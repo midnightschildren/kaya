@@ -80,7 +80,7 @@
 <div class="ln_form-item padded-bottom">
 <input maxlength="64" size="30" name="last_name" type="text" id="last_name" onfocus="if(this.value=='Last Name') this.value='';" onblur="if(this.value=='') this.value='Last Name';" value="Last Name" /></div><div class="clear"></div>
 <div class="email_form-item padded-bottom">
-<input maxlength="64" size="30" name="email-Primary" type="text" id="email-Primary" onfocus="if(this.value=='Email') this.value='';" onblur="if(this.value=='') this.value='Email';" value="Email" /></div><div class="clear"></div></div><!-- end form-layout-compressed for last profile --> 
+<input maxlength="64" size="30" name="email-Primary" type="text" id="email_primary" onfocus="if(this.value=='Email') this.value='';" onblur="if(this.value=='') this.value='Email';" value="Email" /></div><div class="clear"></div></div><!-- end form-layout-compressed for last profile --> 
 
 <div class="crm-submit-buttons">
    <span class="crm-button"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Save" type="submit" id="_qf_Edit_next" /></span>

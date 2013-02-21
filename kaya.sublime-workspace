@@ -43,7 +43,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 20759,
+				"buffer_size": 20903,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,7 +84,7 @@
 			"file": "parts/shared/footer.php",
 			"settings":
 			{
-				"buffer_size": 9825,
+				"buffer_size": 9516,
 				"line_ending": "Unix"
 			}
 		}
@@ -292,7 +292,6 @@
 	"groups":
 	[
 		{
-			"selected": 5,
 			"sheets":
 			[
 				{
@@ -300,15 +299,15 @@
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 20759,
+						"buffer_size": 20903,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10403,
-								10403
+								0,
+								0
 							]
 						],
 						"settings":
@@ -890,15 +889,15 @@
 					"file": "parts/shared/footer.php",
 					"settings":
 					{
-						"buffer_size": 9825,
+						"buffer_size": 9516,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6983,
-								6983
+								0,
+								0
 							]
 						],
 						"settings":
