@@ -1,0 +1,1028 @@
+/*
+Theme Name: 	Kaya
+Theme URI: 		http://kaya.com
+Description: 	Kaya Wordpress theme!
+Version: 		1.0
+Author: 		Amar Ravva + Elliot Jay Stocks & Keir Whitaker
+Author URI: 	http://codisattva.com
+Tags: 			naked, clean, basic
+*/
+
+/*
+===========================
+CONTENTS:
+
+01 Sensible defaults
+02 Typography
+03 Media queries 
+===========================
+*/
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+@import "css/reset.css";
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+li					{ position:relative; /* For absolutely positioning elements within containers (add more to the list if need be) */ }
+.group:after 		{ display:block; height:0; clear:both; content:"."; visibility:hidden; /* For clearing */ }
+body 				{ background:#acaa9f; /* Don't forget to style your body to avoid user overrides */ }
+::-moz-selection 	{ background:#ff0; color:#333; }
+::selection 		{ background:#ff0; color:#333; }
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01.1 Fonts ------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'dincondensed';
+    src: url('fonts/dincond-regular-webfont.eot');
+    src: url('fonts/dincond-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dincond-regular-webfont.woff') format('woff'),
+         url('fonts/dincond-regular-webfont.ttf') format('truetype'),
+         url('fonts/dincond-regular-webfont.svg#dincond-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dincondensed';
+    src: url('fonts/dincond-bold-webfont.eot');
+    src: url('fonts/dincond-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dincond-bold-webfont.woff') format('woff'),
+         url('fonts/dincond-bold-webfont.ttf') format('truetype'),
+         url('fonts/dincond-bold-webfont.svg#dincond-boldregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-regular-webfont.eot');
+    src: url('fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-regular-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-regular-webfont.ttf') format('truetype'),
+         url('fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-italic-webfont.eot');
+    src: url('fonts/playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-italic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-italic-webfont.ttf') format('truetype'),
+         url('fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-bolditalic-webfont.eot');
+    src: url('fonts/playfairdisplay-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-bolditalic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-bold-webfont.eot');
+    src: url('fonts/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-bold-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bold-webfont.ttf') format('truetype'),
+         url('fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+01.5 Layout, Color, Background ------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+
+header				{ background: #fff;}
+#search, #searcha { padding: 18px 10px 10px 0px; color:white; font-weight:bold; background: #FFF; height: 58px; border-bottom: 6px solid black;}
+.arrow-container {position: relative; float:right; right: 70px; top:36px;}
+.arrow-down {
+        position:absolute;
+        top:-4px;
+        margin-left:18px;    
+        padding-top:30px;
+        width:0;
+        height:0;
+        border-left:18px solid transparent;
+        border-right:18px solid transparent;
+        border-top:18px solid #FFF;
+}
+.arrow-down-border {
+        position:absolute;
+        top:-2px;
+        margin-left:12px;
+        padding-top:30px;
+        width:0;
+        height:0;
+        border-left:24px solid transparent;
+        border-right:24px solid transparent;
+        border-top:24px solid black;
+}
+
+input, input[type="search"] {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 0px;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+width: 99%;
+font-size: 1.428em;
+font-family: "playfair", serif;
+color: #acaa9f;
+}
+
+#first_name {
+  border: 1px solid #c6c4bd;
+  -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+  margin-bottom: .5em;
+}
+
+.creative, .chatter {
+  padding-top: 3.9em;
+}
+
+.searchlink {
+	font-weight: bold;
+	font-family: "dincondensed", sans-serif;
+}
+
+.menu li {
+	float: right;
+	padding-left: 1em;
+	text-transform: uppercase;	
+}
+
+.menu-footer_nav-container {
+	padding-top: 3em;
+	padding-right: 15%;
+}
+
+hr.foot_rule {
+	margin-right: 15%;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	margin-left: .5em;
+	height: 1px;
+	color: #c6c4bd;
+	width: 80px;
+	float: right;
+}
+
+.social {
+	margin-right: 15%;
+	clear:both;
+}
+
+.menu li.menu-item-22 {
+	padding-left: 0em;
+}
+
+.paper {
+	height: 12px;
+	background-image: url('http://kaya.codisattva.com/wp-content/uploads/2013/02/paper.png');
+	background-repeat: repeat-x;
+}
+
+#twitter {
+  width: 25px;
+  height: 26px;
+  float: right;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(twitter.png) -25px 0px no-repeat;
+}
+
+#twitter:hover {
+  background: url(twitter.png) 0px 0px no-repeat;
+}
+
+#facebook {
+  width: 25px;
+  height: 26px;
+  float: right;
+  margin-right: 0.5em;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(facebook.png) -25px 0px no-repeat;
+}
+
+#facebook:hover {
+  background: url(facebook.png) 0px 0px no-repeat;
+}
+
+#tumblr {
+  width: 25px;
+  height: 26px;
+  float: right;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(tumblr.png) -25px 0px no-repeat;
+}
+
+#tumblr:hover {
+  background: url(tumblr.png) 0px 0px no-repeat;
+}
+
+#mail {
+  width: 25px;
+  height: 26px;
+  float: right;
+  margin-right: 0.5em;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(mail.png) -25px 0px no-repeat;
+}
+
+#mail:hover {
+  background: url(mail.png) 0px 0px no-repeat;
+}
+
+#footer-section {
+	background-image: url('papergreen.jpg');
+	background-repeat: repeat;
+}
+
+.foot {
+	font-weight: bold;
+	font-family: "dincondensed", sans-serif;
+	font-size: 12px;
+	font-size: .875em;
+	text-transform: uppercase; 
+}
+
+.foot_about {
+	font-weight: normal;
+	font-family: "playfair", serif;
+	font-size: 12px;
+	font-size: .875em; 
+}
+
+/* Responsive images */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full,
+img.size-tiger,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+	max-width: 100%;
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- 
+02 Typography -----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/*
+
+14 / 16	= 		0.875em 		(14px equivalent)
+16 / 16	= 		1em 			(16px equivalent)
+18 / 16 = 		1.125em 		(18px equivalent)
+21 / 16 = 		1.3125em 		(21px equivalent)
+24 / 16 = 		1.5em 			(24px equivalent)
+30 / 16 = 		1.875em 		(30px equivalent)
+
+*/
+
+
+
+body			{ font-size: 100%; font-family: "dincondensed",sans-serif;  }
+
+html>body {
+	font-size: .875em;
+	font-size: 14px; 
+}
+p {
+	line-height: 1.5em;
+	margin-bottom: 1.5em; 
+}
+
+a {
+	color: #cccc00;
+}
+
+header a {
+	color: #000;
+	text-decoration: none;
+}
+
+.footer_menu li a {
+	color: #c6c4bd;
+	text-decoration: none;
+	font-size: .875em;
+	font-size: 14px; 
+	line-height: 1.5em;
+	letter-spacing: 0.25em;
+}
+
+.footer_menu li a:hover {
+	color: #000;
+}
+
+.social a {
+	color: #000;
+	text-decoration: none;
+	font-style:italic;
+	font-family: "dincondensed",sans-serif;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
+
+h6	{
+	font-weight: normal;
+	text-transform:uppercase;
+	font-size: 1em;
+	font-size: 14px;
+	font-family: "playfair", serif;
+	
+}
+
+#footer-section h1 {
+  font-weight: normal;
+  text-transform:uppercase;
+  font-size: 1.71428571em;
+  font-size: 24px;
+  font-family: "playfair", serif;
+}
+
+.menu li, .footer_menu li {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: "dincondensed",sans-serif; 
+}
+
+.creative p {
+  font-weight: bold;
+  font-family: "dincondensed",sans-serif;
+  font-size: 14px;
+  font-size: 1em;
+}
+
+.quote, .attribution {
+	font-family: "abril-display",sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.28571429em;
+	font-size: 18px;
+	color: #000;
+	line-height: 1.5em;
+	margin-bottom: 0em;
+}
+
+.attribution {
+	color: #fff;
+	font-style: normal;
+}
+/* ---------------------------------------------------------------------------------------------------------- 
+03 Media queries (using a mobile-first approach) Extra Strength Responsive Grids (16)------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+.grid-all, .grid-1, .grid-2, .grid-3, .grid-4, .grid-quarter, .grid-5, .grid-third, .grid-6, .grid-7, .grid-8, .grid-half, .grid-9, .grid-10, .grid-11, .grid-12, .grid-three-quarters, .grid-13, .grid-14, .grid-15, .grid-16, .grid-whole {
+  margin: 0;
+  clear: none;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc); }
+
+.grid-1 {
+  width: 6.25%; }
+
+.grid-2 {
+  width: 12.5%; }
+
+.grid-3 {
+  width: 18.75%; }
+
+.grid-4, .grid-quarter {
+  width: 25%; }
+
+.grid-5 {
+  width: 31.25%; }
+
+.grid-third {
+  width: 33.333%;
+}
+
+.grid-6 {
+  width: 37.5%; }
+
+.grid-7 {
+  width: 43.75%; }
+
+.grid-8, .grid-half {
+  width: 50%; }
+
+.grid-9 {
+  width: 56.25%; }
+
+.grid-10 {
+  width: 62.5%; }
+
+.grid-11 {
+  width: 68.75%; }
+
+.grid-12, .grid-three-quarters {
+  width: 75%; }
+
+.grid-13 {
+  width: 81.25%; }
+
+.grid-14 {
+  width: 87.5%; }
+
+.grid-15 {
+  width: 93.75%; }
+
+.grid-16, .grid-whole {
+  width: 100%; }
+
+/* padding helper classes */
+.padded {
+  padding: 0.5em; }
+
+.padded-topn {
+  padding-top: 30px;
+  letter-spacing: .1em;
+}
+
+.padded-topo {
+  padding-top: 5px;
+}
+
+.padded-topm {
+  padding-top: 30px;
+  letter-spacing: 0.15em;
+}
+
+.padded-tops {
+  padding-top: 30px;
+  letter-spacing: 0.1em;
+}
+
+.padded-left {
+  padding-left: 0.5em; }
+
+.padded-right {
+  padding-right: 0.5em; }
+
+.padded-top {
+  padding-top: 0.5em; }
+
+.padded-bottom {
+  padding-bottom: 0.5em; }
+
+.padded-sides {
+  padding: 0 0.5em; }
+
+.padded-vertical {
+  padding: 0.5em 0; }
+
+.padded-inner {
+  padding: 1em; }
+
+.padded-inner-sides {
+  padding: 0 1em; }
+
+.padded-reverse {
+  margin: 0 -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
+
+.padded-reverse-all {
+  margin: -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
+
+/* miscellaneous helper classes */
+.flow-opposite {
+  float: right; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+/* For compatibility with Bootstrap (fixed), Foundation, etc. */
+.row {
+  margin: 0 -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
+
+/* Responsive Media Queries. */
+
+@media (max-width: 591px) {
+  .s-grid-all, .s-grid-1, .s-grid-2, .s-grid-3, .s-grid-4, .s-grid-quarter, .s-grid-5, .s-grid-6, .s-grid-7, .s-grid-8, .s-grid-half, .s-grid-9, .s-grid-10, .s-grid-11, .s-grid-12, .s-grid-three-quarters, .s-grid-13, .s-grid-14, .s-grid-15, .s-grid-16, .s-grid-whole {
+    margin: 0;
+    clear: none;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(boxsizing.htc); }
+
+  .s-grid-1 {
+    width: 6.25%; }
+
+  .s-grid-2 {
+    width: 12.5%; }
+
+  .s-grid-3 {
+    width: 18.75%; }
+
+  .s-grid-4, .s-grid-quarter {
+    width: 25%; }
+
+  .s-grid-5 {
+    width: 31.25%; }
+
+  .s-grid-6 {
+    width: 37.5%; }
+
+  .s-grid-7 {
+    width: 43.75%; }
+
+  .s-grid-8, .s-grid-half {
+    width: 50%; }
+
+  .s-grid-9 {
+    width: 56.25%; }
+
+  .s-grid-10 {
+    width: 62.5%; }
+
+  .s-grid-11 {
+    width: 68.75%; }
+
+  .s-grid-12, .s-grid-three-quarters {
+    width: 75%; }
+
+  .s-grid-13 {
+    width: 81.25%; }
+
+  .s-grid-14 {
+    width: 87.5%; }
+
+  .s-grid-15 {
+    width: 93.75%; }
+
+  .s-grid-16, .s-grid-whole {
+    width: 100%; }
+
+  /* padding helper classes */
+
+.padded-topn {
+  padding-top: 20px;
+  letter-spacing: 0em;
+}
+
+.padded-topo {
+  padding-top: 5px;
+  padding-left: .5em;
+}
+
+.padded-topm {
+  padding-top: 20px;
+  letter-spacing: 0em;
+}
+
+.padded-tops {
+  padding-top: 20px;
+  letter-spacing: 0em;
+}
+
+.menu li {
+	padding-left: 0.5em;
+}
+
+input, input[type="search"] {
+	font-size: 1em;
+}
+
+.quote, .attribution {
+	font-family: "abril-display",sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1em;
+	color: #000;
+	line-height: 1.5em;
+}
+
+
+#search, #searcha {
+	height: 40px;
+	padding: 0px 10px 10px 0px;
+}
+  .s-padded {
+    padding: 0.5em; }
+
+  .s-padded-left {
+    padding-left: 0.5em; }
+
+  .s-padded-right {
+    padding-right: 0.5em; }
+
+  .s-padded-top {
+    padding-top: 0.5em; }
+
+  .s-padded-bottom {
+    padding-bottom: 0.5em; }
+
+  .s-padded-sides {
+    padding: 0 0.5em; }
+
+  .s-padded-vertical {
+    padding: 0.5em 0; }
+
+  .s-padded-inner {
+    padding: 1em; }
+
+  .s-padded-inner-sides {
+    padding: 0 1em; }
+
+  .s-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .s-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  /* miscellaneous helper classes */
+  .s-flow-opposite {
+    float: right; }
+
+  .s-center {
+    text-align: center; }
+
+  .s-left {
+    text-align: left; }
+
+  .s-right {
+    text-align: right; }
+
+  .s-hidden {
+    display: none; } }
+
+@media (min-width: 592px) and (max-width: 817px) {
+  .m-grid-all, .m-grid-1, .m-grid-2, .m-grid-3, .m-grid-4, .m-grid-quarter, .m-grid-5, .m-grid-6, .m-grid-7, .m-grid-8, .m-grid-half, .m-grid-9, .m-grid-10, .m-grid-11, .m-grid-12, .m-grid-three-quarters, .m-grid-13, .m-grid-14, .m-grid-15, .m-grid-16, .m-grid-whole {
+    margin: 0;
+    clear: none;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(boxsizing.htc); }
+
+  .m-grid-1 {
+    width: 6.25%; }
+
+  .m-grid-2 {
+    width: 12.5%; }
+
+  .m-grid-3 {
+    width: 18.75%; }
+
+  .m-grid-4, .m-grid-quarter {
+    width: 25%; }
+
+  .m-grid-5 {
+    width: 31.25%; }
+
+  .m-grid-6 {
+    width: 37.5%; }
+
+  .m-grid-7 {
+    width: 43.75%; }
+
+  .m-grid-8, .m-grid-half {
+    width: 50%; }
+
+  .m-grid-9 {
+    width: 56.25%; }
+
+  .m-grid-10 {
+    width: 62.5%; }
+
+  .m-grid-11 {
+    width: 68.75%; }
+
+  .m-grid-12, .m-grid-three-quarters {
+    width: 75%; }
+
+  .m-grid-13 {
+    width: 81.25%; }
+
+  .m-grid-14 {
+    width: 87.5%; }
+
+  .m-grid-15 {
+    width: 93.75%; }
+
+  .m-grid-16, .m-grid-whole {
+    width: 100%; }
+
+  /* padding helper classes */
+  .padded-topm, .padded-tops {
+    letter-spacing: 0.1em;}
+
+  .padded-topn  {
+  	letter-spacing: 0.07em;
+  }
+
+  .m-padded {
+    padding: 0.5em; }
+
+  .m-padded-left {
+    padding-left: 0.5em; }
+
+  .m-padded-right {
+    padding-right: 0.5em; }
+
+  .m-padded-top {
+    padding-top: 0.5em; }
+
+  .m-padded-bottom {
+    padding-bottom: 0.5em; }
+
+  .m-padded-sides {
+    padding: 0 0.5em; }
+
+  .m-padded-vertical {
+    padding: 0.5em 0; }
+
+  .m-padded-inner {
+    padding: 1em; }
+
+  .m-padded-inner-sides {
+    padding: 0 1em; }
+
+  .m-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .m-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  /* miscellaneous helper classes */
+  .menu li {
+	padding-left: .5em;
+}
+  .m-flow-opposite {
+    float: right; }
+
+  .m-center {
+    text-align: center; }
+
+  .m-left {
+    text-align: left; }
+
+  .m-right {
+    text-align: right; }
+
+  .m-hidden {
+    display: none; } }
+
+@media (min-width: 818px) {
+  .l-grid-all, .l-grid-1, .l-grid-2, .l-grid-3, .l-grid-4, .l-grid-quarter, .l-grid-5, .l-grid-6, .l-grid-7, .l-grid-8, .l-grid-half, .l-grid-9, .l-grid-10, .l-grid-11, .l-grid-12, .l-grid-three-quarters, .l-grid-13, .l-grid-14, .l-grid-15, .l-grid-16, .l-grid-whole {
+    margin: 0;
+    clear: none;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(boxsizing.htc); }
+
+  .l-grid-1 {
+    width: 6.25%; }
+
+  .l-grid-2 {
+    width: 12.5%; }
+
+  .l-grid-3 {
+    width: 18.75%; }
+
+  .l-grid-4, .l-grid-quarter {
+    width: 25%; }
+
+  .l-grid-5 {
+    width: 31.25%; }
+
+  .l-grid-6 {
+    width: 37.5%; }
+
+  .l-grid-7 {
+    width: 43.75%; }
+
+  .l-grid-8, .l-grid-half {
+    width: 50%; }
+
+  .l-grid-9 {
+    width: 56.25%; }
+
+  .l-grid-10 {
+    width: 62.5%; }
+
+  .l-grid-11 {
+    width: 68.75%; }
+
+  .l-grid-12, .l-grid-three-quarters {
+    width: 75%; }
+
+  .l-grid-13 {
+    width: 81.25%; }
+
+  .l-grid-14 {
+    width: 87.5%; }
+
+  .l-grid-15 {
+    width: 93.75%; }
+
+  .l-grid-16, .l-grid-whole {
+    width: 100%; }
+
+  /* padding helper classes */
+
+  .menu li {
+	padding-left: 1em;
+}
+  .l-padded {
+    padding: 0.5em; }
+
+  .l-padded-left {
+    padding-left: 0.5em; }
+
+  .l-padded-right {
+    padding-right: 0.5em; }
+
+  .l-padded-top {
+    padding-top: 0.5em; }
+
+  .l-padded-bottom {
+    padding-bottom: 0.5em; }
+
+  .l-padded-sides {
+    padding: 0 0.5em; }
+
+  .l-padded-vertical {
+    padding: 0.5em 0; }
+
+  .l-padded-inner {
+    padding: 1em; }
+
+  .l-padded-inner-sides {
+    padding: 0 1em; }
+
+  .l-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .l-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+.padded-topn {
+  padding-top: 30px;
+  letter-spacing: 0.07em;
+}
+
+  /* miscellaneous helper classes */
+  .l-flow-opposite {
+    float: right; }
+
+  .l-center {
+    text-align: center; }
+
+  .l-left {
+    text-align: left; }
+
+  .l-right {
+    text-align: right; }
+
+  .l-hidden {
+    display: none; } }
+
+@media (min-width: 1020px) {
+
+.padded-topn {
+  padding-top: 30px;
+  letter-spacing: 0.2em;
+}
+
+.padded-topo {
+  padding-top: 5px;
+}
+
+.padded-topm {
+  padding-top: 30px;
+  letter-spacing: 0.25em;
+}
+
+.padded-tops {
+  padding-top: 30px;
+  letter-spacing: 0.2em;
+}
+
+.menu li {
+	padding-left: 2em;
+}
+
+}
+/* Retina Display */
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+
+					{ /* Place your styles here for all 'Retina' screens */ }
+
+.menu li {
+	font-weight: bold;
+	text-transform:uppercase;
+	font-family: "dincondensed",sans-serif;
+	font-size: 12px;
+	font-size: .875em; 
+}
+
+.searchlink {
+	font-weight: bold;
+	font-family: "dincondensed", sans-serif;
+	font-size: 12px;
+	font-size: .875em;
+}
+
+}
