@@ -5,6 +5,7 @@
 </div>
 
 <div class="grid-third s-grid-half creative"><h1 class="padded-bottom">creative contagion</h1>
+<div class="padded-right">	
 	<p class="padded-vertical">Sign up for our newsletter to receive Kaya updates. The only spam we like is spam musbi. We will never share your info.</p>
 	
 <script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/jquery.min.js"></script>
@@ -83,7 +84,7 @@
 <input maxlength="64" size="30" name="email-Primary" type="text" id="email_primary" onfocus="if(this.value=='Email') this.value='';" onblur="if(this.value=='') this.value='Email';" value="Email" /></div><div class="clear"></div></div><!-- end form-layout-compressed for last profile --> 
 
 <div class="crm-submit-buttons">
-   <span class="crm-button"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Save" type="submit" id="_qf_Edit_next" /></span>
+   <span class="crm-button"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Sign Up" type="submit" id="Edit_next" /></span>
 </div>
 
 </div> 
@@ -107,6 +108,7 @@ cj(document).ready(function(){
         cj("#Edit").validate({ 'errorClass': 'crm-error'});
       });
     </script><script type="text/javascript">jQuery.noConflict(true);</script>
+</div>    
 </div>
 
 <div class="grid-third s-grid-whole">
