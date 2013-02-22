@@ -195,8 +195,16 @@ color: #acaa9f;
   padding-left:10%;
 }
 
-.creative, .chatter {
+.creative {
   padding-top: 3.9em;
+}
+
+.chatter {
+  text-align: right;
+  padding-top: 3.9em;
+  padding-right: 10%;
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .searchlink {

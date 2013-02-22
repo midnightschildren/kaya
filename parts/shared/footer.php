@@ -2,6 +2,31 @@
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 <div class="grid-14 s-grid-whole m-grid-whole">
 <div class="grid-third s-grid-half chatter"><h1>kaya chatter</h1>
+	<ul>
+<?php
+  $tweets = getTweets(3);
+
+  foreach($tweets as $tweet){
+            $pubDate        = $tweet['created_at'];
+            $form_date     = date('F d - h:i:s A', strtotime($pubDate));
+            $statusid         = $tweet['id_str'];
+            $tweet          = $tweet['text'];
+            
+            # Turn URLs into links
+            $tweet = preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\./-]*(\?\S+)?)?)?)@', '<a target="blank" title="$1" href="$1">$1</a>', $tweet);
+            
+            #Turn hashtags into links
+            $tweet = preg_replace('/#([0-9a-zA-Z_-]+)/', "<a target='blank' title='$1' href=\"http://twitter.com/search?q=%23$1\">#$1</a>", $tweet);
+            
+            #Turn @replies into links
+            $tweet = preg_replace("/@([0-9a-zA-Z_-]+)/", "<a target='blank' title='$1' href=\"http://twitter.com/$1\">@$1</a>", $tweet);
+            $twitter .= "<li><span class='time-meta'><a href=\"http://twitter.com/LMUsftv/statuses/" . $statusid . "\">" . $form_date . "</a></span><span class='entry-content'>" . $tweet . "</span></li>";
+
+  }
+  echo $twitter;
+?>
+</ul>
+
 </div>
 
 <div class="grid-third s-grid-half creative"><h1 class="padded-bottom">creative contagion</h1>
