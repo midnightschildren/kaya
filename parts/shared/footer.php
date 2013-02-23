@@ -1,14 +1,16 @@
 <div id="footer-section" class="grid-whole">
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 <div class="grid-14 s-grid-whole m-grid-whole">
-<div class="grid-third s-grid-half chatter"><h1>kaya chatter</h1>
-	<ul>
+<div class="grid-third s-grid-whole m-grid-half chatter">
+<div class="grid-4 right padded"><a href="https://twitter.com/kayapress"><img src="http://kaya.codisattva.com/wp-content/themes/kaya_theme/twitter-icon.png" width="23" height="19" style="
+    margin-top:6px;" /></a></div><div class="grid-12 left padded"><h1>kaya chatter</h1></div>
+
 <?php
-  $tweets = getTweets(3);
+  $tweets = getTweets(3, kayapress, array('include_rts'=>true));
 
   foreach($tweets as $tweet){
             $pubDate        = $tweet['created_at'];
-            $form_date     = date('F d - h:i:s A', strtotime($pubDate));
+            $form_date     = niceTime($pubDate);
             $statusid         = $tweet['id_str'];
             $tweet          = $tweet['text'];
             
@@ -20,17 +22,17 @@
             
             #Turn @replies into links
             $tweet = preg_replace("/@([0-9a-zA-Z_-]+)/", "<a target='blank' title='$1' href=\"http://twitter.com/$1\">@$1</a>", $tweet);
-            $twitter .= "<li><span class='time-meta'><a href=\"http://twitter.com/LMUsftv/statuses/" . $statusid . "\">" . $form_date . "</a></span><span class='entry-content'>" . $tweet . "</span></li>";
+            $twitter .= "<div class='time-meta right grid-4 padded-right padded-top'><a href=\"http://twitter.com/kayapress/statuses/" . $statusid . "\">" . $form_date . "</a></div><div class='left entry-content grid-12 padded'>" . $tweet . "</div>";
 
   }
   echo $twitter;
 ?>
-</ul>
+
 
 </div>
 
-<div class="grid-third s-grid-half creative"><h1 class="padded-bottom">creative contagion</h1>
-<div class="padded-right">	
+<div class="grid-third s-grid-whole m-grid-half creative"><div class="padded-bottom"><h1>creative contagion</h1></div>
+	
 	<p class="padded-vertical">Sign up for our newsletter to receive Kaya updates. The only spam we like is spam musbi. We will never share your info.</p>
 	
 <script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/jquery.min.js"></script>
@@ -133,10 +135,10 @@ cj(document).ready(function(){
         cj("#Edit").validate({ 'errorClass': 'crm-error'});
       });
     </script><script type="text/javascript">jQuery.noConflict(true);</script>
-</div>    
+    
 </div>
 
-<div class="grid-third s-grid-whole">
+<div class="grid-third m-grid-whole s-grid-whole">
 	<div class="grid-half right padded-inner">
 		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'footer_menu' ) ); ?>
 		<hr class="foot_rule" />

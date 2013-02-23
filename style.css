@@ -174,7 +174,7 @@ color: #acaa9f;
 }
 
 .crm-button {
-  width: 33%;
+  width: 23%;
   float: right;
   padding-bottom: 2em;
 }
@@ -197,12 +197,15 @@ color: #acaa9f;
 
 .creative {
   padding-top: 3.9em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
 }
 
 .chatter {
   text-align: right;
-  padding-top: 3.9em;
-  padding-right: 10%;
+  padding-top: 3.4em;
+  padding-right: 2em;
   padding-left: 1em;
   padding-bottom: 1em;
 }
@@ -247,6 +250,17 @@ hr.foot_rule {
 	height: 12px;
 	background-image: url('http://kaya.codisattva.com/wp-content/uploads/2013/02/paper.png');
 	background-repeat: repeat-x;
+}
+
+#twitter_icon {
+  width: 46px;
+  height: 38px;
+  float: right;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(twitter-icon.png) 0px 0px no-repeat;
 }
 
 #twitter {
@@ -416,6 +430,24 @@ header a {
 	font-family: "dincondensed",sans-serif;
 }
 
+.time-meta, .entry-content {
+  line-height: 1.5em;
+  font-size: 14px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "dincondensed",sans-serif;
+}
+
+.entry-content a {
+  color: #2e3192;
+  text-decoration: none;
+}
+
+.time-meta a {
+  color: #acaa9f;
+  text-decoration: none;
+}
+
 h1, 
 h2, 
 h3, 
@@ -552,6 +584,10 @@ h6	{
 .padded-tops {
   padding-top: 30px;
   letter-spacing: 0.1em;
+}
+
+.padded-topcont {
+  padding-top: 1em;
 }
 
 .padded-left {
@@ -711,8 +747,8 @@ input, input[type="search"] {
 
 
 #search, #searcha {
-	height: 40px;
-	padding: 0px 10px 10px 0px;
+	height: 50px;
+	padding: 10px 10px 10px 5px;
 }
   .s-padded {
     padding: 0.5em; }
@@ -1017,7 +1053,25 @@ input, input[type="search"] {
     display: none; }
 
   .crm-button {
-    width: 25%;}
+    width: 27%;}
+
+  .chatter {
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;}
+
+  .menu-footer_nav-container {
+  padding-right: 20%;
+}
+
+hr.foot_rule {
+  margin-right: 20%;
+}
+
+.social {
+  margin-right: 20%;
+}
+
  }
 
 @media (min-width: 1020px) {
@@ -1046,8 +1100,24 @@ input, input[type="search"] {
 }
 
   .crm-button {
-    width: 20%;}
- }
+    width: 22%;}
+
+.chatter {
+  padding-right: 2em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.menu-footer_nav-container {
+  padding-right: 30%;
+}
+
+hr.foot_rule {
+  margin-right: 30%;
+}
+
+.social {
+  margin-right: 30%;
+}
 
 }
 /* Retina Display */
