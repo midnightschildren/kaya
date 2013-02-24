@@ -110,13 +110,28 @@ function niceTime( $time )
 	 * @author Keir Whitaker
 	 */
 
+if( !is_admin()){ 
+ wp_deregister_script('jquery');
+ wp_register_script('jquery', get_template_directory_uri().'/js/jquery.min.js', false, '1.8.0');
+ wp_enqueue_script('jquery');
+}
+
 	function starkers_script_enqueuer() {
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
+		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'modern' );
 	    wp_register_script( 'animatedcollapse', get_template_directory_uri().'/js/animatedcollapse.js', array( 'jquery' ) );
 		wp_enqueue_script( 'animatedcollapse' );
 		wp_register_script( 'collapse', get_template_directory_uri().'/js/collapse.js', array( 'jquery' ) );
 		wp_enqueue_script( 'collapse' );
+		wp_register_script( 'jquery-ui', get_template_directory_uri().'/js/jquery-ui.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'jquery-ui' );
+		wp_register_script( 'hammer', get_template_directory_uri().'/js/hammer.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'hammer' );
+		wp_register_script( 'responsiveCarousel', get_template_directory_uri().'/js/responsiveCarousel.js', array( 'jquery' ) );
+		wp_enqueue_script( 'responsiveCarousel' );
+
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
 	}	
