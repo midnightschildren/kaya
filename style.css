@@ -124,7 +124,7 @@ and right. */
 .slider {
     position: relative;
     zoom: 1;
-    background-color: #556b2f;
+    background-color: #cccc00;
 }
 
 /* This container holds the navigation arrows.  We just want a width but no
@@ -231,7 +231,7 @@ However, the height remains untouched.
 */
 .slider li {
     width: 175px;
-    height: 175px;
+    height: 525px;
     float: left;
     margin: 0;
     padding: 0;
@@ -243,14 +243,14 @@ it with your own stuff.  */
 .slider .inner {
     padding: 10px;
     margin: 0 5px;
-    border: 1px solid #333;
+    border: 0px solid #333;
     height: 100%;
     background-color: #CCC;
 }
 
 .examples {
-    padding: 1em;
-    background-color: #2f4f4f;
+    margin-top: -5px;
+    background-color: #cccc00;
 }
 #menu span {
     white-space: nowrap;
@@ -423,6 +423,7 @@ hr.foot_rule {
 	height: 12px;
 	background-image: url('http://kaya.codisattva.com/wp-content/uploads/2013/02/paper.png');
 	background-repeat: repeat-x;
+  z-index: 100;
 }
 
 #twitter_icon {

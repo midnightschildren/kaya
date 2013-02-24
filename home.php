@@ -12,9 +12,7 @@ Template Name: Home Page
 <?php endwhile; ?>
 
 <div id="slideshow" class="grid-whole">
-<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
-<div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-12 s-grid-16 m-grid-14 center">
+
 
 <div class="examples" id="example-3">
     <div class="slider">
@@ -25,22 +23,22 @@ Template Name: Home Page
         <div class="slider-mask-wrap">
             <div class="slider-mask">
                 <ul class="slider-target">
-                    <li>
+                    <li class="slid">
                         <div class="inner">One</div>
                     </li>
-                    <li>
+                    <li class="slid">
                         <div class="inner">Two</div>
                     </li>
-                    <li>
+                    <li class="slid">
                         <div class="inner">Three</div>
                     </li>
-                    <li>
+                    <li class="slid">
                         <div class="inner">Four</div>
                     </li>
-                    <li>
+                    <li class="slid">
                         <div class="inner">Five</div>
                     </li>
-                    <li>
+                    <li class="slid">
                         <div class="inner">Six</div>
                     </li>
                 </ul>
@@ -50,30 +48,32 @@ Template Name: Home Page
     </div>
 </div>
 
-</div>
-<div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+
 </div>
 
 <script>
 
-jQuery.noConflict();
+
     /* Okay, everything is loaded. Let's go! (on dom ready) */
-    (function ( $ ) {
-$.fn.myPlugin = function() {
+    
+    jQuery(function ( ten ) {
+
         /*
             A generic product carousel - something that might appear in the body of a e-commerce site. Unlike example 1,
             this example uses infinite scrolling.
         */
-        $('#example-3')
+        ten('#example-3')
                 .responsiveCarousel({
                     infinite:   true, // turn on infinite scrolling
                     unitWidth:  'compute',
+                    target: '.slider-target',
+        			mask: '.slider-mask',
+                    unitElement:'.slid',
                     dragEvents: true, // touch and mouse dragging enabled
                     responsiveUnitSize: function () {
-                        var m, w, i = $(document).width(); // use the document width as a measuring stick to determine how many elements we want in the carousel.
+                        var m, w, i = ten(document).width(); // use the document width as a measuring stick to determine how many elements we want in the carousel.
                         if (i > 900) {
-                            m = 4;
+                            m = 3.5;
                         }
                         else if (i > 700) {
                             m = 3;
@@ -90,19 +90,19 @@ $.fn.myPlugin = function() {
                         return m;
                     }
                 });
-};
-    })(jQuery);
+
+    });
 
     /* bleh... CSS media queries seem to be applied sometime after the document.ready and before the
      window.load events.  If you are using the "onRedraw" callback, you should call it again after the page
      is finished loading. Not my fault! Blame your browser! :-) */
-    (function ( $ ) {
-$.fn.myPlugin2 = function() {
+    jQuery(function ( $ ) {
+
     $(window).on('load', function () {
         $('.examples').responsiveCarousel('redraw');
     });
-};
-    })(jQuery);
+
+    });
 
 </script>
 
