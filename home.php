@@ -24,22 +24,22 @@ Template Name: Home Page
             <div class="slider-mask">
                 <ul class="slider-target">
                     <li class="slid">
-                        <div class="inner">One</div>
+                        <div class="inner"><div class="opmask">One</div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner">Two</div>
+                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide2.jpg"></div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner">Three</div>
+                        <div class="inner"><div class="opmask">Three</div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner">Four</div>
+                        <div class="inner"><div class="opmask">Four</div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner">Five</div>
+                        <div class="inner"><div class="opmask">Five</div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner">Six</div>
+                        <div class="inner"><div class="opmask">Six</div></div>
                     </li>
                 </ul>
                 <div class="clearit"></div>
@@ -73,22 +73,34 @@ Template Name: Home Page
                     responsiveUnitSize: function () {
                         var m, w, i = ten(document).width(); // use the document width as a measuring stick to determine how many elements we want in the carousel.
                         if (i > 900) {
-                            m = 3.5;
+                            m = 3;
                         }
                         else if (i > 700) {
                             m = 3;
                         }
                         else if (i > 600) {
-                            m = 2;
+                            m = 3;
                         }
                         else if (i > 400) {
-                            m = 1;
+                            m = 3;
                         }
                         else {
-                            m = 1
+                            m = 3
                         }
                         return m;
-                    }
+                    },
+                    onShift: function (i) {
+        i = Math.round(i);
+        if (i >4) {
+        var $current = $('.slider-target li[data-slide=' + (i-5) + ']');	
+        }
+        else {
+        var $current = $('.slider-target li[data-slide=' + (i+1) + ']');}
+        $('.slider-target li[data-slide]').removeClass('current');
+        $current.addClass('current'); 
+    	}
+        
+    
                 });
 
     });

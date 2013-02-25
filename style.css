@@ -124,7 +124,8 @@ and right. */
 .slider {
     position: relative;
     zoom: 1;
-    background-color: #cccc00;
+    background-color: #000;
+    overflow: hidden;
 }
 
 /* This container holds the navigation arrows.  We just want a width but no
@@ -142,11 +143,12 @@ unclickable on some browsers.  */
 container divs. Even though this div's parent has no height, the overflow is
 visible by default, so we can see and click on the arrows. */
 .arrow {
-    width: 42px;
-    height: 175px;
+    width: 5%;
+    height: 3em;
     position: absolute;
     zoom: 1;
-    top: 0;
+    padding-top: 13%;
+    z-index: 100;
 }
 
 /* This holds common styles for both the left and right navigation arrow anchors
@@ -171,12 +173,12 @@ tag */
 
 /* position the left arrow */
 .arrow-left {
-    left: 0;
+    left: 17%;
 }
 
 /* position the right arrow */
 .arrow-right {
-    right: 0;
+    right: 17%;
 }
 
 /* This container is used to pull-in the carousel mask from the left and right
@@ -187,7 +189,8 @@ you account for it.  To future-proof your design from messups caused by updates
 to the css in the future, apply spacing and positioning to this div, and not
 directly to the mask. */
 .slider-mask-wrap {
-    margin: 0 48px;
+    margin: 0 -15%;
+    background-color: transparent;
 }
 
 /* The mask container contains all the list elements that make up the carousel.
@@ -231,26 +234,36 @@ However, the height remains untouched.
 */
 .slider li {
     width: 175px;
-    height: 525px;
     float: left;
     margin: 0;
     padding: 0;
+    background-color: #000;
 }
 
 
 /* This element is optional. Keep it and fill it with your own stuff, or replace
 it with your own stuff.  */
+
+.slid .opmask {
+  background: rgb(0, 0, 0) ; opacity: 0.2;
+}
+
 .slider .inner {
-    padding: 10px;
-    margin: 0 5px;
-    border: 0px solid #333;
+    padding: 0px;
+    margin: 0px;
     height: 100%;
-    background-color: #CCC;
+    border-right: 5px solid #cccc00;
+    border-left: 5px solid #cccc00;
+}
+
+.slider .current .opmask {
+
+    opacity: 1;
 }
 
 .examples {
     margin-top: -5px;
-    background-color: #cccc00;
+    background-color: #000;
 }
 #menu span {
     white-space: nowrap;
@@ -539,6 +552,10 @@ img.wp-post-image {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
+img.size-slide {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Make sure videos and embeds fit their containers */
 embed,
