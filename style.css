@@ -143,11 +143,11 @@ unclickable on some browsers.  */
 container divs. Even though this div's parent has no height, the overflow is
 visible by default, so we can see and click on the arrows. */
 .arrow {
-    width: 5%;
-    height: 3em;
+    width: 48px;
+    height: 35px;
     position: absolute;
     zoom: 1;
-    padding-top: 13%;
+    padding-top: 17%;
     z-index: 100;
 }
 
@@ -161,7 +161,6 @@ tag */
     display: block;
     width: 100%;
     height: 100%;
-    background-color: red;
     cursor: pointer;
 }
 
@@ -173,12 +172,32 @@ tag */
 
 /* position the left arrow */
 .arrow-left {
-    left: 17%;
+    left: 8%;
 }
 
 /* position the right arrow */
 .arrow-right {
-    right: 17%;
+    right: 8%;
+}
+
+span.carouselnext {
+    background: url(right-arrow.png) 0px 0px no-repeat;
+    width: 48px;
+    height: 35px;
+}
+
+span.carouselnext:hover {
+    background: url(right-arrow.png) -48px 0px no-repeat;
+}
+
+span.carouselback {
+    background: url(left-arrow.png) -48px 0px no-repeat;
+    width: 48px;
+    height: 35px;
+}
+
+span.carouselback:hover {
+    background: url(left-arrow.png) 0px 0px no-repeat;
 }
 
 /* This container is used to pull-in the carousel mask from the left and right
@@ -189,7 +208,7 @@ you account for it.  To future-proof your design from messups caused by updates
 to the css in the future, apply spacing and positioning to this div, and not
 directly to the mask. */
 .slider-mask-wrap {
-    margin: 0 -15%;
+    margin: 0 -25%;
     background-color: transparent;
 }
 
@@ -252,8 +271,8 @@ it with your own stuff.  */
     padding: 0px;
     margin: 0px;
     height: 100%;
-    border-right: 5px solid #cccc00;
-    border-left: 5px solid #cccc00;
+    border-right: 10px solid #cccc00;
+    border-left: 10px solid #cccc00;
 }
 
 .slider .current .opmask {

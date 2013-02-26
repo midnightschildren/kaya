@@ -17,20 +17,20 @@ Template Name: Home Page
 <div class="examples" id="example-3">
     <div class="slider">
         <div class="slider-nav">
-            <div class="arrow-left arrow"><span title="Back"></span></div>
-            <div class="arrow-right arrow"><span title="Next"></span></div>
+            <div class="arrow-left arrow"><span title="Back" class="carouselback"></span></div>
+            <div class="arrow-right arrow"><span title="Next" class="carouselnext"></span></div>
         </div>
         <div class="slider-mask-wrap">
             <div class="slider-mask">
                 <ul class="slider-target">
                     <li class="slid">
-                        <div class="inner"><div class="opmask">One</div></div>
+                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide1.jpg"></div></div>
                     </li>
                     <li class="slid">
                         <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide2.jpg"></div></div>
                     </li>
                     <li class="slid">
-                        <div class="inner"><div class="opmask">Three</div></div>
+                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide3.jpg"></div></div>
                     </li>
                     <li class="slid">
                         <div class="inner"><div class="opmask">Four</div></div>

@@ -43,7 +43,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 20903,
+				"buffer_size": 28289,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,24 +59,15 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 4274,
+				"buffer_size": 5880,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "searchform.php",
-			"settings":
-			{
-				"buffer_size": 298,
-				"line_ending": "Unix",
-				"name": "<form action=\"/\" method=\"get\">"
 			}
 		},
 		{
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 839,
+				"buffer_size": 4870,
 				"line_ending": "Unix"
 			}
 		},
@@ -84,7 +75,7 @@
 			"file": "parts/shared/footer.php",
 			"settings":
 			{
-				"buffer_size": 9516,
+				"buffer_size": 11000,
 				"line_ending": "Unix"
 			}
 		}
@@ -125,6 +116,9 @@
 	},
 	"file_history":
 	[
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/searchform.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/responsiveCarousel.js",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
 		"/Users/amar/Desktop/Codisattva Projects:Clients/LMU-Loglines/LMU Deployment/codi-lmu/header.php",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/js/collapse.js",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/sftp-config.json",
@@ -292,6 +286,7 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -299,15 +294,15 @@
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 20903,
+						"buffer_size": 28289,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								6703,
+								6703
 							]
 						],
 						"settings":
@@ -408,7 +403,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5893.0,
+						"translation.y": 2242.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -425,8 +420,8 @@
 						"selection":
 						[
 							[
-								797,
-								734
+								1484,
+								1484
 							]
 						],
 						"settings":
@@ -536,15 +531,15 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 4274,
+						"buffer_size": 5880,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1069,
-								1094
+								3808,
+								3808
 							]
 						],
 						"settings":
@@ -644,143 +639,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 75.0,
+						"translation.y": 1497.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "searchform.php",
-					"settings":
-					{
-						"buffer_size": 298,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								95,
-								265
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"auto_name": "<form action=\"/\" method=\"get\">",
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "home.php",
 					"settings":
 					{
-						"buffer_size": 839,
+						"buffer_size": 4870,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								670,
-								629
+								482,
+								482
 							]
 						],
 						"settings":
@@ -879,25 +756,25 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 73.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "parts/shared/footer.php",
 					"settings":
 					{
-						"buffer_size": 9516,
+						"buffer_size": 11000,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								9967,
+								9967
 							]
 						],
 						"settings":
@@ -997,7 +874,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 878.0,
+						"translation.y": 1588.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
