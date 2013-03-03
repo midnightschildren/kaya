@@ -38,6 +38,9 @@
   	'after_title' => '</h1>'
 ));
 
+	add_theme_support('post-thumbnails');
+  	add_image_size('category-thumb', 169, 239, true); 
+
 	/* ========================================================================================================================
 	
 	Actions and Filters
@@ -128,40 +131,13 @@ register_post_type('authors', array(	'label' => 'Authors','description' => '','p
   'parent' => 'Parent Author',
 ),) );
 
+register_taxonomy('genres',array (
+  0 => 'books',
+),array( 'hierarchical' => true, 'label' => 'Genre','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Genre') );
 
-//hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_book_taxonomies', 0 );
-
-//create two taxonomies, genres and writers for the post type "book"
-function create_book_taxonomies() 
-{
-  // Add new taxonomy, make it hierarchical (like categories)
-  $labels = array(
-    'name'                => _x( 'Genres', 'taxonomy general name' ),
-    'singular_name'       => _x( 'Genre', 'taxonomy singular name' ),
-    'search_items'        => __( 'Search Genres' ),
-    'all_items'           => __( 'All Genres' ),
-    'parent_item'         => __( 'Parent Genre' ),
-    'parent_item_colon'   => __( 'Parent Genre:' ),
-    'edit_item'           => __( 'Edit Genre' ), 
-    'update_item'         => __( 'Update Genre' ),
-    'add_new_item'        => __( 'Add New Genre' ),
-    'new_item_name'       => __( 'New Genre Name' ),
-    'menu_name'           => __( 'Genre' )
-  ); 	
-
-  $args = array(
-    'hierarchical'        => true,
-    'labels'              => $labels,
-    'show_ui'             => true,
-    'show_admin_column'   => true,
-    'query_var'           => true,
-    'rewrite'             => array( 'slug' => 'genre' )
-  );
-
-  register_taxonomy( 'genre', array( 'books' ), $args );
-
-}
+register_taxonomy('kaya_authors',array (
+  0 => 'authors',
+),array( 'hierarchical' => false, 'label' => 'Author_Taxonomy','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Author') );
 
 
 	/* ========================================================================================================================

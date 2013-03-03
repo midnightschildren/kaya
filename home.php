@@ -121,17 +121,16 @@ Template Name: Home Page
 <div id="mi-slider" class="mi-slider grid-whole">
 
 <?php
-$genre_terms = get_terms( 'genre');
+$genre_terms = get_terms( 'genres');
 ?>
 
 <?php
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query2 = new WP_Query( array(
         'post_type' => 'books',
-        'posts_per_page' => '-1',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genre',
+                'taxonomy' => 'genres',
                 'terms' => array( $genre_term->slug ),
                 'field' => 'slug',
                 'operator' => 'IN'
@@ -142,9 +141,18 @@ foreach ( $genre_terms as $genre_term ) {
 
 <ul>
     <?php
-    if ( $genre_term_query2->have_posts() ) : $genre_term_query2 -> the_post(); ?>
-        <li><?php the_title(); ?></li>
-    <?php endif; ?>
+    if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
+    
+        <li> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a>
+<div id="bookinfo">                
+    <div id="btitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
+<?php global $post;
+echo $post->ID; 
+var_dump( get_field('relationship') );?>
+<?php foreach(get_field('author') as $post_object): ?>
+By <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></div></li>
+<?php endforeach; ?>
+    <?php endwhile; endif; ?>
 </ul>
 
     <?php
@@ -159,7 +167,7 @@ foreach ( $genre_terms as $genre_term ) {
         'post_type' => 'books',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genre',
+                'taxonomy' => 'genres',
                 'terms' => array( $genre_term->slug ),
                 'operator' => 'IN'
             )
