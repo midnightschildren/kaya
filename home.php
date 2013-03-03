@@ -118,6 +118,66 @@ Template Name: Home Page
 
 </script>
 
+<div id="mi-slider" class="mi-slider grid-whole">
+
+<?php
+$genre_terms = get_terms( 'genre');
+?>
+
+<?php
+foreach ( $genre_terms as $genre_term ) {
+    $genre_term_query2 = new WP_Query( array(
+        'post_type' => 'books',
+        'posts_per_page' => '-1',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'genre',
+                'terms' => array( $genre_term->slug ),
+                'field' => 'slug',
+                'operator' => 'IN'
+            )
+        )
+    ) )
+    ?>
+
+<ul>
+    <?php
+    if ( $genre_term_query2->have_posts() ) : $genre_term_query2 -> the_post(); ?>
+        <li><?php the_title(); ?></li>
+    <?php endif; ?>
+</ul>
+
+    <?php
+}
+
+?>
+
+<nav>
+<?php
+foreach ( $genre_terms as $genre_term ) {
+    $genre_term_query = new WP_Query( array(
+        'post_type' => 'books',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'genre',
+                'terms' => array( $genre_term->slug ),
+                'operator' => 'IN'
+            )
+        )
+    ) );
+    ?>
+
+    <a href="#"><?php echo $genre_term->name; ?></a> <?php
+
+    $genre_term_query = null;
+    wp_reset_postdata();
+}
+
+?>
+</nav>
+
+</div>
+
 <div id="quote" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden">&nbsp;</div>

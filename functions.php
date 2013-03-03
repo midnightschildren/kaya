@@ -94,7 +94,74 @@ function niceTime( $time )
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	
 	======================================================================================================================== */
+register_post_type('books', array(	'label' => 'Books','description' => 'Kaya Press books!','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'taxonomies' => array('Genres',),'labels' => array (
+  'name' => 'Books',
+  'singular_name' => 'Book',
+  'menu_name' => 'Books',
+  'add_new' => 'Add Book',
+  'add_new_item' => 'Add New Book',
+  'edit' => 'Edit',
+  'edit_item' => 'Edit Book',
+  'new_item' => 'New Book',
+  'view' => 'View Book',
+  'view_item' => 'View Book',
+  'search_items' => 'Search Books',
+  'not_found' => 'No Books Found',
+  'not_found_in_trash' => 'No Books Found in Trash',
+  'parent' => 'Parent Book',
+),) );
 
+register_post_type('authors', array(	'label' => 'Authors','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'labels' => array (
+  'name' => 'Authors',
+  'singular_name' => 'Author',
+  'menu_name' => 'Authors',
+  'add_new' => 'Add Author',
+  'add_new_item' => 'Add New Author',
+  'edit' => 'Edit',
+  'edit_item' => 'Edit Author',
+  'new_item' => 'New Author',
+  'view' => 'View Author',
+  'view_item' => 'View Author',
+  'search_items' => 'Search Authors',
+  'not_found' => 'No Authors Found',
+  'not_found_in_trash' => 'No Authors Found in Trash',
+  'parent' => 'Parent Author',
+),) );
+
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_book_taxonomies', 0 );
+
+//create two taxonomies, genres and writers for the post type "book"
+function create_book_taxonomies() 
+{
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'                => _x( 'Genres', 'taxonomy general name' ),
+    'singular_name'       => _x( 'Genre', 'taxonomy singular name' ),
+    'search_items'        => __( 'Search Genres' ),
+    'all_items'           => __( 'All Genres' ),
+    'parent_item'         => __( 'Parent Genre' ),
+    'parent_item_colon'   => __( 'Parent Genre:' ),
+    'edit_item'           => __( 'Edit Genre' ), 
+    'update_item'         => __( 'Update Genre' ),
+    'add_new_item'        => __( 'Add New Genre' ),
+    'new_item_name'       => __( 'New Genre Name' ),
+    'menu_name'           => __( 'Genre' )
+  ); 	
+
+  $args = array(
+    'hierarchical'        => true,
+    'labels'              => $labels,
+    'show_ui'             => true,
+    'show_admin_column'   => true,
+    'query_var'           => true,
+    'rewrite'             => array( 'slug' => 'genre' )
+  );
+
+  register_taxonomy( 'genre', array( 'books' ), $args );
+
+}
 
 
 	/* ========================================================================================================================
@@ -119,7 +186,7 @@ if( !is_admin()){
 	function starkers_script_enqueuer() {
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
-		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.min.js', array( 'jquery' ) );
+		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.custom.63321.js', array( 'jquery' ) );
 		wp_enqueue_script( 'modern' );
 	    wp_register_script( 'animatedcollapse', get_template_directory_uri().'/js/animatedcollapse.js', array( 'jquery' ) );
 		wp_enqueue_script( 'animatedcollapse' );
@@ -131,6 +198,8 @@ if( !is_admin()){
 		wp_enqueue_script( 'hammer' );
 		wp_register_script( 'responsiveCarousel', get_template_directory_uri().'/js/responsiveCarousel.js', array( 'jquery' ) );
 		wp_enqueue_script( 'responsiveCarousel' );
+		wp_register_script( 'catslider', get_template_directory_uri().'/js/jquery.catslider.js', array( 'jquery' ) );
+		wp_enqueue_script( 'catslider' );
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
