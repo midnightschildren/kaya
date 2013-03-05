@@ -117,17 +117,19 @@ Template Name: Home Page
     });
 
 </script>
-
-<div id="mi-slider" class="mi-slider grid-whole">
-
-<?php
-$genre_terms = get_terms( 'genres');
-?>
+<div id="books" class="grid-whole">
+<div id="mi-slider" class="mi-slider">
 
 <?php
+$genre_terms = get_terms( 'genres',  array(
+    'number' => 6
+));
+
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query2 = new WP_Query( array(
         'post_type' => 'books',
+        'posts_per_page' => 5,
+        'orderby' => 'rand',
         'tax_query' => array(
             array(
                 'taxonomy' => 'genres',
@@ -143,15 +145,10 @@ foreach ( $genre_terms as $genre_term ) {
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
     
-        <li> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a>
-<div id="bookinfo">                
-    <div id="btitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
-<?php global $post;
-echo $post->ID; 
-var_dump( get_field('relationship') );?>
-<?php foreach(get_field('author') as $post_object): ?>
-By <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></div></li>
-<?php endforeach; ?>
+<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> by 
+    <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
+    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
+<?php endforeach; wp_reset_postdata(); endif;?>
     <?php endwhile; endif; ?>
 </ul>
 
@@ -159,8 +156,8 @@ By <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_t
 }
 
 ?>
-
-<nav>
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+<nav class="grid-14 s-grid-16 m-grid-16">
 <?php
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query = new WP_Query( array(
@@ -175,7 +172,7 @@ foreach ( $genre_terms as $genre_term ) {
     ) );
     ?>
 
-    <a href="#"><?php echo $genre_term->name; ?></a> <?php
+    <a href="#"><?php echo $genre_term->name; ?></a><?php
 
     $genre_term_query = null;
     wp_reset_postdata();
@@ -183,7 +180,9 @@ foreach ( $genre_terms as $genre_term ) {
 
 ?>
 </nav>
-
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+<div class="clearit"></div>
+</div>
 </div>
 
 <div id="quote" class="grid-whole">
