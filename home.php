@@ -118,6 +118,8 @@ Template Name: Home Page
 
 </script>
 <div id="books" class="grid-whole">
+<h2 class="white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
+
 <div id="mi-slider" class="mi-slider">
 
 <?php
@@ -156,8 +158,8 @@ foreach ( $genre_terms as $genre_term ) {
 }
 
 ?>
-<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
-<nav class="grid-14 s-grid-16 m-grid-16">
+
+<nav>
 <?php
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query = new WP_Query( array(
@@ -180,7 +182,7 @@ foreach ( $genre_terms as $genre_term ) {
 
 ?>
 </nav>
-<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+
 <div class="clearit"></div>
 </div>
 </div>
