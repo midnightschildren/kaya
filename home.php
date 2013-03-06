@@ -118,7 +118,7 @@ Template Name: Home Page
 
 </script>
 <div id="books" class="grid-whole">
-<h2 class="white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
+<h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
 
 <div id="mi-slider" class="mi-slider">
 
