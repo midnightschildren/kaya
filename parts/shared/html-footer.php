@@ -5,6 +5,9 @@
 
 				$( '#mi-slider' ).catslider();
 
+				
+
+
 			});
 		</script>
 	</body>

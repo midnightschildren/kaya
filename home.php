@@ -124,7 +124,7 @@ Template Name: Home Page
 
 <?php
 $genre_terms = get_terms( 'genres',  array(
-    'number' => 6
+    'number' => 5
 ));
 
 foreach ( $genre_terms as $genre_term ) {

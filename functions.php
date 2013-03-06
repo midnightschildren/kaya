@@ -162,7 +162,7 @@ if( !is_admin()){
 	function starkers_script_enqueuer() {
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
-		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.custom.63321.js', array( 'jquery' ) );
+		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'modern' );
 	    wp_register_script( 'animatedcollapse', get_template_directory_uri().'/js/animatedcollapse.js', array( 'jquery' ) );
 		wp_enqueue_script( 'animatedcollapse' );

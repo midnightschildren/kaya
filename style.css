@@ -725,11 +725,23 @@ it with your own stuff.  */
 
 @media screen and (-webkit-min-device-pixel-ratio:2) {
 
+.mi-slider nav {
+  width: 98%;
+
+}
+
 .mi-slider nav a {
   font-size: 10px;
   font-size: .85714826em;
   padding: 30px 5px 30px 5px;
   }
+
+.mi-slider, #books {
+
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+
+}
 
 }
 
