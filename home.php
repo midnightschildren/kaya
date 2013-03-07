@@ -189,15 +189,15 @@ foreach ( $genre_terms as $genre_term ) {
 <div class="grid-whole papertop"></div>
 <div id="newsandevents" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
-<div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-12 s-grid-16 m-grid-14">
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+<div class="grid-12 s-grid-whole m-grid-whole">
 
-<div id="events" class="grid-half padded-inner">
+<div id="events" class="grid-half s-grid-whole padded-inner">
 
 </div>
 
-<div id="by_author_news" class="grid-half padded-inner">
-
+<div id="by_author_news" class="grid-half s-grid-whole padded-inner">
+<h2 class="diaspora gray">author news</h2>
 <?php
 $author_query = new WP_Query( array(
         'post_type' => 'post',
@@ -206,18 +206,22 @@ $author_query = new WP_Query( array(
         
     ) )
     ?>
-<ul>
+
 
 <?php if ($author_query->have_posts()) : while ($author_query->have_posts()) : $author_query->the_post(); ?>
+<div class="grid-whole">
+<div class="grid-5 padded-inner"><?php $posts = get_field('news_by_author');if ($posts): foreach($posts as $post_object): ?>
+    <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'category-thumb'); ?></a></div>
+<?php endforeach;  endif;?>
+    <div class="grid-11 padded-inner"><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br /><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+</div>
+<?php endwhile; endif; ?>
 
-<li><div class="grid-5">&nbsp;</div><div class="grid-11"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div></li>
-
-<?php wp_reset_postdata(); endwhile; endif; ?>
 </div>
 
 
 </div>
-<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 </div>
 <div class="grid-whole paper"></div>
