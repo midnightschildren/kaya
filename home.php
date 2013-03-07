@@ -186,6 +186,42 @@ foreach ( $genre_terms as $genre_term ) {
 <div class="clearit"></div>
 </div>
 </div>
+<div class="grid-whole papertop"></div>
+<div id="newsandevents" class="grid-whole">
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="grid-12 s-grid-16 m-grid-14">
+
+<div id="events" class="grid-half padded-inner">
+
+</div>
+
+<div id="by_author_news" class="grid-half padded-inner">
+
+<?php
+$author_query = new WP_Query( array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'meta_key' => 'news_by_author'
+        
+    ) )
+    ?>
+<ul>
+
+<?php if ($author_query->have_posts()) : while ($author_query->have_posts()) : $author_query->the_post(); ?>
+
+<li><div class="grid-5">&nbsp;</div><div class="grid-11"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div></li>
+
+<?php wp_reset_postdata(); endwhile; endif; ?>
+</div>
+
+
+</div>
+<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+</div>
+<div class="grid-whole paper"></div>
+
 
 <div id="quote" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>

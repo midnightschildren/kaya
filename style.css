@@ -348,7 +348,6 @@ it with your own stuff.  */
   position: absolute;
   width: 100%;
   left: 0;
-  
   overflow: hidden;
   text-align: center;
   pointer-events: none;
@@ -879,9 +878,25 @@ hr.foot_rule {
 
 .paper {
 	height: 12px;
-	background-image: url('http://kaya.codisattva.com/wp-content/uploads/2013/02/paper.png');
+	background-image: url('paper.png');
 	background-repeat: repeat-x;
   z-index: 100;
+}
+
+.papertop {
+  height: 12px;
+  background-image: url('papertop.png');
+  background-repeat: repeat-x;
+  z-index: 100;
+}
+
+#newsandevents {
+  background-color: #fff;
+}
+
+#quote {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #twitter_icon {
