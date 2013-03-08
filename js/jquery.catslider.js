@@ -39,10 +39,7 @@
 			}
 			// current nav category
 			this.$navcategories.eq( 0 ).addClass( 'mi-selected' );
-			if (Modernizr.touch)  {
-				$(".mi-selected").click(function(){ // Update class to point at the head of the list
-				});
-			}
+			
 			// initialize the events
 			this._initEvents();
 
@@ -60,10 +57,7 @@
 				self.$categories.removeClass().eq( 0 ).addClass( 'mi-current' );
 				self.$navcategories.eq( self.current ).removeClass( 'mi-selected' ).end().eq( 0 ).addClass( 'mi-selected' );
 				self.current = 0;
-				if (Modernizr.touch)  {
-					$(".mi-selected").click(function(){ // Update class to point at the head of the list
-					});
-				}
+				
 			} );
 
 		},

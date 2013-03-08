@@ -404,6 +404,11 @@ it with your own stuff.  */
   line-height:1rem;
 }
 
+.bookcover {
+  max-width: 169px;
+  margin: 0 auto;
+}
+
 .mi-slider ul li a {
   outline: none;
   cursor: pointer;
@@ -1147,6 +1152,17 @@ h2  {
   font-family: "dincondensed",sans-serif;
   font-size: 14px;
   font-size: 1em;
+}
+
+.author_name {
+  font-weight: bold;
+}
+
+.author_title {
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.71428571em;
+  text-transform: uppercase;
 }
 
 .quote, .attribution {

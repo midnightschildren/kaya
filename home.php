@@ -147,7 +147,7 @@ foreach ( $genre_terms as $genre_term ) {
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
     
-<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> by 
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> by 
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -193,6 +193,7 @@ foreach ( $genre_terms as $genre_term ) {
 <div class="grid-12 s-grid-whole m-grid-whole">
 
 <div id="events" class="grid-half s-grid-whole padded-inner">
+<h2 class="diaspora gray">kaya events</h2>
 
 </div>
 
@@ -213,10 +214,10 @@ $author_query = new WP_Query( array(
 <div class="grid-5 padded-inner"><?php $posts = get_field('news_by_author');if ($posts): foreach($posts as $post_object): ?>
     <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'category-thumb'); ?></a></div>
 <?php endforeach;  endif;?>
-    <div class="grid-11 padded-inner"><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br /><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+    <div class="grid-11 padded-inner"><a class="author_name" href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br /><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>
 <?php endwhile; endif; ?>
-
+<div class="grid-5 padded-inner">&nbsp;</div><div class="grid-11 padded-inner"><a class="author_name" href="/authors" style="text-transform:uppercase;">see all author news</a></div>
 </div>
 
 
