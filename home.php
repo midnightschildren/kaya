@@ -194,6 +194,24 @@ foreach ( $genre_terms as $genre_term ) {
 
 <div id="events" class="grid-half s-grid-whole padded-inner">
 <h2 class="diaspora gray">kaya events</h2>
+<?php
+$events_query = new WP_Query( array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'category__in' => 7,
+        'category__not_in' => 54
+        
+    ) )
+    ?>
+<?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
+<div class="grid-whole">
+<div class="grid-3 padded-right padded-topcont"><h2 class="diaspora event_date"><?php the_time('m/d') ?></h2></div>
+
+    <div class="grid-13 padded-inner"><a class="event_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+</div>
+<?php endwhile; endif; ?>
+<div class="grid-3 padded-right padded-topcont">&nbsp;</div><div class="grid-13 padded-inner"><a class="author_name" href="/events" style="text-transform:uppercase;">see all events</a></div>
+
 
 </div>
 
@@ -203,7 +221,9 @@ foreach ( $genre_terms as $genre_term ) {
 $author_query = new WP_Query( array(
         'post_type' => 'post',
         'posts_per_page' => 3,
-        'meta_key' => 'news_by_author'
+        'meta_key' => 'news_by_author',
+        'meta_value' => ' ',
+        'meta_compare' => '!='
         
     ) )
     ?>

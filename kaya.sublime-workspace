@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"genre",
+				"genre_term_query2"
+			],
+			[
 				"tex",
 				"text-decoration"
 			],
@@ -40,14 +44,6 @@
 	"buffers":
 	[
 		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 28289,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "parts/shared/header.php",
 			"settings":
 			{
@@ -59,7 +55,7 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 5880,
+				"buffer_size": 8162,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,15 +63,31 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 4870,
+				"buffer_size": 8574,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "parts/shared/footer.php",
+			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 11000,
+				"buffer_size": 36916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "if (Modernizr.touch)  {\n				$(\".mi-selected\").click(function(){ // Update class to point at the head of the list\n				});\n			}",
+			"settings":
+			{
+				"buffer_size": 125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/jquery.catslider.js",
+			"settings":
+			{
+				"buffer_size": 3940,
 				"line_ending": "Unix"
 			}
 		}
@@ -116,15 +128,19 @@
 	},
 	"file_history":
 	[
+		"/Users/amar/Desktop/Siglio/amar siglio.rtf",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/footer.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-header.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/modernizr.min.js",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/jquery.catslider.js",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/searchform.php",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/responsiveCarousel.js",
-		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
 		"/Users/amar/Desktop/Codisattva Projects:Clients/LMU-Loglines/LMU Deployment/codi-lmu/header.php",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/js/collapse.js",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/sftp-config.json",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/screenshot.png",
 		"/Users/amar/Desktop/Siglio/Round 3 corrections/amar siglio(1).rtf",
-		"/Users/amar/Desktop/Siglio/amar siglio.rtf",
 		"/Users/amar/Desktop/Playfair-webfontkit-20130213-194516/stylesheet.css",
 		"/Users/amar/Desktop/Codisattva Projects:Clients/LMU-Loglines/LMU/codi-lmu/style.css",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya Theme/functions.php",
@@ -198,6 +214,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tests['touch'] = function()",
+			"touch",
 			"16px",
 			"Helvetica",
 			"color: #fff",
@@ -286,23 +304,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "style.css",
+					"file": "parts/shared/header.php",
 					"settings":
 					{
-						"buffer_size": 28289,
+						"buffer_size": 1484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6703,
-								6703
+								1483,
+								1447
 							]
 						],
 						"settings":
@@ -398,30 +416,29 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2242.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "parts/shared/header.php",
+					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 1484,
+						"buffer_size": 8162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1484,
-								1484
+								1458,
+								1458
 							]
 						],
 						"settings":
@@ -528,18 +545,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "functions.php",
+					"file": "home.php",
 					"settings":
 					{
-						"buffer_size": 5880,
+						"buffer_size": 8574,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3808,
-								3808
+								7768,
+								7768
 							]
 						],
 						"settings":
@@ -636,28 +653,29 @@
 							"sublimelinter_wrap_find": true,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1497.0,
+						"translation.y": 2613.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "home.php",
+					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 4870,
+						"buffer_size": 36916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								482,
-								482
+								26032,
+								26032
 							]
 						],
 						"settings":
@@ -753,28 +771,56 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 73.0,
+						"translation.y": 16814.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "parts/shared/footer.php",
 					"settings":
 					{
-						"buffer_size": 11000,
+						"buffer_size": 125,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9967,
-								9967
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/jquery.catslider.js",
+					"settings":
+					{
+						"buffer_size": 3940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1667,
+								1667
 							]
 						],
 						"settings":
@@ -870,11 +916,11 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1588.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1046,6 +1092,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true
 }

@@ -1094,6 +1094,10 @@ header a {
   font-family: "dincondensed",sans-serif;
 }
 
+.event_date {
+  line-height: 1em;
+}
+
 .entry-content a {
   color: #2e3192;
   text-decoration: none;
@@ -1156,6 +1160,11 @@ h2  {
 
 .author_name {
   font-weight: bold;
+}
+
+.event_title {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .author_title {
