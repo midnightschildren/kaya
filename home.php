@@ -194,6 +194,24 @@ foreach ( $genre_terms as $genre_term ) {
 
 <div id="events" class="grid-half s-grid-whole padded-inner">
 <h2 class="diaspora gray">kaya events</h2>
+
+<?php
+$events_query = new WP_Query( array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'category__in' => 54
+        
+        
+    ) )
+    ?>
+<?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
+<div class="grid-whole">
+<div class="grid-5 padded-topcont"><?php the_post_thumbnail('featured-event'); ?></div>
+
+    <div class="grid-11 padded-inner"><h2 class="diaspora event_date"><?php the_time('m/d') ?></h2><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+</div>
+<?php endwhile; endif; ?>
+
 <?php
 $events_query = new WP_Query( array(
         'post_type' => 'post',
