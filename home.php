@@ -144,7 +144,7 @@ foreach ( $genre_terms as $genre_term ) {
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
     
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> by 
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>

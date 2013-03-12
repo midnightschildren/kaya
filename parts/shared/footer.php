@@ -153,7 +153,7 @@ cj(document).ready(function(){
 		<footer>
 			<img class="alignnone size-tiger padded-vertical" alt="tiger-logo" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/tiger-logo.png" width="124" height="100" />
 			<p class="foot_about padded-top"><strong>Kaya Press</strong> is a publisher of Asian Pacific Diasporas and is under the academic auspices of the USC Dana and David Dornsife College of Letters, Arts and Sciences.</p>
-			<p class="foot">&copy; copyright <?php echo date("Y"); ?><br />kaya press</p>
+			<p class="foot">&copy; copyright <?php echo date("Y"); ?> kaya press</p>
 		</footer>
 	</div>	
 </div>

@@ -99,48 +99,6 @@ function niceTime( $time )
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	
 	======================================================================================================================== */
-register_post_type('books', array( 'label' => 'Books','description' => 'Kaya Press books!','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'taxonomies' => array('Genres',),'labels' => array (
-  'name' => 'Books',
-  'singular_name' => 'Book',
-  'menu_name' => 'Books',
-  'add_new' => 'Add Book',
-  'add_new_item' => 'Add New Book',
-  'edit' => 'Edit',
-  'edit_item' => 'Edit Book',
-  'new_item' => 'New Book',
-  'view' => 'View Book',
-  'view_item' => 'View Book',
-  'search_items' => 'Search Books',
-  'not_found' => 'No Books Found',
-  'not_found_in_trash' => 'No Books Found in Trash',
-  'parent' => 'Parent Book',
-),) );
-
-register_post_type('authors', array( 'label' => 'Authors','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'labels' => array (
-  'name' => 'Authors',
-  'singular_name' => 'Author',
-  'menu_name' => 'Authors',
-  'add_new' => 'Add Author',
-  'add_new_item' => 'Add New Author',
-  'edit' => 'Edit',
-  'edit_item' => 'Edit Author',
-  'new_item' => 'New Author',
-  'view' => 'View Author',
-  'view_item' => 'View Author',
-  'search_items' => 'Search Authors',
-  'not_found' => 'No Authors Found',
-  'not_found_in_trash' => 'No Authors Found in Trash',
-  'parent' => 'Parent Author',
-),) );
-
-register_taxonomy('genres',array (
-  0 => 'books',
-),array( 'hierarchical' => true, 'label' => 'Genre','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Genre') );
-
-register_taxonomy('kaya_authors',array (
-  0 => 'authors',
-),array( 'hierarchical' => false, 'label' => 'Author_Taxonomy','show_ui' => true,'query_var' => true,'rewrite' => array('slug' => ''),'singular_label' => 'Author') );
-
 
 	/* ========================================================================================================================
 	
