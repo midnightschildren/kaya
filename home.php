@@ -34,7 +34,8 @@ $slide_query = new WP_Query( array(
                 <ul class="slider-target">
                 <?php if ($slide_query->have_posts()) : while ($slide_query->have_posts()) : $slide_query->the_post(); ?>
                     <li class="slid">
-                        <div class="inner"><div class="opmask"><?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?></div></div>
+                        <div class="inner"><div class="opmask"><?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?>
+                            <div class="slide-title"><?php the_title(); ?> <a class="slide_link" href="">read on</a></div></div></div>
                     </li>
                 <?php endwhile; endif; $slide_query = null; wp_reset_postdata();?>   
                 </ul>
@@ -268,7 +269,7 @@ $author_query = new WP_Query( array(
 <div id="quote" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-12 s-grid-16 m-grid-14 center">
+<div class="padded-inner grid-12 s-grid-16 m-grid-14 center">
 <?php
  
 if(get_field('quote_home'))

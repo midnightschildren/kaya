@@ -281,6 +281,26 @@ it with your own stuff.  */
     opacity: 1;
 }
 
+.slide-title {
+  position: absolute;
+  bottom: 0px;
+  background-color: #000;
+  line-height: 1em;
+  max-width: 75%;
+  color: #fff;
+  font-family: dincondensed, sans-serif;
+  font-size: 2em;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.slide_link {
+  text-decoration: none;
+  font-size: 14px;
+  font-size: .5em;
+}
+
 .examples {
     margin-top: -5px;
     background-color: #000;
@@ -1451,6 +1471,11 @@ input, input[type="search"] {
     background-color: transparent;
 }
 
+.slide-title {
+    font-size: 20px;
+    font-size: 1.42857143em;
+}
+
 /* position the left arrow */
 .arrow-left {
     left: 2%;
@@ -1632,8 +1657,12 @@ input, input[type="search"] {
 
   /* miscellaneous helper classes */
   .menu li {
-	padding-left: .5em;
-}
+	padding-left: .5em;}
+
+  .slide-title {
+    font-size: 24px;
+    font-size: 1.71428571em;}
+
   .m-flow-opposite {
     float: right; }
 
