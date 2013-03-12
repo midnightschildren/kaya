@@ -13,6 +13,15 @@ Template Name: Home Page
 
 <div id="slideshow" class="grid-whole">
 
+<?php
+$slide_query = new WP_Query( array(
+        'post_type' => 'slides',
+        'posts_per_page' => 6
+                
+    ) )
+?>
+
+
 
 <div class="examples" id="example-3">
     <div class="slider">
@@ -23,24 +32,11 @@ Template Name: Home Page
         <div class="slider-mask-wrap">
             <div class="slider-mask">
                 <ul class="slider-target">
+                <?php if ($slide_query->have_posts()) : while ($slide_query->have_posts()) : $slide_query->the_post(); ?>
                     <li class="slid">
-                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide1.jpg"></div></div>
+                        <div class="inner"><div class="opmask"><?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?></div></div>
                     </li>
-                    <li class="slid">
-                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide2.jpg"></div></div>
-                    </li>
-                    <li class="slid">
-                        <div class="inner"><div class="opmask"><img class="size-slide" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/slide3.jpg"></div></div>
-                    </li>
-                    <li class="slid">
-                        <div class="inner"><div class="opmask">Four</div></div>
-                    </li>
-                    <li class="slid">
-                        <div class="inner"><div class="opmask">Five</div></div>
-                    </li>
-                    <li class="slid">
-                        <div class="inner"><div class="opmask">Six</div></div>
-                    </li>
+                <?php endwhile; endif; $slide_query = null; wp_reset_postdata();?>   
                 </ul>
                 <div class="clearit"></div>
             </div>
@@ -196,7 +192,7 @@ foreach ( $genre_terms as $genre_term ) {
 <h2 class="diaspora gray">kaya events</h2>
 
 <?php
-$events_query = new WP_Query( array(
+$feature_query = new WP_Query( array(
         'post_type' => 'post',
         'posts_per_page' => 1,
         'category__in' => 54
@@ -204,13 +200,14 @@ $events_query = new WP_Query( array(
         
     ) )
     ?>
-<?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
+<?php if ($feature_query->have_posts()) : while ($feature_query->have_posts()) : $feature_query->the_post(); ?>
 <div class="grid-whole">
 <div class="grid-5 padded-topcont"><?php the_post_thumbnail('featured-event'); ?></div>
 
-    <div class="grid-11 padded-inner"><h2 class="diaspora event_date"><?php the_time('m/d') ?></h2><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+    <div class="grid-11 padded-inner"><h2 class="diaspora event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>
-<?php endwhile; endif; ?>
+<?php endwhile; endif; $feature_query = null;
+    wp_reset_postdata();?>
 
 <?php
 $events_query = new WP_Query( array(
@@ -223,11 +220,12 @@ $events_query = new WP_Query( array(
     ?>
 <?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
 <div class="grid-whole">
-<div class="grid-3 padded-right padded-topcont"><h2 class="diaspora event_date"><?php the_time('m/d') ?></h2></div>
+<div class="grid-3 padded-right padded-topcont"><h2 class="diaspora event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2></div>
 
     <div class="grid-13 padded-inner"><a class="event_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>
-<?php endwhile; endif; ?>
+<?php endwhile; endif; $events_query = null;
+    wp_reset_postdata(); ?>
 <div class="grid-3 padded-right padded-topcont">&nbsp;</div><div class="grid-13 padded-inner"><a class="author_name" href="/events" style="text-transform:uppercase;">see all events</a></div>
 
 
@@ -254,7 +252,8 @@ $author_query = new WP_Query( array(
 <?php endforeach;  endif;?>
     <div class="grid-11 padded-inner"><a class="author_name" href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br /><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>
-<?php endwhile; endif; ?>
+<?php endwhile; endif; $author_query = null;
+    wp_reset_postdata();?>
 <div class="grid-5 padded-inner">&nbsp;</div><div class="grid-11 padded-inner"><a class="author_name" href="/authors" style="text-transform:uppercase;">see all author news</a></div>
 </div>
 

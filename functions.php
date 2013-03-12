@@ -41,6 +41,7 @@
 	add_theme_support('post-thumbnails');
   	add_image_size('category-thumb', 169, 239, true); 
   	add_image_size('featured-event', 160, 130, true);
+  	add_image_size('featured-slide', 850, 700, true);
 
 	/* ========================================================================================================================
 	
@@ -98,7 +99,7 @@ function niceTime( $time )
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	
 	======================================================================================================================== */
-register_post_type('books', array(	'label' => 'Books','description' => 'Kaya Press books!','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'taxonomies' => array('Genres',),'labels' => array (
+register_post_type('books', array( 'label' => 'Books','description' => 'Kaya Press books!','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'taxonomies' => array('Genres',),'labels' => array (
   'name' => 'Books',
   'singular_name' => 'Book',
   'menu_name' => 'Books',
@@ -115,7 +116,7 @@ register_post_type('books', array(	'label' => 'Books','description' => 'Kaya Pre
   'parent' => 'Parent Book',
 ),) );
 
-register_post_type('authors', array(	'label' => 'Authors','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'labels' => array (
+register_post_type('authors', array( 'label' => 'Authors','description' => '','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => ''),'query_var' => true,'supports' => array('title','comments','revisions','thumbnail','author',),'labels' => array (
   'name' => 'Authors',
   'singular_name' => 'Author',
   'menu_name' => 'Authors',

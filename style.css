@@ -173,6 +173,7 @@ tag */
 /* position the left arrow */
 .arrow-left {
     left: 8%;
+    padding-left: 3px;
 }
 
 /* position the right arrow */
@@ -1418,8 +1419,18 @@ h2  {
   letter-spacing: 0em;
 }
 
-.menu li {
-	padding-left: 0.5em;
+
+.searchlink {
+  padding-right: .4em;
+}
+
+.arrow-container {
+  right: 50px;
+}
+
+header a {
+  font-size: 15px;
+  font-size: 1.07142857em;
 }
 
 input, input[type="search"] {
@@ -1435,6 +1446,25 @@ input, input[type="search"] {
 	line-height: 1.5em;
 }
 
+.slider-mask-wrap {
+    margin: 0 -40%;
+    background-color: transparent;
+}
+
+/* position the left arrow */
+.arrow-left {
+    left: 2%;
+    padding-left: 3px;
+}
+
+/* position the right arrow */
+.arrow-right {
+    right: 2%;
+}
+
+.arrow {
+    padding-top: 20%;
+}
 
 #search, #searcha {
 	height: 50px;
@@ -1815,12 +1845,18 @@ hr.foot_rule {
 
 					{ /* Place your styles here for all 'Retina' screens */ }
 
-.menu li {
+.menu a {
 	font-weight: bold;
 	text-transform:uppercase;
 	font-family: "dincondensed",sans-serif;
 	font-size: 12px;
-	font-size: .875em; 
+	font-size: .875em;
+  padding-left: .1em;
+
+}
+
+.padded-tops {
+  padding-top: 21px;
 }
 
 .searchlink {
@@ -1828,6 +1864,7 @@ hr.foot_rule {
 	font-family: "dincondensed", sans-serif;
 	font-size: 12px;
 	font-size: .875em;
+
 }
 
 }

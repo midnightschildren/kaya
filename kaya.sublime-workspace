@@ -55,7 +55,7 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 8162,
+				"buffer_size": 8215,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +63,7 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 8574,
+				"buffer_size": 10167,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,15 +71,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 36916,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "if (Modernizr.touch)  {\n				$(\".mi-selected\").click(function(){ // Update class to point at the head of the list\n				});\n			}",
-			"settings":
-			{
-				"buffer_size": 125,
+				"buffer_size": 37021,
 				"line_ending": "Unix"
 			}
 		},
@@ -430,15 +422,15 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 8162,
+						"buffer_size": 8215,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1458,
-								1458
+								1501,
+								1487
 							]
 						],
 						"settings":
@@ -538,7 +530,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 97.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -548,15 +540,15 @@
 					"file": "home.php",
 					"settings":
 					{
-						"buffer_size": 8574,
+						"buffer_size": 10167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7768,
-								7768
+								6892,
+								6892
 							]
 						],
 						"settings":
@@ -657,7 +649,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2613.0,
+						"translation.y": 2652.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -667,15 +659,15 @@
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 36916,
+						"buffer_size": 37021,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26032,
-								26032
+								28379,
+								28360
 							]
 						],
 						"settings":
@@ -776,39 +768,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 16814.0,
+						"translation.y": 19060.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "js/jquery.catslider.js",
 					"settings":
 					{
