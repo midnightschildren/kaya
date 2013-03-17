@@ -5,11 +5,7 @@ Template Name: Kaya Authors Page
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content(); ?>
 
-<?php endwhile; ?>
 <div id="quote" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden">&nbsp;</div>
@@ -25,8 +21,10 @@ $quote_query = new WP_Query( array(
     ) )
     ?>
 <?php if ($quote_query->have_posts()) : while ($quote_query->have_posts()) : $quote_query->the_post(); ?>
-	<h2><?php the_title(); ?></h2>
+	<p class="quote"><?php the_field('quote_text'); ?></p>
+	<p class="attribution"><?php the_field('quote_attribution'); ?></p>
 <?php endwhile; endif; ?>	
+
 </div>
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
