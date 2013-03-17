@@ -209,7 +209,7 @@ you account for it.  To future-proof your design from messups caused by updates
 to the css in the future, apply spacing and positioning to this div, and not
 directly to the mask. */
 .slider-mask-wrap {
-    margin: 0 -25%;
+    margin: 0 -20%;
     background-color: transparent;
 }
 
@@ -361,7 +361,7 @@ it with your own stuff.  */
 .mi-slider {
   position: relative;
   margin-top: 0px;
-  height: 460px;
+  height: 400px;
 }
 
 .mi-slider ul {
@@ -456,7 +456,7 @@ it with your own stuff.  */
 .mi-slider nav {
   position: relative;
   width:87.5%;
-  top: 350px;
+  top: 320px;
   text-align: center;
   margin: 0 auto;
   border-top: 6px solid #000;
@@ -470,7 +470,7 @@ it with your own stuff.  */
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 40px 30px 30px 34px;
+  padding: 35px 30px 20px 34px;
   position: relative;
   font-weight:bold;
   color: #333;
@@ -666,27 +666,33 @@ it with your own stuff.  */
 
 /* Media Queries */
 @media screen and (max-width: 1020px){
+
+  .mi-slider {
+    height: 380px;
+  }
+
   .mi-slider nav {
-    top: 330px;
+    top: 300px;
   }
   .mi-slider nav a {
     font-size: 14px;
     font-size: 1em;
-    padding: 40px 10px 30px 14px;
+    padding: 35px 10px 20px 14px;
   }
 
   .diaspora {
     font-size: 2em;
     font-size: 28px;
+
   }
 }
 
 @media screen and (max-width: 817px){
   .mi-slider {
-    height: 410px;
+    height: 355px;
   }
   .mi-slider nav {
-    top: 310px;
+    top: 275px;
     width: 100%;
   }
   .diaspora {
@@ -696,6 +702,15 @@ it with your own stuff.  */
 }
 
 @media screen and (max-width: 700px){
+
+  .mi-slider {
+    height: 335px;
+  }
+  .mi-slider nav {
+    top: 250px;
+    width: 100%;
+  }
+
   .diaspora {
     font-size: 1.42857143em;
     font-size: 20px;
@@ -711,7 +726,7 @@ it with your own stuff.  */
   }
 
   .mi-slider {
-    height: 250px;
+    height: 240px;
   }
 
   .mi-slider ul li {
@@ -719,14 +734,14 @@ it with your own stuff.  */
   }
 
   .mi-slider nav {
-    top: 175px;
+    top: 165px;
   }
 
   .mi-slider nav a {
   font-size: 14px;
   font-size: 1em;
   letter-spacing: 0px;
-  padding: 30px 6px 30px 5px;
+  padding: 30px 6px 20px 5px;
   }
 
   .booktitle {
