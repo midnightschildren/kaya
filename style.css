@@ -1895,12 +1895,21 @@ hr.foot_rule {
 	font-family: "dincondensed",sans-serif;
 	font-size: 12px;
 	font-size: .875em;
-  padding-left: .1em;
+  padding-left: 0em;
 
+}
+
+.menu li {
+  padding-left: .75em;
 }
 
 .padded-tops {
   padding-top: 21px;
+}
+
+.padded-topo {
+padding-top: 10px;
+padding-left: .5em;
 }
 
 .searchlink {
