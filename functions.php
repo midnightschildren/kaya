@@ -39,7 +39,8 @@
 ));
 
 	add_theme_support('post-thumbnails');
-  	add_image_size('category-thumb', 169, 239, true); 
+  	add_image_size('category-thumb', 169, 239, true);
+  	add_image_size('author-thumb', 125, 175, true); 
   	add_image_size('featured-event', 160, 130, true);
   	add_image_size('featured-slide', 850, 700, true);
 
