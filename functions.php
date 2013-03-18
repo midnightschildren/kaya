@@ -131,6 +131,10 @@ if( !is_admin()){
 		wp_enqueue_script( 'collapse' );
 		wp_register_script( 'jquery-ui', get_template_directory_uri().'/js/jquery-ui.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'jquery-ui' );
+
+		wp_register_script( 'equalize', get_template_directory_uri().'/js/equalize.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'equalize' );
+
 		wp_register_script( 'hammer', get_template_directory_uri().'/js/hammer.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'hammer' );
 		wp_register_script( 'responsiveCarousel', get_template_directory_uri().'/js/responsiveCarousel.js', array( 'jquery' ) );

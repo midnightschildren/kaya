@@ -931,7 +931,7 @@ hr.foot_rule {
   z-index: 100;
 }
 
-#newsandevents {
+#newsandevents, #author_landing {
   background-color: #fff;
 }
 
@@ -1144,6 +1144,18 @@ header a {
   text-decoration: none;
 }
 
+.content-box {
+  line-height: 1.5em;
+  font-size: 14px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "dincondensed",sans-serif;
+}
+
+.content-box a{
+  color: #000;
+}
+
 h1, 
 h2, 
 h3, 
@@ -1234,7 +1246,7 @@ h2  {
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) Extra Strength Responsive Grids (16)------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-.grid-all, .grid-1, .grid-2, .grid-3, .grid-4, .grid-quarter, .grid-5, .grid-third, .grid-6, .grid-7, .grid-8, .grid-half, .grid-9, .grid-10, .grid-11, .grid-12, .grid-three-quarters, .grid-13, .grid-14, .grid-15, .grid-16, .grid-whole {
+.grid-all, .grid-1, .grid-2, .grid-3, .grid-fifth, .grid-4, .grid-quarter, .grid-5, .grid-third, .grid-6, .grid-7, .grid-8, .grid-half, .grid-9, .grid-10, .grid-11, .grid-12, .grid-three-quarters, .grid-13, .grid-14, .grid-15, .grid-16, .grid-whole {
   margin: 0;
   clear: none;
   float: left;
@@ -1251,6 +1263,10 @@ h2  {
 
 .grid-3 {
   width: 18.75%; }
+
+.grid-fifth {
+  width: 20%;
+}
 
 .grid-4, .grid-quarter {
   width: 25%; }
@@ -1381,7 +1397,7 @@ h2  {
 /* Responsive Media Queries. */
 
 @media (max-width: 591px) {
-  .s-grid-all, .s-grid-1, .s-grid-2, .s-grid-3, .s-grid-4, .s-grid-quarter, .s-grid-5, .s-grid-6, .s-grid-7, .s-grid-8, .s-grid-half, .s-grid-9, .s-grid-10, .s-grid-11, .s-grid-12, .s-grid-three-quarters, .s-grid-13, .s-grid-14, .s-grid-15, .s-grid-16, .s-grid-whole {
+  .s-grid-all, .s-grid-1, .s-grid-2, .s-grid-3, .s-grid-4, .s-grid-quarter, .s-grid-5, .s-grid-third, .s-grid-6, .s-grid-7, .s-grid-8, .s-grid-half, .s-grid-9, .s-grid-10, .s-grid-11, .s-grid-12, .s-grid-three-quarters, .s-grid-13, .s-grid-14, .s-grid-15, .s-grid-16, .s-grid-whole {
     margin: 0;
     clear: none;
     float: left;
@@ -1404,6 +1420,9 @@ h2  {
 
   .s-grid-5 {
     width: 31.25%; }
+
+  .s-grid-third {
+  width: 33.333%; }
 
   .s-grid-6 {
     width: 37.5%; }
