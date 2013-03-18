@@ -19,9 +19,10 @@ $quote_query = new WP_Query( array(
         
         
     ) )
-    ?>
+?>
 <?php if ($quote_query->have_posts()) : while ($quote_query->have_posts()) : $quote_query->the_post(); ?>
-	<p class="quote"><?php the_field('quote_text'); ?></p>
+	<p class="quote"><?php $posts = get_field('quote_source');if ($posts): foreach($posts as $post_object): ?>
+    <a href="<?php echo get_permalink($post_object->ID); ?>"><?php endforeach; endif; ?><?php the_field('quote_text'); ?></a></p>
 	<p class="attribution"><?php the_field('quote_attribution'); ?></p>
 <?php endwhile; endif; ?>	
 
