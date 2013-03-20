@@ -4,8 +4,10 @@
 			$(function() {
 
 				$( '#mi-slider' ).catslider();
+				$( '#bi-slider' ).catslider();
+
 			});
-  
+
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/
   (function($,sr){
  

@@ -364,6 +364,11 @@ it with your own stuff.  */
   height: 400px;
 }
 
+#bi-slider.mi-slider {
+  padding-top: 100px;
+  height: 1200px;
+}
+
 .mi-slider ul {
   list-style-type: none;
   position: absolute;
@@ -392,10 +397,14 @@ it with your own stuff.  */
   vertical-align: top;
   width: 16%;
   max-width: 300px;
-  -webkit-transform: translateX(600%);
-  transform: translateX(600%);
+  -webkit-transform: translateX(700%);
+  transform: translateX(700%);
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+}
+
+#bi-slider.mi-slider ul li {
+  width: 14%;
 }
 
 .no-js .mi-slider ul li {
@@ -460,6 +469,11 @@ it with your own stuff.  */
   text-align: center;
   margin: 0 auto;
   border-top: 6px solid #000;
+}
+
+#bi-slider nav {
+  top: 0px;
+  background-color: #acaa9f;
 }
 
 .no-js nav {
@@ -616,43 +630,43 @@ it with your own stuff.  */
 /* Animations */
 
 @-webkit-keyframes moveFromRight {
-  0% { -webkit-transform: translateX(600%); }
+  0% { -webkit-transform: translateX(700%); }
   100% { -webkit-transform: translateX(0%); }
 }
 
 @-webkit-keyframes moveFromLeft {
-  0% { -webkit-transform: translateX(-600%); }
+  0% { -webkit-transform: translateX(-700%); }
   100% { -webkit-transform: translateX(0%); }
 }
 
 @-webkit-keyframes moveToRight {
   0% { -webkit-transform: translateX(0%); }
-  100% { -webkit-transform: translateX(600%); }
+  100% { -webkit-transform: translateX(700%); }
 }
 
 @-webkit-keyframes moveToLeft {
   0% { -webkit-transform: translateX(0%); }
-  100% { -webkit-transform: translateX(-600%); }
+  100% { -webkit-transform: translateX(-700%); }
 }
 
 @keyframes moveFromRight {
-  0% { transform: translateX(600%); }
+  0% { transform: translateX(700%); }
   100% { transform: translateX(0); }
 }
 
 @keyframes moveFromLeft {
-  0% { transform: translateX(-600%); }
+  0% { transform: translateX(-700%); }
   100% { transform: translateX(0); }
 }
 
 @keyframes moveToRight {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(600%); }
+  100% { transform: translateX(700%); }
 }
 
 @keyframes moveToLeft {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-600%); }
+  100% { transform: translateX(-700%); }
 }
 
 .mi-slider {
@@ -929,6 +943,12 @@ hr.foot_rule {
   background-image: url('papertop.png');
   background-repeat: repeat-x;
   z-index: 100;
+}
+
+.background-gray {
+  background-color: #acaa9f;
+  position: relative;
+  top: -100px;
 }
 
 #newsandevents, #author_landing {
