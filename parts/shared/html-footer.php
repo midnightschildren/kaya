@@ -8,12 +8,19 @@
 
 			});
 
+			$( window ).on( 'resize', function() {
+				$("#bi-slider").attr("class", "mi-slider allht");
+			});
 			$("#AllBtn").click(function() {
     		$("#bi-slider").attr("class", "mi-slider allht");
 			});
 
 			$("#FictionBtn").click(function() {
     		$("#bi-slider").attr("class", "mi-slider fictionht");
+			});
+
+			$("#Non-FictionBtn").click(function() {
+    		$("#bi-slider").attr("class", "mi-slider non-fictionht");
 			});
 
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/
