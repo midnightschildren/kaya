@@ -475,6 +475,7 @@ it with your own stuff.  */
 #bi-slider nav {
   top: 0px;
   background-color: #acaa9f;
+  z-index:999;
 }
 
 .no-js nav {
@@ -696,7 +697,7 @@ it with your own stuff.  */
   height: 700px;
   }
 
-#bi-slider.non-fictionht {
+#bi-slider.non-fictionht, #bi-slider.filmht {
   height: 350px;
   }
 
@@ -708,14 +709,18 @@ it with your own stuff.  */
   height: 2000px;
 }
 
-#bi-slider.non-fictionht {
+  #bi-slider.fictionht {
+  height: 700px;
+  }
+
+#bi-slider.non-fictionht, #bi-slider.filmht {
   height: 340px;
   }
 }
 
 @media screen and (max-width: 1200px){
 
-  #bi-slider.non-fictionht {
+  #bi-slider.non-fictionht, #bi-slider.filmht {
   height: 320px;
   }
 
@@ -736,7 +741,7 @@ it with your own stuff.  */
     height: 380px;
   }
 
-  #bi-slider.non-fictionht {
+  #bi-slider.non-fictionht, #bi-slider.filmht {
     height: 300px;
   }
 
@@ -770,11 +775,15 @@ it with your own stuff.  */
   }
 
   #bi-slider.allht {
-  height: 2000px;
+  height: 1950px;
   }
 
   #bi-slider.fictionht {
   height: 800px;
+  }
+
+  #bi-slider.non-fictionht, #bi-slider.filmht {
+    height: 280px;
   }
 
   .mi-slider nav {
@@ -816,7 +825,10 @@ it with your own stuff.  */
   #bi-slider.allht {
   height: 2225px;
   }
-
+  
+  #bi-slider.non-fictionht, #bi-slider.filmht {
+  height: 220px;
+  }
 }
 
 @media screen and (max-width: 591px){ 
@@ -861,6 +873,10 @@ it with your own stuff.  */
   height: 600px;
   }
 
+  #bi-slider.non-fictionht, #bi-slider.filmht {
+  height: 220px;
+  }
+
 }
 
 @media screen and (max-width: 480px){ 
@@ -886,6 +902,14 @@ it with your own stuff.  */
   height: 850px;
   }
 
+  #bi-slider.non-fictionht {
+  height: 440px;
+  }
+
+  #bi-slider.filmht {
+  height: 210px;
+  }
+
 }
 
 @media screen and (max-width: 400px){ 
@@ -898,6 +922,13 @@ it with your own stuff.  */
   height: 740px;
   }
 
+  #bi-slider.non-fictionht {
+  height: 400px;
+  }
+
+  #bi-slider.filmht {
+  height: 200px;
+  }
 }
 
 @media screen and (max-width: 320px){ 
@@ -910,6 +941,13 @@ it with your own stuff.  */
   height: 640px;
   }
 
+  #bi-slider.non-fictionht {
+  height: 320px;
+  }
+
+  #bi-slider.filmht {
+  height: 190px;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:2) {

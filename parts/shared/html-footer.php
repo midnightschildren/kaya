@@ -11,6 +11,7 @@
 			$( window ).on( 'resize', function() {
 				$("#bi-slider").attr("class", "mi-slider allht");
 			});
+			
 			$("#AllBtn").click(function() {
     		$("#bi-slider").attr("class", "mi-slider allht");
 			});
@@ -21,6 +22,14 @@
 
 			$("#Non-FictionBtn").click(function() {
     		$("#bi-slider").attr("class", "mi-slider non-fictionht");
+			});
+
+			$("#PerformanceBtn").click(function() {
+    		$("#bi-slider").attr("class", "mi-slider filmht");
+			});
+
+			$("#FilmBtn").click(function() {
+    		$("#bi-slider").attr("class", "mi-slider filmht");
 			});
 
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/

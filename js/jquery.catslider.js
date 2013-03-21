@@ -53,9 +53,11 @@
 
 			// reset on window resize..
 			$( window ).on( 'resize', function() {
+				if(!Modernizr.touch) {
 				self.$categories.removeClass().eq( 0 ).addClass( 'mi-current' );
 				self.$navcategories.eq( self.current ).removeClass( 'mi-selected' ).end().eq( 0 ).addClass( 'mi-selected' );
 				self.current = 0;
+				}
 			} );
 
 		},
