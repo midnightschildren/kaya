@@ -366,7 +366,10 @@ it with your own stuff.  */
 
 #bi-slider.mi-slider {
   padding-top: 100px;
-  height: 1200px;
+}
+
+#bi-slider.allht {
+  height: 2000px;
 }
 
 .mi-slider ul {
@@ -404,7 +407,8 @@ it with your own stuff.  */
 }
 
 #bi-slider.mi-slider ul li {
-  width: 14%;
+  width: 12.875%;
+  padding: 20px 10px;
 }
 
 .no-js .mi-slider ul li {
@@ -679,10 +683,32 @@ it with your own stuff.  */
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 1400px){
+
+#bi-slider.mi-slider ul li {
+  width: 14%;
+  padding: 20px 10px;
+}
+
+}
+
+@media screen and (max-width: 1200px){
+
+  #bi-slider.allht {
+  height: 1850px;
+  }
+
+}
+
 @media screen and (max-width: 1020px){
 
   .mi-slider {
     height: 380px;
+  }
+
+  #bi-slider.allht {
+  height: 1750px;
   }
 
   .mi-slider nav {
@@ -705,6 +731,11 @@ it with your own stuff.  */
   .mi-slider {
     height: 355px;
   }
+
+  #bi-slider.allht {
+  height: 2000px;
+  }
+
   .mi-slider nav {
     top: 275px;
     width: 100%;
@@ -712,6 +743,11 @@ it with your own stuff.  */
   .diaspora {
     font-size: 1.71428571em;
     font-size: 24px;
+  }
+
+  #bi-slider.mi-slider ul li {
+  width: 15%;
+  padding: 20px 10px;
   }
 }
 
@@ -729,6 +765,15 @@ it with your own stuff.  */
     font-size: 1.42857143em;
     font-size: 20px;
     line-height: 1.5em;
+  }
+
+  #bi-slider.mi-slider ul li {
+  width: 18%;
+  padding: 20px 10px;
+  }
+
+  #bi-slider.allht {
+  height: 2225px;
   }
 
 }
@@ -762,6 +807,15 @@ it with your own stuff.  */
     display: none;
   }
 
+  #bi-slider.mi-slider ul li {
+  width: 18%;
+  padding: 20px 10px;
+  }
+
+  #bi-slider.allht {
+  height: 1530px;
+  }
+
 }
 
 @media screen and (max-width: 480px){ 
@@ -774,6 +828,30 @@ it with your own stuff.  */
     top: 140px;
   }
 
+  #bi-slider.mi-slider ul li {
+  width: 25%;
+  padding: 20px 10px;
+}
+
+  #bi-slider.allht {
+  height: 2310px;
+  }
+
+}
+
+@media screen and (max-width: 400px){ 
+
+  #bi-slider.allht {
+  height: 2000px;
+  }
+
+}
+
+@media screen and (max-width: 320px){ 
+
+  #bi-slider.allht {
+  height: 1700px;
+  }
 
 }
 
@@ -1204,6 +1282,7 @@ h2  {
 .white {color: #fff;}
 .green {color: #dbef00;}
 .gray {color: #acaa9f;}
+.black {color: #000;}
 
 #footer-section h1 {
   font-weight: normal;

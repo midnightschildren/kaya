@@ -8,6 +8,14 @@
 
 			});
 
+			$("#AllBtn").click(function() {
+    		$("#bi-slider").attr("class", "mi-slider allht");
+			});
+
+			$("#FictionBtn").click(function() {
+    		$("#bi-slider").attr("class", "mi-slider fictionht");
+			});
+
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/
   (function($,sr){
  

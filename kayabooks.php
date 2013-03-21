@@ -8,7 +8,7 @@ Template Name: Kaya Books Page
 
 <div id="author_landing" class="grid-whole">
 
-<div id="bi-slider" class="mi-slider">
+<div id="bi-slider" class="mi-slider allht">
 
 <?php
 
@@ -24,7 +24,7 @@ Template Name: Kaya Books Page
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
     
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -34,8 +34,8 @@ Template Name: Kaya Books Page
 
 <?php
 $genre_terms = get_terms( 'genres',  array(
-    'number' => 7,
-    'exclude' => array (26, 30)
+    'number' => 5,
+    'exclude' => array (26, 31)
 )); ?>
 
 <?php
@@ -59,7 +59,7 @@ foreach ( $genre_terms as $genre_term ) {
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
     
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('category-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -72,7 +72,7 @@ foreach ( $genre_terms as $genre_term ) {
 ?>
 <div class="grid-whole background-gray">
 <nav>
-	<a href="#">All</a>
+	<a id="AllBtn" href="#">All</a>
 <?php
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query = new WP_Query( array(
@@ -87,7 +87,7 @@ foreach ( $genre_terms as $genre_term ) {
     ) );
     ?>
 
-    <a href="#"><?php echo $genre_term->name; ?></a><?php
+    <a id="<?php echo $genre_term->name; ?>Btn" href="#"><?php echo $genre_term->name; ?></a><?php
 
     $genre_term_query = null;
     wp_reset_postdata();
