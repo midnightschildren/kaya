@@ -701,20 +701,28 @@ it with your own stuff.  */
   height: 350px;
   }
 
+  .poetryht #bi-slider {
+  height: 1000px;
+  }
+
 }
 
 @media screen and (min-width: 1201px){
 
-.allht #bi-slider {
+  .allht #bi-slider {
   height: 2000px;
-}
+  }
 
-.fictionht #bi-slider {
+  .fictionht #bi-slider {
   height: 700px;
   }
 
-.non-fictionht #bi-slider, .filmht #bi-slider {
+  .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 340px;
+  }
+
+  .poetryht #bi-slider {
+  height: 1000px;
   }
 }
 
@@ -732,6 +740,9 @@ it with your own stuff.  */
   height: 700px;
   }
 
+  .poetryht #bi-slider {
+  height: 920px;
+  }
 
 }
 
@@ -751,6 +762,10 @@ it with your own stuff.  */
 
   .fictionht #bi-slider {
   height: 600px;
+  }
+
+  .poetryht #bi-slider {
+  height: 880px;
   }
 
   .mi-slider nav {
@@ -784,6 +799,10 @@ it with your own stuff.  */
 
   .non-fictionht #bi-slider, .filmht #bi-slider {
     height: 280px;
+  }
+
+  .poetryht #bi-slider {
+  height: 870px;
   }
 
   .mi-slider nav {
@@ -828,6 +847,10 @@ it with your own stuff.  */
 
   .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 220px;
+  }
+
+  .poetryht #bi-slider {
+  height: 1150px;
   }
 }
 
@@ -877,6 +900,10 @@ it with your own stuff.  */
   height: 220px;
   }
 
+  .poetryht #bi-slider {
+  height: 775px;
+  }
+
 }
 
 @media screen and (max-width: 480px){ 
@@ -910,6 +937,10 @@ it with your own stuff.  */
   height: 210px;
   }
 
+  .poetryht #bi-slider {
+  height: 1065px;
+  }
+
 }
 
 @media screen and (max-width: 400px){ 
@@ -929,6 +960,10 @@ it with your own stuff.  */
   .filmht #bi-slider {
   height: 200px;
   }
+
+  .poetryht #bi-slider {
+  height: 920px;
+  }
 }
 
 @media screen and (max-width: 320px){ 
@@ -947,6 +982,10 @@ it with your own stuff.  */
 
   .filmht #bi-slider {
   height: 190px;
+  }
+
+  .poetryht #bi-slider {
+  height: 790px;
   }
 }
 

@@ -20,29 +20,28 @@
 
 
 			$("#AllBtn").on(event, function(a) {
-    		$("#author_landing").attr("class", "grid-whole allht");
-    				
+    		$("#author_landing").attr("class", "grid-whole allht");   				
 			});
 
 			$("#FictionBtn").on(event, function(b) {
-    		$("#author_landing").attr("class", "grid-whole fictionht");
-    				
+    		$("#author_landing").attr("class", "grid-whole fictionht");    				
 			});
 
 			$("#Non-FictionBtn").on(event, function(c) {
-    		$("#author_landing").attr("class", "grid-whole non-fictionht");
-    				
+    		$("#author_landing").attr("class", "grid-whole non-fictionht");    				
 			});
 
 			$("#PerformanceBtn").on(event, function(d) {
-    		$("#author_landing").attr("class", "grid-whole filmht");
-    				
+    		$("#author_landing").attr("class", "grid-whole filmht");    				
 			});
 
 			$("#FilmBtn").on(event, function(e) {
-    		$("#author_landing").attr("class", "grid-whole filmht");
-    				
+    		$("#author_landing").attr("class", "grid-whole filmht");    				
 			});
+
+            $("#PoetryBtn").on(event, function(f) {
+            $("#author_landing").attr("class", "grid-whole poetryht");                    
+            });
 
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/
   (function($,sr){
