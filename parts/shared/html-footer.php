@@ -7,29 +7,41 @@
 				$( '#bi-slider' ).catslider();
 
 			});
-
+			if(!Modernizr.touch){
 			$( window ).on( 'resize', function() {
-				$("#bi-slider").attr("class", "mi-slider allht");
+				$("#author_landing").attr("class", "grid-whole allht");
 			});
-			
-			$("#AllBtn").click(function() {
-    		$("#bi-slider").attr("class", "mi-slider allht");
+			}
+			if(Modernizr.touch){
+			event = "touchend";
+			} else {
+			event = "click";
+			}
+
+
+			$("#AllBtn").on(event, function(a) {
+    		$("#author_landing").attr("class", "grid-whole allht");
+    				
 			});
 
-			$("#FictionBtn").click(function() {
-    		$("#bi-slider").attr("class", "mi-slider fictionht");
+			$("#FictionBtn").on(event, function(b) {
+    		$("#author_landing").attr("class", "grid-whole fictionht");
+    				
 			});
 
-			$("#Non-FictionBtn").click(function() {
-    		$("#bi-slider").attr("class", "mi-slider non-fictionht");
+			$("#Non-FictionBtn").on(event, function(c) {
+    		$("#author_landing").attr("class", "grid-whole non-fictionht");
+    				
 			});
 
-			$("#PerformanceBtn").click(function() {
-    		$("#bi-slider").attr("class", "mi-slider filmht");
+			$("#PerformanceBtn").on(event, function(d) {
+    		$("#author_landing").attr("class", "grid-whole filmht");
+    				
 			});
 
-			$("#FilmBtn").click(function() {
-    		$("#bi-slider").attr("class", "mi-slider filmht");
+			$("#FilmBtn").on(event, function(e) {
+    		$("#author_landing").attr("class", "grid-whole filmht");
+    				
 			});
 
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/

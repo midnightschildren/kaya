@@ -6,9 +6,9 @@ Template Name: Kaya Books Page
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
 
-<div id="author_landing" class="grid-whole">
+<div id="author_landing" class="grid-whole allht">
 
-<div id="bi-slider" class="mi-slider allht">
+<div id="bi-slider" class="mi-slider">
 
 <?php
 

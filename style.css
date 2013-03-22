@@ -689,15 +689,15 @@ it with your own stuff.  */
   padding: 20px 10px;
 }
 
-#bi-slider.allht {
+.allht #bi-slider {
   height: 2000px;
 }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 700px;
   }
 
-#bi-slider.non-fictionht, #bi-slider.filmht {
+ .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 350px;
   }
 
@@ -705,30 +705,30 @@ it with your own stuff.  */
 
 @media screen and (min-width: 1201px){
 
-#bi-slider.allht {
+.allht #bi-slider {
   height: 2000px;
 }
 
-  #bi-slider.fictionht {
+.fictionht #bi-slider {
   height: 700px;
   }
 
-#bi-slider.non-fictionht, #bi-slider.filmht {
+.non-fictionht #bi-slider, .filmht #bi-slider {
   height: 340px;
   }
 }
 
 @media screen and (max-width: 1200px){
 
-  #bi-slider.non-fictionht, #bi-slider.filmht {
+  .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 320px;
   }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 1850px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 700px;
   }
 
@@ -741,15 +741,15 @@ it with your own stuff.  */
     height: 380px;
   }
 
-  #bi-slider.non-fictionht, #bi-slider.filmht {
+  .non-fictionht #bi-slider, .filmht #bi-slider {
     height: 300px;
   }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 1750px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 600px;
   }
 
@@ -774,15 +774,15 @@ it with your own stuff.  */
     height: 355px;
   }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 1950px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 800px;
   }
 
-  #bi-slider.non-fictionht, #bi-slider.filmht {
+  .non-fictionht #bi-slider, .filmht #bi-slider {
     height: 280px;
   }
 
@@ -822,11 +822,11 @@ it with your own stuff.  */
   padding: 20px 10px;
   }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 2225px;
   }
-  
-  #bi-slider.non-fictionht, #bi-slider.filmht {
+
+  .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 220px;
   }
 }
@@ -865,15 +865,15 @@ it with your own stuff.  */
   padding: 20px 10px;
   }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 1530px;
   }
   
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 600px;
   }
 
-  #bi-slider.non-fictionht, #bi-slider.filmht {
+  .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 220px;
   }
 
@@ -894,19 +894,19 @@ it with your own stuff.  */
   padding: 20px 10px;
 }
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 2310px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 850px;
   }
 
-  #bi-slider.non-fictionht {
+  .non-fictionht #bi-slider {
   height: 440px;
   }
 
-  #bi-slider.filmht {
+  .filmht #bi-slider {
   height: 210px;
   }
 
@@ -914,38 +914,38 @@ it with your own stuff.  */
 
 @media screen and (max-width: 400px){ 
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 2000px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 740px;
   }
 
-  #bi-slider.non-fictionht {
+  .non-fictionht #bi-slider {
   height: 400px;
   }
 
-  #bi-slider.filmht {
+  .filmht #bi-slider {
   height: 200px;
   }
 }
 
 @media screen and (max-width: 320px){ 
 
-  #bi-slider.allht {
+  .allht #bi-slider {
   height: 1700px;
   }
 
-  #bi-slider.fictionht {
+  .fictionht #bi-slider {
   height: 640px;
   }
 
-  #bi-slider.non-fictionht {
+  .non-fictionht #bi-slider {
   height: 320px;
   }
 
-  #bi-slider.filmht {
+  .filmht #bi-slider {
   height: 190px;
   }
 }
