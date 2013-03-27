@@ -12,12 +12,16 @@
 				$("#author_landing").attr("class", "grid-whole allht");
 			});
 			}
+
 			if(Modernizr.touch){
 			event = "touchend";
 			} else {
 			event = "click";
 			}
 
+            $( window ).on( 'orientationchange', function() {
+                $("#author_landing").attr("class", "grid-whole allht");
+            });
 
 			$("#AllBtn").on(event, function(a) {
     		$("#author_landing").attr("class", "grid-whole allht");   				

@@ -377,6 +377,7 @@ it with your own stuff.  */
   overflow: hidden;
   text-align: center;
   pointer-events: none;
+  z-index:999;
 }
 
 .no-js .mi-slider ul {

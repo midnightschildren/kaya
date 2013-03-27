@@ -60,6 +60,13 @@
 				}
 			} );
 
+			$( window ).on( 'orientationchange', function() {
+				self.$categories.removeClass().eq( 0 ).addClass( 'mi-current' );
+				self.$navcategories.eq( self.current ).removeClass( 'mi-selected' ).end().eq( 0 ).addClass( 'mi-selected' );
+				self.current = 0;
+				} );
+
+
 		},
 		showCategory : function( catidx ) {
 
