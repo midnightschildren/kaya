@@ -1108,6 +1108,11 @@ color: #acaa9f;
   padding-bottom: 1em;
 }
 
+.booklanding {
+  max-width: 338px;
+  margin: 0 auto;
+}
+
 .searchlink {
 	font-weight: bold;
 	font-family: "dincondensed", sans-serif;
@@ -1162,6 +1167,10 @@ hr.foot_rule {
   background-color: #acaa9f;
   position: relative;
   top: -100px;
+}
+
+.background-white {
+  background-color: #fff;
 }
 
 #newsandevents, #author_landing {
@@ -1299,6 +1308,12 @@ video {
 	max-width: 100%;
 }
 
+.scribd_iframe_embed {
+  width: 100%;
+  
+}
+
+
 /* ---------------------------------------------------------------------------------------------------------- 
 02 Typography -----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
@@ -1404,6 +1419,24 @@ h6	{
 	
 }
 
+h5 {
+  font-weight: bold;
+  text-transform:uppercase;
+  font-size: 1em;
+  font-size: 14px;
+  font-family: "dincondensed",sans-serif;
+  width:100%; 
+  text-align:center; 
+  border-bottom: 1px solid #000; 
+  line-height:0.1em; 
+  margin:10px 0 20px;
+}
+
+h5 span {
+  background:#fff; 
+  padding:0 10px;
+}
+
 h2  {
   font-weight: normal;
   text-transform:uppercase;
@@ -1449,6 +1482,11 @@ h2  {
   text-transform: uppercase;
 }
 
+.book-title {
+  text-transform: none;
+  line-height: 1;
+}
+
 .author_title {
   font-weight: bold;
   font-size: 24px;
@@ -1456,7 +1494,7 @@ h2  {
   text-transform: uppercase;
 }
 
-.quote, .attribution {
+.quote, .attribution, .price {
 	font-family: "abril-display",sans-serif;
 	font-style: italic;
 	font-weight: 700;
@@ -1465,6 +1503,15 @@ h2  {
 	color: #000;
 	line-height: 1.5em;
 	margin-bottom: 0em;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "playfair", serif;
+  font-size: 28px;
+  font-size: 2em;
+  line-height: 2;
 }
 
 .attribution {
