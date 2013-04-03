@@ -31,7 +31,7 @@ $head_query = new WP_Query( array(
 
 <?php while ($head_query->have_posts()) : $head_query->the_post(); ?>
 <div class="grid-fifth s-grid-third m-grid-quarter padded-inner">
-<div class="grid-whole padded"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('author-thumb'); ?></a></div>
+<div class="grid-whole padded"><div class="headshot"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('author-thumb'); ?></a></div></div>
 <div class="grid-whole padded content-box"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 </div>
 

@@ -1113,6 +1113,11 @@ color: #acaa9f;
   margin: 0 auto;
 }
 
+.headshot {
+  max-width: 125px;
+  margin: 0 auto;
+}
+
 .sb_author_head {
   max-width: 169px;
   margin: 0 auto;
