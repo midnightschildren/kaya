@@ -1113,6 +1113,11 @@ color: #acaa9f;
   margin: 0 auto;
 }
 
+.sb_author_head {
+  max-width: 169px;
+  margin: 0 auto;
+}
+
 .searchlink {
 	font-weight: bold;
 	font-family: "dincondensed", sans-serif;
@@ -1477,6 +1482,14 @@ h2  {
   font-weight: bold;
 }
 
+.author_name a {
+  text-decoration: underline;
+}
+
+p.author_name {
+  margin-bottom: 1em;
+}
+
 .event_title {
   font-weight: bold;
   text-transform: uppercase;
@@ -1485,6 +1498,12 @@ h2  {
 .book-title {
   text-transform: none;
   line-height: 1;
+}
+
+.sb_author {
+  line-height: 1.75em;
+  font-size: 2em;
+  font-size: 28px;
 }
 
 .author_title {
@@ -1511,7 +1530,7 @@ h2  {
   font-family: "playfair", serif;
   font-size: 28px;
   font-size: 2em;
-  line-height: 2;
+  line-height: 2.5;
 }
 
 .attribution {
@@ -1522,6 +1541,10 @@ h2  {
 .quote a {
   color: #000;
   text-decoration: none;
+}
+
+.book_genres a {
+  color: #000;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- 

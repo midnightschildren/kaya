@@ -44,18 +44,10 @@
 	"buffers":
 	[
 		{
-			"file": "parts/shared/header.php",
-			"settings":
-			{
-				"buffer_size": 1502,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 6226,
+				"buffer_size": 6522,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +55,7 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 10065,
+				"buffer_size": 10075,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,42 +63,32 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 37945,
+				"buffer_size": 42465,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/jquery.catslider.js",
+			"file": "single-books.php",
 			"settings":
 			{
-				"buffer_size": 3931,
+				"buffer_size": 4580,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "kayaauthors.php",
+			"file": "single.php",
 			"settings":
 			{
-				"buffer_size": 411,
+				"buffer_size": 1091,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "parts/shared/footer.php",
+			"file": "parts/shared/html-footer.php",
 			"settings":
 			{
-				"buffer_size": 10995,
+				"buffer_size": 2551,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 54 files for \"$wp_rewrite->flush_rules();\"\n\n0 matches across 0 files\n",
-			"settings":
-			{
-				"buffer_size": 79,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
 			}
 		}
 	],
@@ -146,12 +128,14 @@
 	},
 	"file_history":
 	[
-		"/Users/amar/Desktop/Siglio/amar siglio.rtf",
-		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/footer.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/kayabooks.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/jquery.catslider.js",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/html-header.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/footer.php",
+		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/parts/shared/header.php",
+		"/Users/amar/Desktop/Siglio/amar siglio.rtf",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/modernizr.min.js",
-		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/jquery.catslider.js",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/searchform.php",
 		"/Users/amar/Desktop/Kaya Redesign/Kaya_local/kaya/js/responsiveCarousel.js",
 		"/Users/amar/Desktop/Codisattva Projects:Clients/LMU-Loglines/LMU Deployment/codi-lmu/header.php",
@@ -323,23 +307,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "parts/shared/header.php",
+					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 1502,
+						"buffer_size": 6522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1239,
-								1239
+								1558,
+								1558
 							]
 						],
 						"settings":
@@ -446,136 +430,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "functions.php",
-					"settings":
-					{
-						"buffer_size": 6226,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3507,
-								3507
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1140.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "home.php",
 					"settings":
 					{
-						"buffer_size": 10065,
+						"buffer_size": 10075,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5004,
-								5004
+								9139,
+								8306
 							]
 						],
 						"settings":
@@ -675,26 +541,26 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 850.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 3397.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 37945,
+						"buffer_size": 42465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36972,
-								36955
+								23924,
+								23924
 							]
 						],
 						"settings":
@@ -795,25 +661,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 26824.0,
+						"translation.y": 16514.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "js/jquery.catslider.js",
+					"buffer": 3,
+					"file": "single-books.php",
 					"settings":
 					{
-						"buffer_size": 3931,
+						"buffer_size": 4580,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1144,
-								1144
+								1753,
+								1753
 							]
 						],
 						"settings":
@@ -909,29 +775,28 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 177.0,
+						"translation.y": 395.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "kayaauthors.php",
+					"buffer": 4,
+					"file": "single.php",
 					"settings":
 					{
-						"buffer_size": 411,
+						"buffer_size": 1091,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								281,
-								281
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1036,19 +901,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "parts/shared/footer.php",
+					"buffer": 5,
+					"file": "parts/shared/html-footer.php",
 					"settings":
 					{
-						"buffer_size": 10995,
+						"buffer_size": 2551,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10887,
-								10887
+								355,
+								355
 							]
 						],
 						"settings":
@@ -1145,130 +1010,8 @@
 							"sublimelinter_wrap_find": true,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1583.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"settings":
-					{
-						"buffer_size": 79,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"detect_indentation": false,
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"output_tag": 1,
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

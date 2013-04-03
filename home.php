@@ -120,7 +120,7 @@ $slide_query = new WP_Query( array(
 <div id="mi-slider" class="mi-slider">
 
 <?php
-$genre_terms = get_terms( 'genres',  array(
+$genre_terms = get_terms( 'book_genre',  array(
     'number' => 5
 ));
 
@@ -131,7 +131,7 @@ foreach ( $genre_terms as $genre_term ) {
         'orderby' => 'rand',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genres',
+                'taxonomy' => 'book_genre',
                 'terms' => array( $genre_term->slug ),
                 'field' => 'slug',
                 'operator' => 'IN'
@@ -163,7 +163,7 @@ foreach ( $genre_terms as $genre_term ) {
         'post_type' => 'books',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genres',
+                'taxonomy' => 'book_genre',
                 'terms' => array( $genre_term->slug ),
                 'operator' => 'IN'
             )

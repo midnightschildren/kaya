@@ -33,9 +33,9 @@ Template Name: Kaya Books Page
 <div class="clearit"></div>
 
 <?php
-$genre_terms = get_terms( 'genres',  array(
+$genre_terms = get_terms( 'book_genre',  array(
     'number' => 5,
-    'exclude' => array (26, 31)
+    'exclude' => array (56, 62)
 )); ?>
 
 <?php
@@ -46,7 +46,7 @@ foreach ( $genre_terms as $genre_term ) {
         'orderby' => 'rand',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genres',
+                'taxonomy' => 'book_genre',
                 'terms' => array( $genre_term->slug ),
                 'field' => 'slug',
                 'operator' => 'IN'
@@ -79,7 +79,7 @@ foreach ( $genre_terms as $genre_term ) {
         'post_type' => 'books',
         'tax_query' => array(
             array(
-                'taxonomy' => 'genres',
+                'taxonomy' => 'book_genre',
                 'terms' => array( $genre_term->slug ),
                 'operator' => 'IN'
             )
