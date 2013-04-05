@@ -284,9 +284,8 @@ it with your own stuff.  */
 .slide-title {
   position: absolute;
   bottom: 0px;
-  background-color: #000;
   line-height: 1em;
-  max-width: 75%;
+  max-width: 85%;
   color: #fff;
   font-family: dincondensed, sans-serif;
   font-size: 2em;
@@ -495,6 +494,7 @@ it with your own stuff.  */
   outline: none;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
+  font-family: "dincondensed",sans-serif;
 }
 
 .mi-slider nav a:hover,
@@ -1340,7 +1340,7 @@ video {
 
 
 
-body			{ font-size: 100%; font-family: "dincondensed",sans-serif;  }
+body			{ font-size: 100%; font-family: "ff-ernestine-web-pro",sans-serif;  }
 
 html>body {
 	font-size: .875em;
@@ -1378,6 +1378,13 @@ header a {
 	text-decoration: none;
 	font-style:italic;
 	font-family: "dincondensed",sans-serif;
+}
+
+.test-title {
+  
+  margin-bottom: 0em;
+  line-height: 1em;
+  font-size: 48px;
 }
 
 .time-meta, .entry-content {
@@ -1418,7 +1425,7 @@ h1,
 h2, 
 h3, 
 h4, 
-h5					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
+h5					{ font-weight:bold; font-family: "playfair", serif; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
 
 h6	{
 	font-weight: normal;
@@ -1496,13 +1503,19 @@ p.author_name {
 }
 
 .event_title {
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
+  font-family: "dincondensed",sans-serif;
+  font-size: 24px;
 }
 
 .book-title {
   text-transform: none;
   line-height: 1;
+}
+
+.booktitle {
+  font-family: "dincondensed",sans-serif;
 }
 
 .sb_author {
@@ -1512,18 +1525,19 @@ p.author_name {
 }
 
 .author_title {
-  font-weight: bold;
-  font-size: 24px;
-  font-size: 1.71428571em;
+  font-weight: normal;
+  font-size: 36px;
+  
   text-transform: uppercase;
+  font-family: "dincondensed",sans-serif;
 }
 
 .quote, .attribution, .price {
-	font-family: "abril-display",sans-serif;
+	font-family: "playfair", serif;
 	font-style: italic;
-	font-weight: 700;
-	font-size: 1.28571429em;
-	font-size: 18px;
+	font-weight: 400;
+	
+	font-size: 24px;
 	color: #000;
 	line-height: 1.5em;
 	margin-bottom: 0em;

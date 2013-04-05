@@ -35,7 +35,7 @@ $slide_query = new WP_Query( array(
                 <?php if ($slide_query->have_posts()) : while ($slide_query->have_posts()) : $slide_query->the_post(); ?>
                     <li class="slid">
                         <div class="inner"><div class="opmask"><?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?>
-                            <div class="slide-title"><?php the_title(); ?> <a class="slide_link" href="">read on</a></div></div></div>
+                            <div class="slide-title"><p class="test-title"><span style="background-color:#000;"><?php the_title(); ?></span></p> <a class="slide_link" href="">read on</a></div></div></div>
                     </li>
                 <?php endwhile; endif; $slide_query = null; wp_reset_postdata();?>   
                 </ul>
