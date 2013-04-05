@@ -27,6 +27,10 @@
     		$("#author_landing").attr("class", "grid-whole allht");   				
 			});
 
+            $("#CurrentBtn").on(event, function(a) {
+            $("#author_landing").attr("class", "grid-whole singleht");                 
+            });
+
 			$("#FictionBtn").on(event, function(b) {
     		$("#author_landing").attr("class", "grid-whole fictionht");    				
 			});

@@ -56,6 +56,23 @@
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
+
+	 function the_titlesmall($before = '', $after = '', $echo = true, $length = false) { $title = get_the_title();
+
+	if ( $length && is_numeric($length) ) {
+		$title = substr( $title, 0, $length );
+	}
+
+	if ( strlen($title)> 0 ) {
+		$title = apply_filters('the_titlesmall', $before . $title . $after, $before, $after);
+		if ( $echo )
+			echo $title;
+		else
+			return $title;
+		}
+	}
+	
+
     /* ========================================================================================================================
 	
 	Search Hook

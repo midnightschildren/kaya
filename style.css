@@ -408,6 +408,13 @@ it with your own stuff.  */
   padding: 20px 10px;
 }
 
+#bi-slider.mi-slider ul li.special {
+  width: 100%;
+  padding: 20px 10px;
+  max-width: 2000px;
+  text-align: left;
+}
+
 .no-js .mi-slider ul li {
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -417,6 +424,12 @@ it with your own stuff.  */
 .mi-slider ul li img {
   display: block;
   margin: 0 auto;
+}
+
+.mi-slider ul li.special img {
+  display: inline;
+  margin: 0;
+  
 }
 
 #books {
@@ -447,6 +460,10 @@ it with your own stuff.  */
   line-height: 1.5em;
 }
 
+.mi-slider ul li.special a {
+  line-height: 1em;
+}
+
 .mi-slider ul li img {
   max-width: 100%;
   border: none;
@@ -461,6 +478,10 @@ it with your own stuff.  */
 
 .mi-slider ul li:hover {
   opacity: 0.7;
+} 
+
+.mi-slider ul li.special:hover {
+  opacity: 1;
 } 
 
 .mi-slider nav {
@@ -692,6 +713,10 @@ it with your own stuff.  */
 
 .allht #bi-slider {
   height: 2000px;
+}
+
+.singleht #bi-slider {
+  height: 1500px;
 }
 
   .fictionht #bi-slider {
