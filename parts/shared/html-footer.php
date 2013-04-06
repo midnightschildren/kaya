@@ -10,6 +10,7 @@
 			if(!Modernizr.touch){
 			$( window ).on( 'resize', function() {
 				$("#author_landing").attr("class", "grid-whole allht");
+                $(".single #author_landing").attr("class", "grid-whole singleht");
 			});
 			}
 
@@ -21,6 +22,7 @@
 
             $( window ).on( 'orientationchange', function() {
                 $("#author_landing").attr("class", "grid-whole allht");
+                $(".single #author_landing").attr("class", "grid-whole singleht");
             });
 
 			$("#AllBtn").on(event, function(a) {

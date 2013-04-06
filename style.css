@@ -716,7 +716,7 @@ it with your own stuff.  */
 }
 
 .singleht #bi-slider {
-  height: 1500px;
+  height: 1600px;
 }
 
   .fictionht #bi-slider {
@@ -738,6 +738,10 @@ it with your own stuff.  */
   .allht #bi-slider {
   height: 2000px;
   }
+
+.singleht #bi-slider {
+  height: 1600px;
+}
 
   .fictionht #bi-slider {
   height: 700px;
@@ -762,6 +766,10 @@ it with your own stuff.  */
   height: 1850px;
   }
 
+  .singleht #bi-slider {
+  height: 1750px;
+  }
+
   .fictionht #bi-slider {
   height: 700px;
   }
@@ -784,6 +792,10 @@ it with your own stuff.  */
 
   .allht #bi-slider {
   height: 1750px;
+  }
+
+  .singleht #bi-slider {
+  height: 2100px;
   }
 
   .fictionht #bi-slider {
@@ -817,6 +829,10 @@ it with your own stuff.  */
 
   .allht #bi-slider {
   height: 1950px;
+  }
+
+  .singleht #bi-slider {
+  height: 2200px;
   }
 
   .fictionht #bi-slider {
@@ -871,6 +887,10 @@ it with your own stuff.  */
   height: 2225px;
   }
 
+  .singleht #bi-slider {
+  height: 2200px;
+  }
+
   .non-fictionht #bi-slider, .filmht #bi-slider {
   height: 220px;
   }
@@ -918,6 +938,10 @@ it with your own stuff.  */
   height: 1530px;
   }
   
+  .singleht #bi-slider {
+  height: 2350px;
+  }
+
   .fictionht #bi-slider {
   height: 600px;
   }
@@ -951,6 +975,10 @@ it with your own stuff.  */
   height: 2310px;
   }
 
+  .singleht #bi-slider {
+  height: 2625px;
+  }
+
   .fictionht #bi-slider {
   height: 850px;
   }
@@ -975,6 +1003,10 @@ it with your own stuff.  */
   height: 2000px;
   }
 
+  .singleht #bi-slider {
+  height: 2800px;
+  }
+
   .fictionht #bi-slider {
   height: 740px;
   }
@@ -996,6 +1028,10 @@ it with your own stuff.  */
 
   .allht #bi-slider {
   height: 1700px;
+  }
+
+  .singleht #bi-slider {
+  height: 3450px;
   }
 
   .fictionht #bi-slider {
@@ -1134,7 +1170,7 @@ color: #acaa9f;
 }
 
 .booklanding {
-  max-width: 338px;
+  
   margin: 0 auto;
 }
 
@@ -1544,7 +1580,7 @@ p.author_name {
 }
 
 .sb_author {
-  line-height: 1.75em;
+  line-height: 1em;
   font-size: 2em;
   font-size: 28px;
 }

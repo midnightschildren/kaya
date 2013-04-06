@@ -23,14 +23,14 @@
 <?php if (have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 <div id="single-book" class="grid-whole background-white">
-<div class="grid-1 s-hidden">&nbsp;</div>
-<div class="padded-inner grid-14 s-grid-16 m-grid-14">
+<div class="grid-1 m-hidden s-hidden">&nbsp;</div>
+<div class="padded-inner grid-14 s-grid-16 m-grid-16">
 
 <article>
-<div class="grid-7 s-grid-whole padded-sides">
+<div class="grid-7 m-grid-whole s-grid-whole padded-inner">
 
-<div class="grid-3 s-hidden">&nbsp;</div>
-<div class="grid-13 padded">
+
+<div class="grid-whole padded-inner">
 <div class="booklanding">
     <?php if (get_field('scribd')){  
     the_field('scribd');
@@ -39,9 +39,9 @@
     }   ?> 
 </div>
 </div>
-<div class="grid-whole s-grid-whole padded-sides">
+<div class="grid-whole s-grid-whole s-hidden m-hidden padded-inner">
 <?php foreach(get_field('author') as $post_object): ?>
-<div class="grid-1 s-hidden">&nbsp;</div> <div class="grid-15 s-grid-whole"> <h2 class="sb_author gray"><?php echo get_the_title($post_object->ID) ?> NEWS</h2></div>
+<div class="grid-whole s-grid-whole"> <h2 class="sb_author gray"><?php echo get_the_title($post_object->ID) ?> NEWS</h2></div>
 <div class="grid-6">
 <div class="sb_author_head">
  <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
@@ -57,7 +57,7 @@
 <?php
 $author_query3 = new WP_Query( array(
         'post_type' => 'post',
-        'posts_per_page' => 3,
+        'posts_per_page' => 2,
         'meta_query' => array (
             array (
             'key' => 'news_by_author',
@@ -79,7 +79,8 @@ $author_query3 = new WP_Query( array(
 </div>
 </div>
 </div>
-<div class="grid-9 s-grid-whole padded-sides">
+<div class="grid-9 m-grid-whole s-grid-whole padded-inner">
+<div class="padded-inner">
       <header>
         <h2 class="book-title gray"><?php the_title(); ?></h2>
 
@@ -119,13 +120,54 @@ $author_query3 = new WP_Query( array(
 <h5><span>awards</span></h5>
 <?php the_field('awards'); ?>
 <?php } ?>
-
+</div>
 </div>
 
+<div class="grid-whole s-grid-whole l-hidden padded-inner">
+<div class="padded-inner">
+<?php foreach(get_field('author') as $post_object): ?>
+<div class="grid-whole s-grid-whole"> <h2 class="sb_author gray"><?php echo get_the_title($post_object->ID) ?> NEWS</h2></div>
+<div class="grid-6">
+<div class="sb_author_head">
+ <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+</div></div>
+
+<?php $authorvariable = $post_object->ID;
+
+?>
+
+
+<?php endforeach; ?>
+
+<?php
+$author_query3 = new WP_Query( array(
+        'post_type' => 'post',
+        'posts_per_page' => 2,
+        'meta_query' => array (
+            array (
+            'key' => 'news_by_author',
+            'value' => '"'.$authorvariable.'"',
+            'compare' => 'LIKE'
+            )
+        ),
+        
+    ) )
+?>
+<div class ="grid-10">
+<?php if ($author_query3->have_posts()) : while ($author_query3->have_posts()) : $author_query3->the_post(); ?>
+
+    <div class="grid-whole padded-inner"><a class="event_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+
+<?php endwhile; endif; $author_query3 = null;
+    wp_reset_postdata();?>
+
+</div>
+</div>
+</div>
 </article>
 
 </div>
-<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 </div>
 <?php endwhile; ?>
 </li>
