@@ -24,7 +24,7 @@
 
 <div id="single-book" class="grid-whole background-white">
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
-<div class="padded-inner grid-14 s-grid-16 m-grid-16">
+<div class="grid-14 s-grid-16 m-grid-16">
 
 <article>
 <div class="grid-7 m-grid-whole s-grid-whole padded-inner">
