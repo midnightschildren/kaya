@@ -7,10 +7,29 @@
 				$( '#bi-slider' ).catslider();
 
 			});
+            
+            $(function() {
+        $( ".mi-slider" ).each(function() {
+        var newHeight = 25, $this = $( this );
+        $.each( $this.children(".mi-current"), function() {
+            newHeight += $( this ).height();
+        });
+        $this.height( newHeight );
+    });
+});
+
+
 			if(!Modernizr.touch){
 			$( window ).on( 'resize', function() {
 				$("#author_landing").attr("class", "grid-whole allht");
-                $(".single #author_landing").attr("class", "grid-whole singleht");
+                $(".single #author_landing").attr("class", "grid-whole container_test");
+                $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $.each( $this.children(".mi-current"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
 			});
 			}
 
@@ -26,19 +45,51 @@
             });
 
 			$("#AllBtn").on(event, function(a) {
-    		$("#author_landing").attr("class", "grid-whole allht");   				
+    		$("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(2)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });   				
 			});
 
             $("#CurrentBtn").on(event, function(a) {
-            $("#author_landing").attr("class", "grid-whole singleht");                 
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(1)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                          
             });
 
 			$("#FictionBtn").on(event, function(b) {
-    		$("#author_landing").attr("class", "grid-whole fictionht");    				
+    		$("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(3)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });       				
 			});
 
 			$("#Non-FictionBtn").on(event, function(c) {
-    		$("#author_landing").attr("class", "grid-whole non-fictionht");    				
+    		$("#author_landing").attr("class", "grid-whole container_test"); 
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(4)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });        				
 			});
 
 			$("#PerformanceBtn").on(event, function(d) {
@@ -50,7 +101,15 @@
 			});
 
             $("#PoetryBtn").on(event, function(f) {
-            $("#author_landing").attr("class", "grid-whole poetryht");                    
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(5)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                         
             });
 
   // smart resize - http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/

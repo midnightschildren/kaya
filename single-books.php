@@ -15,7 +15,7 @@
 
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
 
-<div id="author_landing" class="grid-whole singleht">
+<div id="author_landing" class="grid-whole container_test">
 
 <div id="bi-slider" class="mi-slider">
 
@@ -200,7 +200,7 @@ $author_query3 = new WP_Query( array(
 
 
 </ul>
-<div class="clearit"></div>
+
 
 <?php
 $genre_terms = get_terms( 'book_genre',  array(
@@ -238,7 +238,7 @@ foreach( $genre_terms as $genre_term ) {
 
 
 </ul>
-<div class="clearit"></div>
+
     <?php 
 }
 

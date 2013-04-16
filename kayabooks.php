@@ -20,7 +20,7 @@ Template Name: Kaya Books Page
     ) )
     ?>
 
-<ul>
+<ul> 
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
     
@@ -29,8 +29,9 @@ Template Name: Kaya Books Page
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
     <?php endwhile; endif; ?>
+
 </ul>
-<div class="clearit"></div>
+
 
 <?php
 $genre_terms = get_terms( 'book_genre',  array(
@@ -65,7 +66,7 @@ foreach ( $genre_terms as $genre_term ) {
 <?php endforeach; wp_reset_postdata(); endif;?>
     <?php endwhile; endif; ?>
 </ul>
-<div class="clearit"></div>
+
     <?php
 }
 

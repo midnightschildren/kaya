@@ -1216,6 +1216,10 @@ hr.foot_rule {
 	clear:both;
 }
 
+.clearit {
+  clear:both;
+}
+
 .menu li.menu-item-22 {
 	padding-left: 0em;
 }
