@@ -8,7 +8,7 @@
 
 			});
             
-            $(function() {
+            $(window).load(function() {
                 $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );
                     $.each( $this.children(".mi-current"), function() {
@@ -18,10 +18,11 @@
                 });
             });
 
-            $(function() {
+            $(window).load(function() {
                 $( "#mi-slider" ).each(function() {
                     var newHeight = 100, $this = $( this );
-                    $.each( $this.children(".mi-current"), function() {
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(1)"), function() {
                     newHeight += $( this ).height();
                     });
                 $this.height( newHeight );
