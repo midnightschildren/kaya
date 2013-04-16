@@ -6,7 +6,7 @@ Template Name: Kaya Books Page
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
 
-<div id="author_landing" class="grid-whole allht">
+<div id="author_landing" class="grid-whole container_test">
 
 <div id="bi-slider" class="mi-slider">
 
@@ -73,7 +73,7 @@ foreach ( $genre_terms as $genre_term ) {
 ?>
 <div class="grid-whole background-gray">
 <nav>
-	<a id="AllBtn" href="#">All</a>
+	<a id="AllBtnBC" href="#">All</a>
 <?php
 foreach ( $genre_terms as $genre_term ) {
     $genre_term_query = new WP_Query( array(
@@ -88,7 +88,7 @@ foreach ( $genre_terms as $genre_term ) {
     ) );
     ?>
 
-    <a id="<?php echo $genre_term->name; ?>Btn" href="#"><?php echo $genre_term->name; ?></a><?php
+    <a id="<?php echo $genre_term->name; ?>BtnBC" href="#"><?php echo $genre_term->name; ?></a><?php
 
     $genre_term_query = null;
     wp_reset_postdata();

@@ -9,19 +9,19 @@
 			});
             
             $(function() {
-        $( ".mi-slider" ).each(function() {
-        var newHeight = 25, $this = $( this );
-        $.each( $this.children(".mi-current"), function() {
-            newHeight += $( this ).height();
-        });
-        $this.height( newHeight );
-    });
-});
+                $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $.each( $this.children(".mi-current"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
+            });
 
 
 			if(!Modernizr.touch){
 			$( window ).on( 'resize', function() {
-				$("#author_landing").attr("class", "grid-whole allht");
+				$("#author_landing").attr("class", "grid-whole container_test");
                 $(".single #author_landing").attr("class", "grid-whole container_test");
                 $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );
@@ -40,8 +40,15 @@
 			}
 
             $( window ).on( 'orientationchange', function() {
-                $("#author_landing").attr("class", "grid-whole allht");
-                $(".single #author_landing").attr("class", "grid-whole singleht");
+                $("#author_landing").attr("class", "grid-whole container_test");
+                $(".single #author_landing").attr("class", "grid-whole container_test");
+                $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $.each( $this.children(".mi-current"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
             });
 
 			$("#AllBtn").on(event, function(a) {
@@ -56,7 +63,19 @@
                 });   				
 			});
 
-            $("#CurrentBtn").on(event, function(a) {
+            $("#AllBtnBC").on(event, function(h) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(1)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                 
+            });
+
+            $("#CurrentBtn").on(event, function(g) {
             $("#author_landing").attr("class", "grid-whole container_test");
             $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );
@@ -80,6 +99,18 @@
                 });       				
 			});
 
+            $("#FictionBtnBC").on(event, function(i) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(2)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                     
+            });
+
 			$("#Non-FictionBtn").on(event, function(c) {
     		$("#author_landing").attr("class", "grid-whole container_test"); 
             $( ".mi-slider" ).each(function() {
@@ -92,12 +123,40 @@
                 });        				
 			});
 
-			$("#PerformanceBtn").on(event, function(d) {
-    		$("#author_landing").attr("class", "grid-whole filmht");    				
+            $("#Non-FictionBtnBC").on(event, function(j) {
+            $("#author_landing").attr("class", "grid-whole container_test"); 
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(3)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                     
+            });
+
+			$("#PerformanceBtnBC").on(event, function(d) {
+    		$("#author_landing").attr("class", "grid-whole container_test"); 
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(4)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });   				
 			});
 
-			$("#FilmBtn").on(event, function(e) {
-    		$("#author_landing").attr("class", "grid-whole filmht");    				
+			$("#FilmBtnBC").on(event, function(e) {
+    		$("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(6)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });    				
 			});
 
             $("#PoetryBtn").on(event, function(f) {
@@ -106,6 +165,30 @@
                     var newHeight = 25, $this = $( this );
                     $this.isAnimating = false;
                     $.each( $this.children(":nth-child(5)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                         
+            });
+
+            $("#PoetryBtnBC").on(event, function(k) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(5)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                         
+            });
+
+            $("#menu-item-22").on(event, function(l) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(1)"), function() {
                     newHeight += $( this ).height();
                     });
                 $this.height( newHeight );
