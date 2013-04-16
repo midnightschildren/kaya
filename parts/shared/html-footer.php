@@ -18,6 +18,16 @@
                 });
             });
 
+            $(function() {
+                $( "#mi-slider" ).each(function() {
+                    var newHeight = 100, $this = $( this );
+                    $.each( $this.children(".mi-current"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
+            });
+
 
 			if(!Modernizr.touch){
 			$( window ).on( 'resize', function() {
@@ -25,6 +35,13 @@
                 $(".single #author_landing").attr("class", "grid-whole container_test");
                 $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );
+                    $.each( $this.children(".mi-current"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
+                $( "#mi-slider" ).each(function() {
+                    var newHeight = 100, $this = $( this );
                     $.each( $this.children(".mi-current"), function() {
                     newHeight += $( this ).height();
                     });
