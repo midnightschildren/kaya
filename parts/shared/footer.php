@@ -34,107 +34,34 @@
 <div class="grid-third s-grid-whole m-grid-half creative"><div class="padded-bottom"><h1>creative contagion</h1></div>
 	
 	<p class="padded-vertical">Sign up for our newsletter to receive Kaya updates. The only spam we like is spam musbi. We will never share your info.</p>
-	
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/jquery-ui-1.8.16/js/jquery-ui-1.8.16.custom.min.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/jquery-ui-1.8.16/css/smoothness/jquery-ui-1.8.16.custom.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.autocomplete.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/css/jquery.autocomplete.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jstree/jquery.jstree.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jstree/themes/default/style.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.menu.pack.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/css/menu.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.chainedSelects.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.contextMenu.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.tableHeader.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.textarearesizer.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.form.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.tokeninput.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/css/token-input-facebook.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.timeentry.pack.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.mousewheel.pack.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.toolTip.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/DataTables/media/css/demo_table_jui.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.dashboard.js"></script>
-<style type="text/css">@import url("http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/css/dashboard.css");</style>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.FormNavigate.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.validate.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.civicrm-validate.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.ui.datepicker.validation.pack.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery-fieldselection.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.jeditable.mini.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.mustache.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/packages/jquery/plugins/jquery.blockUI.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/rest.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/Common.js"></script>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/jquery/jquery.crmeditable.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/jquery/jquery.crmaccordions.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/jquery/jquery.crmasmselect.js"></script>
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/jquery/jquery.crmtooltip.js"></script>
 
 
-<script type="text/javascript">var cj = jQuery.noConflict();</script>
+<!-- Begin MailChimp Signup Form -->
 
-<form action="http://kaya.codisattva.com/index.php?page=CiviCRM&amp;q=civicrm/profile/create&amp;gid=13&amp;reset=1" method="post" name="Edit" id="Edit" >
+<form action="http://kaya.us4.list-manage.com/subscribe/post?u=1d19f7b96ceebd1b8b7a5b063&amp;id=852d438278" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  
 
-<div><input name="postURL" type="hidden" value="" /></div>
-
-<script type="text/javascript" src="http://kaya.codisattva.com/wp-content/plugins/civicrm/civicrm/js/Common.js"></script>
-
-<div id="crm-container" lang="en" xml:lang="en">
-
-<div class="form-layout-compressed"><div class="fn_form-item padded-bottom">
-<input maxlength="64" size="30" name="first_name" type="text" id="first_name" onfocus="if(this.value=='First Name') this.value='';" onblur="if(this.value=='') this.value='First Name';" value="First Name" /></div><div class="clear"></div>
-<div class="ln_form-item padded-bottom">
-<input maxlength="64" size="30" name="last_name" type="text" id="last_name" onfocus="if(this.value=='Last Name') this.value='';" onblur="if(this.value=='') this.value='Last Name';" value="Last Name" /></div><div class="clear"></div>
-<div class="email_form-item padded-bottom">
-<input maxlength="64" size="30" name="email-Primary" type="text" id="email_primary" onfocus="if(this.value=='Email') this.value='';" onblur="if(this.value=='') this.value='Email';" value="Email" /></div><div class="clear"></div></div><!-- end form-layout-compressed for last profile --> 
-
-<div class="crm-submit-buttons">
-   <span class="crm-button"><input class="form-submit default" accesskey="S" name="_qf_Edit_next" value="Sign Up" type="submit" id="Edit_next" /></span>
+<div class="mc-field-group padded-bottom">
+  <input maxlength="64" size="30" type="text" name="FNAME" id="mce-FNAME" onfocus="if(this.value=='First Name') this.value='';" onblur="if(this.value=='') this.value='First Name';" value="First Name">
 </div>
-
-</div> 
-
-
-<script type="text/javascript">
-    
-cj(document).ready(function(){ 
-	cj('#selector tr:even').addClass('odd-row ');
-	cj('#selector tr:odd ').addClass('even-row');
-});
-
-</script>
-
-
+<div class="mc-field-group padded-bottom">
+  <input maxlength="64" size="30" type="text" name="LNAME" id="mce-LNAME" onfocus="if(this.value=='Last Name') this.value='';" onblur="if(this.value=='') this.value='Last Name';" value="Last Name">
+</div>
+<div class="mc-field-group padded-bottom">
+  <input maxlength="64" size="30" type="email"  name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value=='Email') this.value='';" onblur="if(this.value=='') this.value='Email';" value="Email">
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>  
+<div class="crm-submit-buttons">
+   <span class="crm-button"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></span>
+</div>
 </form>
 
-      
-    <script type="text/javascript" >
-      cj( function( ) {
-        cj("#Edit").validate({ 'errorClass': 'crm-error'});
-      });
-    </script><script type="text/javascript">jQuery.noConflict(true);</script>
+
+<!--End mc_embed_signup-->      
+    
     
 </div>
 

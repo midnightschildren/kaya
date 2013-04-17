@@ -903,7 +903,7 @@ font-family: "playfair", serif;
 color: #acaa9f;
 }
 
-#first_name, #last_name, #email_primary {
+#first_name, #last_name, #email_primary, #mce-FNAME, #mce-LNAME, #mce-EMAIL {
   border: 1px solid #c6c4bd;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
   margin-bottom: .5em;
@@ -922,7 +922,7 @@ color: #acaa9f;
   padding-bottom: 2em;
 }
 
-#Edit_next {
+#Edit_next, #mc-embedded-subscribe {
   color: #5b5959;
   font-family: "dincondensed", sans-serif;
   font-size: 14px;
