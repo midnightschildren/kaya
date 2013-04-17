@@ -58,6 +58,7 @@
 			}
 
             $( window ).on( 'orientationchange', function() {
+              setTimeout(function () {
                 $("#author_landing").attr("class", "grid-whole container_test");
                 $(".single #author_landing").attr("class", "grid-whole container_test");
                 $( ".mi-slider" ).each(function() {
@@ -67,6 +68,14 @@
                     });
                 $this.height( newHeight );
                 });
+                $( "#mi-slider" ).each(function() {
+                    var newHeight = 100, $this = $( this );
+                    $.each( $this.children(":nth-child(1)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });
+              }, 500);
             });
 
 			$("#AllBtn").on(event, function(a) {
