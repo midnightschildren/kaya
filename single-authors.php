@@ -14,7 +14,7 @@
 <?php $single_amar = clone $wp_query; ?>
 
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
-
+<div class="papertop grid-whole">&nbsp;</div>
 <div id="single-book" class="grid-whole background-white">
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 <div class="grid-14 s-grid-16 m-grid-16">
@@ -157,9 +157,8 @@ $author_query3 = new WP_Query( array(
 		</div>
 	<?php } ?>		
 
-	<h4 class="two"><span>books</span></h4>
-	<p>&nbsp;</p>
-	<div class="book_author_section">
+	<h5><span>books</span></h5>
+	
 	<?php
 $counter = 1; //start counter
 
@@ -173,8 +172,27 @@ if($counter == 1) :
 ?>
 <div class="grid-half padded-inner-right">
 
- <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<?php if (get_field ('press', $post_object->ID)) : ?>
 
+<div class="padded-inner-bottom">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php else : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+Kaya <?php echo get_field('published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php endif; ?>
 </div>	
 
 <?php
@@ -184,7 +202,27 @@ elseif($counter == $grids) :
 
 <div class="grid-half padded-inner-left">
 
- <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<?php if (get_field ('press', $post_object->ID)) : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php else : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+Kaya <?php echo get_field('published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php endif; ?>
 
 </div>	
 <?php
@@ -194,13 +232,47 @@ endif;
 <?php
 $counter++;
 endforeach; ?>
-</article>
+
+<div class="grid-whole">
+<h5><span>praise</span></h5>
+
+<?php foreach(get_field('1book') as $post_object): ?>
+
+<?php echo get_field('praise', $post_object->ID); ?>
+<?php endforeach; ?>
 </div>
+</article>
 </div>
 </div>
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 </div>
 
 <?php endwhile; ?>
+
+<div class="grid-whole paper"></div>
+<div id="quote" class="grid-whole">
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="padded-inner grid-12 s-grid-16 m-grid-14 center">
+
+<?php
+$quote_query = new WP_Query( array(
+        'post_type' => 'quotes',
+        'posts_per_page' => 1,
+        'orderby' => 'rand'
+        
+        
+    ) )
+?>
+<?php if ($quote_query->have_posts()) : while ($quote_query->have_posts()) : $quote_query->the_post(); ?>
+	<p class="quote"><?php $posts = get_field('quote_source');if ($posts): foreach($posts as $post_object): ?>
+    <a href="<?php echo get_permalink($post_object->ID); ?>"><?php endforeach; endif; ?><?php the_field('quote_text'); ?></a></p>
+	<p class="attribution"><?php the_field('quote_attribution'); ?></p>
+<?php endwhile; endif; ?>	
+
+</div>
+<div class="grid-1 s-hidden">&nbsp;</div>
+<div class="grid-1 s-hidden m-hidden">&nbsp;</div>
+</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

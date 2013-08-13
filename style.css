@@ -958,10 +958,6 @@ color: #acaa9f;
   margin: 0 auto;
 }
 
-.book_author_section {
-  margin-top: -50px;
-}
-
 .headshot {
   max-width: 125px;
   margin: 0 auto;
@@ -1216,7 +1212,11 @@ a {
   letter-spacing: .15em;
 }
 
-.side_menu a:hover {
+.booktitle2 a {
+  color: #000;
+}
+
+.side_menu a:hover, .booktitle2 a:hover {
   color: #cccc00;
 }
 
@@ -1322,21 +1322,6 @@ h4 {
     
 }
 
- h4.two span {
-    background: #fff;
-    padding: 0 0;
-    top: -30px;
-    position: relative;
-    z-index: 5;
-  }
-  
-  h4.two+p {
-    border-top: solid 1px black;
-    padding-top: 40px;
-    margin-top: -40px;
-  }
-
-
 h5 {
   font-weight: bold;
   text-transform:uppercase;
@@ -1435,6 +1420,11 @@ p.author_name {
 
 .booktitle, .news_excerpt p {
   font-family: "dincondensed",sans-serif;
+}
+
+.booktitle2 {
+  font-family: "dincondensed", sans-serif;
+  font-weight: bold;
 }
 
 .sb_author {
@@ -1610,6 +1600,10 @@ p.author_name {
 
 .padded-inner-left {
   padding-left: 1em;
+}
+
+.padded-inner-bottom {
+  padding-bottom: 1em;
 }
 
 .padded-reverse {
