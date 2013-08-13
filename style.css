@@ -958,6 +958,10 @@ color: #acaa9f;
   margin: 0 auto;
 }
 
+.book_author_section {
+  margin-top: -50px;
+}
+
 .headshot {
   max-width: 125px;
   margin: 0 auto;
@@ -1172,6 +1176,9 @@ video {
   
 }
 
+.weblink_box {
+  background-color:#dbef00;
+}
 
 /* ---------------------------------------------------------------------------------------------------------- 
 02 Typography -----------------------------------------------------------------------------------------------
@@ -1202,6 +1209,23 @@ p {
 
 a {
 	color: #cccc00;
+}
+
+.side_menu a, .web_menu a {
+  color: #000;
+  letter-spacing: .15em;
+}
+
+.side_menu a:hover {
+  color: #cccc00;
+}
+
+.web_menu a:hover {
+  color: #c6c4bd;
+}
+
+.single_author_news {
+  line-height: 1em;
 }
 
 header a {
@@ -1285,6 +1309,34 @@ h6	{
 	
 }
 
+h4 {
+  font-weight: bold;
+  text-transform:uppercase;
+  font-size: 1.14285714em;
+  font-size: 16px;
+  font-family: "dincondensed",sans-serif;
+  position: relative;
+    margin-top: 20px;
+    display: block;
+    text-align:center;
+    
+}
+
+ h4.two span {
+    background: #fff;
+    padding: 0 0;
+    top: -30px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  h4.two+p {
+    border-top: solid 1px black;
+    padding-top: 40px;
+    margin-top: -40px;
+  }
+
+
 h5 {
   font-weight: bold;
   text-transform:uppercase;
@@ -1313,6 +1365,16 @@ h2  {
   
 }
 
+h3 {
+  font-weight: normal;
+  text-transform:uppercase;
+  letter-spacing: -.1em;
+  line-height: 2em;
+  font-size: 1.71428571em;
+  font-size: 24px;
+  font-family: "playfair", serif;
+}
+
 .white {color: #fff;}
 .green {color: #dbef00;}
 .gray {color: #acaa9f;}
@@ -1331,6 +1393,14 @@ h2  {
 	text-transform: uppercase;
 	font-family: "dincondensed",sans-serif; 
 }
+
+.side_menu li, .web_menu li {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "dincondensed",sans-serif; 
+}
+
+
 
 .creative p {
   font-weight: bold;
@@ -1363,7 +1433,7 @@ p.author_name {
   line-height: 1;
 }
 
-.booktitle {
+.booktitle, .news_excerpt p {
   font-family: "dincondensed",sans-serif;
 }
 
@@ -1533,6 +1603,14 @@ p.author_name {
 
 .padded-inner-sides {
   padding: 0 1em; }
+
+.padded-inner-right {
+  padding-right: 1em;
+}
+
+.padded-inner-left {
+  padding-left: 1em;
+}
 
 .padded-reverse {
   margin: 0 -0.5em;
