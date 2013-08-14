@@ -18,7 +18,7 @@
 <div id="single-book" class="grid-whole background-white">
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 <div class="grid-14 s-grid-16 m-grid-16">
-<div class="grid-half padded-inner">
+<div class="grid-half s-grid-whole padded-inner">
 
 <div class="grid-half padded-inner">
 
@@ -142,7 +142,7 @@ $author_query3 = new WP_Query( array(
 
 </div>
 </div>
-<div class="grid-half padded-inner">
+<div class="grid-half s-grid-whole padded-inner">
 
 
 <article class="padded-inner">
@@ -159,7 +159,7 @@ $author_query3 = new WP_Query( array(
 
 	<h5><span>books</span></h5>
 	
-	<?php
+<?php
 $counter = 1; //start counter
 
 $grids = 2; //Grids per row ?>
