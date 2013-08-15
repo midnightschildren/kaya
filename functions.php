@@ -38,10 +38,17 @@
   	'after_title' => '</h1>'
 ));
 
+	register_sidebar( array(
+    'id'          => 'side-menu',
+    'name'        => __( 'Side Menu'),
+    'description' => __( 'This sidebar is located on category and tag pages.'),
+) );
+
 	add_theme_support('post-thumbnails');
   	add_image_size('category-thumb', 169, 239, true);
   	add_image_size('book-thumb', 338, 478, true);
   	add_image_size('book-landing', 676, 956, true);
+  	add_image_size('news-image', 400, 300, true);
   	add_image_size('author-thumb', 250, 350, true); 
   	add_image_size('featured-event', 160, 130, true);
   	add_image_size('featured-slide', 850, 700, true);

@@ -1392,13 +1392,15 @@ h3 {
   font-family: "dincondensed",sans-serif; 
 }
 
-
-
 .creative p {
   font-weight: bold;
   font-family: "dincondensed",sans-serif;
   font-size: 14px;
   font-size: 1em;
+}
+
+.dotted {
+  border-bottom: 1px dotted #000;
 }
 
 .author_name {
@@ -1432,6 +1434,20 @@ p.author_name {
 .booktitle2 {
   font-family: "dincondensed", sans-serif;
   font-weight: bold;
+}
+
+.timetitle {
+  font-family: "dincondensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timetitle a {
+  color: #000;
+}
+
+.timetitle a:hover {
+  color: #cccc00;
 }
 
 .sb_author {

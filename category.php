@@ -19,7 +19,7 @@
 <div class="grid-12 s-grid-16 m-grid-14">
 
 
-
+<div class="grid-12 padded-inner-right">
 <?php
 $counter = 1; //start counter
 $row = 1;
@@ -36,10 +36,12 @@ $grids = 2; //Grids per row ?>
 if($counter == 1) :
 ?>
 <div class="grid-half padded-inner-right">
-	<li>
+	<li class="padded-top">
 		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> 
+			<div class="grid-whole"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
+			<div class="grid-whole"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+			<div class="grid-whole timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
 			<?php the_excerpt(); ?>
 		</article>
 	</li>
@@ -51,15 +53,17 @@ elseif($counter == $grids) :
 ?>
 
 <div class="grid-half padded-inner-left">
-	<li>
+	<li class="padded-top">
 		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> 
+			<div class="grid-whole"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
+			<div class="grid-whole"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+			<div class="grid-whole timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
 			<?php the_excerpt(); ?>
 		</article>
 	</li>	
 </div>
-<?php if(($row<$totalposts)&&($row < 5)) : ?><div class="grid-whole"><hr></div><?php endif; ?>
+<?php if(($row<$totalposts)&&($row < 5)) : ?><div class="grid-whole dotted"></div><?php endif; ?>
 
 <?php
 $counter = 0;
@@ -80,7 +84,17 @@ endwhile; ?>
 <?php else: ?>
 <h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 <?php endif; ?>
+</div>
 
+<div class="grid-4 padded-inner-left">
+
+<?php if ( is_active_sidebar( 'side-menu' ) ) : ?>
+	<ul id="sidebar">
+		<?php dynamic_sidebar( 'side-menu' ); ?>
+	</ul>
+<?php endif; ?>
+
+</div>
 
 </div>
 <div class="grid-1 s-hidden">&nbsp;</div>
