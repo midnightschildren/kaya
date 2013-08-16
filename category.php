@@ -19,7 +19,7 @@
 <div class="grid-12 s-grid-16 m-grid-14">
 
 
-<div class="grid-12 padded-inner-right">
+<div class="grid-12 padded-inner">
 <?php
 $counter = 1; //start counter
 $row = 1;
@@ -38,11 +38,11 @@ if($counter == 1) :
 <div class="grid-half padded-inner-right">
 	<li class="padded-top">
 		<article>
-			<div class="grid-whole"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
-			<div class="grid-whole"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
-			<div class="grid-whole timetitle"><?php the_tags('', '|'); ?></div>
-			<div class="grid-whole timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
-			<?php the_excerpt(); ?>
+			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
+			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+			<div class="grid-whole padded-vertical timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
 	</li>
 </div>
@@ -55,11 +55,11 @@ elseif($counter == $grids) :
 <div class="grid-half padded-inner-left">
 	<li class="padded-top">
 		<article>
-			<div class="grid-whole"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
-			<div class="grid-whole"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
-			<div class="grid-whole timetitle"><?php the_tags('', '|'); ?></div>
-			<div class="grid-whole timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
-			<?php the_excerpt(); ?>
+			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
+			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+			<div class="grid-whole padded-vertical timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
 	</li>	
 </div>
@@ -77,8 +77,8 @@ $row++;
 endwhile; ?>
 
 <div class="grid-whole">
-<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+<div class="grid-6 nav-previous timetitle slightlylg"><?php next_posts_link( '<div class="arrow2lt"><span title="Back" class="carouselback"></span></div>'); ?><?php next_posts_link( 'Older' ); ?></div>
+<div class="grid-6 nav-next flow-opposite timetitle slightlylg"><?php previous_posts_link( '<div class="arrow2"><span title="Next" class="carouselnext"></span></div>' ); ?><div class="flow-opposite"><?php previous_posts_link( 'Newer' ); ?></div></div>
 </div>
 
 <?php else: ?>
@@ -89,7 +89,7 @@ endwhile; ?>
 <div class="grid-4 padded-inner-left">
 
 <?php if ( is_active_sidebar( 'side-menu' ) ) : ?>
-	<ul id="sidebar">
+	<ul class="padded-inner" id="sidebar">
 		<?php dynamic_sidebar( 'side-menu' ); ?>
 	</ul>
 <?php endif; ?>
