@@ -19,7 +19,7 @@
 <div class="grid-12 s-grid-16 m-grid-14">
 
 
-<div class="grid-12 padded-inner">
+<div class="grid-12 m-grid-11 s-grid-10 padded-inner">
 <?php
 $counter = 1; //start counter
 $row = 1;
@@ -35,8 +35,8 @@ $grids = 2; //Grids per row ?>
 //Show the left hand side column
 if($counter == 1) :
 ?>
-<div class="grid-half padded-inner-right">
-	<li class="padded-top">
+<div class="grid-half s-grid-whole s-padded-sides padded-inner-right">
+	<li class="padded-top art">
 		<article>
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
@@ -52,8 +52,8 @@ if($counter == 1) :
 elseif($counter == $grids) :
 ?>
 
-<div class="grid-half padded-inner-left">
-	<li class="padded-top">
+<div class="grid-half s-grid-whole s-padded-sides padded-inner-left">
+	<li class="padded-top art">
 		<article>
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
@@ -63,7 +63,7 @@ elseif($counter == $grids) :
 		</article>
 	</li>	
 </div>
-<?php if(($row<$totalposts)&&($row < 5)) : ?><div class="grid-whole dotted"></div><?php endif; ?>
+<?php if(($row<$totalposts)&&($row < 5)) : ?><div class="grid-whole s-hidden dotted"></div><?php endif; ?>
 
 <?php
 $counter = 0;
@@ -86,7 +86,7 @@ endwhile; ?>
 <?php endif; ?>
 </div>
 
-<div class="grid-4 padded-inner-left">
+<div class="grid-4 m-grid-5 s-grid-6 s-padded-left padded-inner-left">
 
 <?php if ( is_active_sidebar( 'side-menu' ) ) : ?>
 	<ul class="padded-inner" id="sidebar">

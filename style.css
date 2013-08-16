@@ -730,7 +730,7 @@ it with your own stuff.  */
     padding: 35px 10px 20px 14px;
   }
 
-  .diaspora {
+  .diaspora, .widgettitle {
     font-size: 2em;
     font-size: 28px;
 
@@ -746,7 +746,7 @@ it with your own stuff.  */
     top: 275px;
     width: 100%;
   }
-  .diaspora {
+  .diaspora, .widgettitle {
     font-size: 1.71428571em;
     font-size: 24px;
   }
@@ -1071,6 +1071,10 @@ hr.foot_rule {
 #quote {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.art {
+  max-width: 400px;
 }
 
 #twitter_icon {
@@ -1444,7 +1448,7 @@ h3 {
 }
 
 .dotted {
-  border-bottom: 1px dotted #000;
+  border-bottom: 1px dashed #000;
 }
 
 .author_name {
