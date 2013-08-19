@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Category Archive pages
+ * The template used to display Topic Archive pages
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
@@ -41,7 +41,11 @@ if($counter == 1) :
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
 			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
+			<?php if ( in_category('events')) { ?>
+			<div class="grid-whole padded-bottom timetitle"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('l, F d, Y'); ?></div> 	
+			<?php } else { ?>
 			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<?php } ?>
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
 	</li>
@@ -58,7 +62,11 @@ elseif($counter == $grids) :
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
 			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
+			<?php if ( in_category('events')) { ?>
+			<div class="grid-whole padded-bottom timetitle"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('l, F d, Y'); ?></div> 	
+			<?php } else { ?>
 			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<?php } ?>
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
 	</li>	

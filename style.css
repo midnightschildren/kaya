@@ -1037,7 +1037,7 @@ hr.foot_rule {
 }
 
 .menu li.menu-item-22 {
-	padding-left: 0em;
+	padding-left: 0;
 }
 
 .paper {
@@ -1243,7 +1243,7 @@ a {
 	color: #cccc00;
 }
 
-.side_menu a, .web_menu a, #sidebar a {
+.side_menu a, .web_menu a {
   color: #000;
   letter-spacing: .1em;
 }
@@ -1252,7 +1252,7 @@ a {
   color: #000;
 }
 
-.side_menu a:hover, .booktitle2 a:hover, #sidebar a:hover {
+.side_menu a:hover, .booktitle2 a:hover {
   color: #cccc00;
 }
 
@@ -1292,7 +1292,7 @@ header a {
 
 .test-title {
   
-  margin-bottom: 0em;
+  margin-bottom: 0;
   line-height: 1em;
   font-size: 48px;
 }
@@ -1435,17 +1435,47 @@ h3 {
 }
 
 .tlw-list br, .cat-item {
+  line-height: 1em;
+}
+
+.sgr-custom-taxonomies-menu {
+  margin-top: -0.5em;
+}
+
+.cat-item.cat-item-92 > a, .cat-item.cat-item-93 > a, .cat-item.cat-item-94 > a {
+  font-weight: normal;
+  text-transform:uppercase;
   line-height: 2em;
+  font-size: 2.28571429em;
+  font-size: 32px;
+  font-family: "playfair", serif;
+  text-decoration: none;
+  color: #acaa9f;
 }
 
-.widget_taxonomy_list_widget {
-  margin-top: .5em;
-}
-
-.side_menu li, .web_menu li, #sidebar li {
+.side_menu li, .web_menu li {
   font-weight: bold;
   text-transform: uppercase;
   font-family: "dincondensed",sans-serif; 
+}
+
+.children {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "dincondensed",sans-serif;
+}
+
+.children a {
+  color: #000;
+  letter-spacing: .1em;
+}
+
+.children a:hover {
+  color: #cccc00;
+}
+
+.children li {
+  margin-bottom: 1em;
 }
 
 .creative p {
@@ -1533,7 +1563,7 @@ p.author_name {
 	font-size: 24px;
 	color: #000;
 	line-height: 1.5em;
-	margin-bottom: 0em;
+	margin-bottom: 0;
 }
 
 .price {
@@ -1789,7 +1819,7 @@ p.author_name {
 
 .padded-topn {
   padding-top: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 
 .padded-topo {
@@ -1799,12 +1829,12 @@ p.author_name {
 
 .padded-topm {
   padding-top: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 
 .padded-tops {
   padding-top: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 
 
@@ -2240,7 +2270,7 @@ hr.foot_rule {
 /* Retina Display */
 @media screen and (-webkit-min-device-pixel-ratio:2) {
 
-					{ /* Place your styles here for all 'Retina' screens */ }
+					
 
 .menu a {
 	font-weight: bold;
@@ -2248,7 +2278,7 @@ hr.foot_rule {
 	font-family: "dincondensed",sans-serif;
 	font-size: 12px;
 	font-size: .875em;
-  padding-left: 0em;
+  padding-left: 0;
 
 }
 

@@ -40,7 +40,7 @@ if($counter == 1) :
 		<article>
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
-			<div class="grid-whole padded-vertical timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
 			<div class="grid-whole padded-bottom timetitle"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('l, F d, Y'); ?></div> 
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
@@ -57,7 +57,7 @@ elseif($counter == $grids) :
 		<article>
 			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
-			<div class="grid-whole padded-vertical timetitle"><?php the_tags('', '|'); ?></div>
+			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
 			<div class="grid-whole padded-bottom timetitle"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('l, F d, Y'); ?></div> 
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
