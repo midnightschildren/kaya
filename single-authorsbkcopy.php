@@ -18,9 +18,35 @@
 <div id="single-book" class="grid-whole background-white">
 <div class="grid-1 m-hidden s-hidden">&nbsp;</div>
 <div class="grid-14 s-grid-16 m-grid-16">
-<div class="grid-5 s-grid-6 padded-inner">
+<div class="grid-half s-grid-whole padded-inner">
 
+<div class="grid-whole padded-inner">
 
+<h2 class="book-title gray padded-bottom">Kaya Authors</h2>
+
+<?php
+
+    $author_term_query = new WP_Query( array(
+        'post_type' => 'authors',
+        'posts_per_page' => -1,
+        'orderby' => 'rand'
+        
+    ) )
+    ?>
+
+<ul class="padded-top side_menu"> 
+    <?php
+    if ( $author_term_query->have_posts() ) : while ( $author_term_query->have_posts() ) : $author_term_query->the_post(); ?>
+    
+<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+	<?php endwhile; endif; ?>
+</ul>
+</div>
+
+<?php wp_reset_postdata();?>
+
+<?php $author_term_query = null; $wp_query = clone $single_amar; ?><?php rewind_posts(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -84,54 +110,8 @@
 	</div>
 
 </div>
-
-<div class="grid-whole padded-inner">
-
-<h2 class="side_author_news gray padded-bottom">More <?php the_title(); ?> Books</h2>
-
-	<div class="padded-inner">
-	<?php foreach(get_field('authors_other_book') as $post_object): ?>
-		<div class="padded-inner-bottom">
-		<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
-			<div class="padded-top booktitle2">
-				<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
-				<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
-			</div>
-		</div>
-	<?php endforeach; ?>
-	</div>
 </div>
-
-<div class="grid-whole padded-inner-sides">
-
-<h2 class="side_author_news gray padded-bottom">Kaya Authors</h2>
-
-<?php
-
-    $author_term_query = new WP_Query( array(
-        'post_type' => 'authors',
-        'posts_per_page' => -1,
-        'orderby' => 'rand'
-        
-    ) )
-    ?>
-
-<ul class="padded-top side_menu"> 
-    <?php
-    if ( $author_term_query->have_posts() ) : while ( $author_term_query->have_posts() ) : $author_term_query->the_post(); ?>
-    
-<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-
-	<?php endwhile; endif; ?>
-</ul>
-</div>
-
-<?php wp_reset_postdata();?>
-
-<?php $author_term_query = null; ?>
-
-</div>
-<div class="grid-11 s-grid-10 padded-inner">
+<div class="grid-half s-grid-whole padded-inner">
 
 
 <article class="padded-inner">
@@ -148,34 +128,81 @@
 
 	<h5><span>books</span></h5>
 	
+<?php
+$counter = 1; //start counter
 
-<?php foreach(get_field('1book') as $post_object): ?>
+$grids = 2; //Grids per row ?>
 
+	<?php foreach(get_field('1book') as $post_object): ?>
 
-<div class="grid-whole padded-bottom">
-	<div class="grid-whole background-beige">
-	
-		<div class="grid-whole padded-inner">
-			<div class="grid-6 s-grid-whole">
-			<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
-			</div>
+<?php
+//Show the left hand side column
+if($counter == 1) :
+?>
+<div class="grid-half padded-inner-right">
 
-			<div class="grid-10 s-grid-whole padded-inner">
-			
-			<h2 class="black booktitle3"><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a></h2>
-			<div class="booktitle2 padded-bottom">Kaya <?php echo get_field('published', $post_object->ID); ?></div>
-			<?php echo get_field('description', $post_object->ID); ?>
-			
-			</div>
-		</div>
-	<div class="papertop grid-whole">&nbsp;</div>
-	</div>
-	
+<?php if (get_field ('press', $post_object->ID)) : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php else : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+Kaya <?php echo get_field('published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php endif; ?>
 </div>	
 
-<?php endforeach; ?>
+<?php
+//Show the right hand side column
+elseif($counter == $grids) :
+?>
 
-<div class="grid-whole s-breakword">
+<div class="grid-half padded-inner-left">
+
+<?php if (get_field ('press', $post_object->ID)) : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php else : ?>
+
+<div class="padded-inner-bottom">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+<div class="padded-top booktitle2">
+<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+Kaya <?php echo get_field('published', $post_object->ID); ?>
+</div>
+</div>
+
+<?php endif; ?>
+
+</div>	
+<?php
+$counter = 0;
+endif;
+?>
+<?php
+$counter++;
+endforeach; ?>
+
+<div class="grid-whole">
 <h5><span>praise</span></h5>
 
 <?php foreach(get_field('1book') as $post_object): ?>
@@ -198,7 +225,7 @@ $author_query3 = new WP_Query( array(
         
     ) )
 ?>
-<div class ="grid-whole s-breakword padded-top">
+<div class ="grid-whole padded-top">
 <?php if ($author_query3->have_posts())
 {?>
 <h2 class="single_author_news padded-vertical gray"><?php the_title(); ?> news</h2>

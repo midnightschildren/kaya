@@ -1060,6 +1060,10 @@ hr.foot_rule {
   top: -100px;
 }
 
+.background-beige {
+  background-color: #edede6;
+}
+
 .background-white {
   background-color: #fff;
 }
@@ -1263,6 +1267,10 @@ a {
 .single_author_news {
   line-height: 1em;
   word-wrap: break-word;
+}
+
+.side_author_news {
+  line-height: 1em;
 }
 
 header a {
@@ -1520,6 +1528,19 @@ p.author_name {
 .booktitle2 {
   font-family: "dincondensed", sans-serif;
   font-weight: bold;
+}
+
+.booktitle3 {
+  line-height: 1em;
+}
+
+.booktitle3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.booktitle3 a:hover {
+  color: #000;
 }
 
 .timetitle {
@@ -1874,6 +1895,12 @@ input, input[type="search"] {
     font-size: 1.42857143em;
 }
 
+h2.side_author_news {
+    line-height: 1em;
+    font-size: 1.71428571em;
+    font-size: 24px;
+}
+
 /* position the left arrow */
 .arrow-left {
     left: 2%;
@@ -1931,6 +1958,10 @@ input, input[type="search"] {
     width: auto;
     box-sizing: content-box;
     float: none; }
+
+  .s-breakword {
+    word-wrap: break-word;
+  }
 
   /* miscellaneous helper classes */
   .s-flow-opposite {
