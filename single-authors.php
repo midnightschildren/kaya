@@ -90,6 +90,8 @@
 <h2 class="side_author_news gray padded-bottom">More <?php the_title(); ?> Books</h2>
 
 	<div class="padded-inner">
+	<div class="grid-3">&nbsp;</div>
+	<div class="grid-10">
 	<?php foreach(get_field('authors_other_book') as $post_object): ?>
 		<div class="padded-inner-bottom">
 		<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
@@ -99,6 +101,8 @@
 			</div>
 		</div>
 	<?php endforeach; ?>
+	</div>
+	<div class="grid-3">&nbsp;</div>
 	</div>
 </div>
 

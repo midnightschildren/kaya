@@ -48,7 +48,8 @@
   	add_image_size('category-thumb', 169, 239, true);
   	add_image_size('book-thumb', 338, 478, true);
   	add_image_size('book-landing', 676, 956, true);
-  	add_image_size('news-image', 400, 300, true);
+  	add_image_size('news-image', 325, 325, true);
+  	add_image_size('news-featured', 670, 502, true);
   	add_image_size('author-thumb', 250, 350, true); 
   	add_image_size('featured-event', 160, 130, true);
   	add_image_size('featured-slide', 850, 700, true);
@@ -199,12 +200,14 @@ if( !is_admin()){
 		$GLOBALS['comment'] = $comment; 
 		?>
 		<?php if ( $comment->comment_approved == '1' ): ?>	
-		<li>
+		<li class="padded-vertical kaya_c_section">
 			<article id="comment-<?php comment_ID() ?>">
-				<?php echo get_avatar( $comment ); ?>
-				<h4><?php comment_author_link() ?></h4>
-				<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
-				<?php comment_text() ?>
+				<div class="kaya_comment"><span class="kaya_quote">&#8220;</span><?php comment_text() ?></div>
+				&mdash; <strong><?php comment_author_link() ?></strong> <time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?></a></time>
+				
 			</article>
+		</li>
 		<?php endif; 
 	}
+
+	?>

@@ -1,6 +1,7 @@
 		animatedcollapse.addDiv('categories', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('archives', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('searchgroup', 'fade=1, speed=200,group=srv,hide=1')
+		animatedcollapse.addDiv('comgroup', 'fade=1, speed=200,group=trv,hide=1')
 		
 		
 

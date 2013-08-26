@@ -35,38 +35,44 @@ $grids = 2; //Grids per row ?>
 //Show the left hand side column
 if($counter == 1) :
 ?>
-<div class="grid-half s-grid-whole s-padded-sides padded-inner-right">
-	<li class="padded-top art">
+<div class="grid-whole padded-inner-bottom news-width">
+<div class="grid-whole s-grid-whole s-padded-sides background-beige padded-inner">
+	
 		<article>
-			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
+			<div class="grid-whole s-padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-featured'); ?></a></div>
 			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
 			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
-			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<div class="grid-whole padded-bottom timetitle">ON <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
 		</article>
-	</li>
+	
+	<div class="grid-whole s-hidden dotted"></div>
 </div>
-
+</div>
 <?php
 //Show the right hand side column
-elseif($counter == $grids) :
+elseif($counter > 1) :
 ?>
-
-<div class="grid-half s-grid-whole s-padded-sides padded-inner-left">
-	<li class="padded-top art">
+<div class="grid-whole padded-inner-bottom news-width">
+<div class="grid-whole s-grid-whole s-padded-sides background-beige padded-inner">
+	
 		<article>
-			<div class="grid-whole padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></a></div>
-			<div class="grid-whole padded-vertical "><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+			<div class="grid-6 s-grid-whole s-padded-vertical m-padded-right l-padded-right"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+					<div class="s-hidden"><?php the_post_thumbnail('news-image'); ?></div><div class="m-hidden l-hidden"><?php the_post_thumbnail('news-featured'); ?></div></a>
+			</div>
+			<div class="grid-10 s-grid-whole m-padded-left l-padded-left">
+			<div class="grid-whole padded-bottom"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
 			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
-			<div class="grid-whole padded-bottom timetitle"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<div class="grid-whole padded-bottom timetitle">ON <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
 			<div class="grid-whole padded-top"><?php the_excerpt(); ?></div>
+			</div>
 		</article>
-	</li>	
+		
+<div class="grid-whole padded-vertical s-hidden dotted"></div>
 </div>
-<?php if(($row<$totalposts)&&($row < 5)) : ?><div class="grid-whole s-hidden dotted"></div><?php endif; ?>
+</div>
 
 <?php
-$counter = 0;
 endif;
 ?>
 
@@ -76,7 +82,7 @@ $counter++;
 $row++;
 endwhile; ?>
 
-<div class="grid-whole">
+<div class="grid-whole news-width">
 <div class="grid-6 nav-previous timetitle slightlylg"><?php next_posts_link( '<div class="arrow2lt"><span title="Back" class="carouselback"></span></div>'); ?><?php next_posts_link( 'Older' ); ?></div>
 <div class="grid-6 nav-next flow-opposite timetitle slightlylg"><?php previous_posts_link( '<div class="arrow2"><span title="Next" class="carouselnext"></span></div>' ); ?><div class="flow-opposite"><?php previous_posts_link( 'Newer' ); ?></div></div>
 </div>

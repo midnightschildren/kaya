@@ -864,6 +864,7 @@ it with your own stuff.  */
 
 header				{ background: #fff;}
 #search, #searcha { padding: 18px 10px 10px 0px; color:white; font-weight:bold; background: #FFF; height: 58px; border-bottom: 6px solid black;}
+#com, #coma { padding: 18px 10px 10px 0px; color:black; font-weight:bold; height: 58px; border-bottom: 6px solid black;}
 .arrow-container {position: relative; float:right; right: 70px; top:36px;}
 .arrow-down {
         position:absolute;
@@ -925,6 +926,36 @@ input, input[type="search"] {
 padding: 1px;
 background-color: white;
 border: 0px;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+width: 99%;
+font-size: 1.428em;
+font-family: "playfair", serif;
+color: #acaa9f;
+}
+
+#commentform input[type="text"] {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 1px dashed;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+width: 99%;
+font-size: 1.428em;
+font-family: "playfair", serif;
+color: #acaa9f;
+}
+
+textarea#comment {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 1px dashed;
 border-image: initial;
 -webkit-rtl-ordering: logical;
 -webkit-user-select: text;
@@ -1070,6 +1101,10 @@ hr.foot_rule {
 
 #newsandevents, #author_landing {
   background-color: #fff;
+}
+
+.news-width {
+  max-width: 698px;
 }
 
 #quote {
@@ -1514,6 +1549,58 @@ p.author_name {
   text-transform: uppercase;
   font-family: "dincondensed",sans-serif;
   font-size: 24px;
+  text-decoration: none;
+}
+
+.single_post_title {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "dincondensed",sans-serif;
+  font-size: 42px;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+.smtit {
+  text-transform: none;
+}
+
+.kaya_comment p{
+  margin-bottom: 0;
+  margin-top: 2em;
+  font-style: italic;
+
+}
+
+.kaya_quote {
+  font-size: 42px;
+  font-size: 3em;
+  color: #acaa9f;
+  line-height: 1em;
+  font-family: "ff-ernestine-web-pro", serif;
+  float: left;
+  margin-right: 14px;
+}
+
+.kaya_c_section a {
+  text-decoration: none;
+  color: #000;
+}
+
+.kaya_c_section a:hover {
+  color: #cccc00;
+}
+
+.form-allowed-tags {
+  display: none;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 100%;
 }
 
 .book-title {
@@ -1895,7 +1982,7 @@ input, input[type="search"] {
     font-size: 1.42857143em;
 }
 
-h2.side_author_news {
+h2.side_author_news, h2.booktitle3 {
     line-height: 1em;
     font-size: 1.71428571em;
     font-size: 24px;

@@ -22,17 +22,29 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
+<div class="grid-whole padded-inner-bottom news-width">
+<div class="grid-whole s-grid-whole s-padded-sides padded-inner">
+
 <article>
 
-	<h2><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>			
-
-
-
-	<?php comments_template( '', true ); ?>
+	<div class="grid-whole s-padded-top"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-featured'); ?></a></div>
+	<div class="grid-whole padded-vertical "><a class="single_post_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+	<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
+	<div class="grid-whole padded-bottom timetitle">ON <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+	<div class="grid-whole padded-top"><?php the_content(); ?>	</div>			
 
 </article>
+
+<div class="grid-whole s-hidden dotted"></div>
+
+<div class="grid-whole"><?php comments_template( '', true ); ?></div>
+
+</div>
+</div>
+
+
+
+
 
 <div class="grid-whole">
 <div class="grid-6 nav-previous timetitle slightlylg"><?php next_posts_link( '<div class="arrow2lt"><span title="Back" class="carouselback"></span></div>'); ?><?php next_posts_link( 'Older' ); ?></div>

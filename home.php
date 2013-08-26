@@ -247,9 +247,11 @@ $author_query = new WP_Query( array(
 
 
 <?php if ($author_query->have_posts()) : while ($author_query->have_posts()) : $author_query->the_post(); ?>
+
 <div class="grid-whole">
 <div class="grid-5 padded-inner"><?php $posts = get_field('news_by_author');if ($posts): foreach($posts as $post_object): ?>
     <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'category-thumb'); ?></a></div>
+    <?php break; ?>
 <?php endforeach;  endif;?>
     <div class="grid-11 padded-inner"><a class="author_name" href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br /><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>

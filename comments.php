@@ -30,8 +30,6 @@
 
 	<?php if ( have_comments() ) : ?>
 
-	<h2><?php comments_number(); ?></h2>
-
 	<ol>
 		<?php wp_list_comments( array( 'callback' => 'starkers_comment' ) ); ?>
 	</ol>
@@ -47,6 +45,23 @@
 	
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	
+<h2 class="gray"><a href="#" rel="toggle[comgroup]" class="commentlink" title="commentcol">Leave a Comment</a></h2>
+
+<div id="comgroup" class="grid-whole">
+	
+	<?php comment_form(array('title_reply'=>'')); ?>
+	
+</div>
+<div class="grid-whole">
+<h2 class="book-title gray" style="margin-bottom: -50px; font-size: 24px">We'd love to know what you think.</h2>
+<div id="com" class="grid-14 s-grid-13 m-grid-14"></div>
+<div id="coma" class="grid-2 s-grid-3 m-grid-2 padded-inner-sides">
+		<div class="arrow-container">
+		<div class="arrow-down-border"></div>
+		<div class="arrow-down"></div>
+		</div>
+</div>
+</div>
 
 </div><!-- #comments -->
