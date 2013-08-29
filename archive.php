@@ -65,7 +65,7 @@ $term_id = $queried_object->term_id;?>
     ) )
     ?>
 
-<ul> 
+<ul class="spnone"> 
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
     
