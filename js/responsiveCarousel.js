@@ -47,7 +47,7 @@
             onShift: null,
             cssAnimations: Modernizr.csstransitions,
             nudgeThreshold: 10,
-            infinite: false,
+            infinite: true,
             delta: 1,
             dragVertical: false,
             dragPreventDefault: false,

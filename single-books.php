@@ -101,7 +101,7 @@ $author_query3 = new WP_Query( array(
 
 <?php if (get_field('amazon'))
 { ?> 
-<a href="<?php the_field('amazon');?>"><img alt="Btnbuy" src="/wp-content/uploads/2013/03/buy-button.png" /></a>
+<a href="<?php the_field('amazon');?>" target="_blank"><img alt="Btnbuy" src="/wp-content/uploads/2013/03/buy-button.png" /></a>
 <?php } ?>
 </div>
 
@@ -185,13 +185,13 @@ $author_query3 = new WP_Query( array(
     ) )
     ?>
 
-<ul>
+<ul class="spnone">
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
     
 <li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $hosts = get_field('author');if ($hosts): foreach($hosts as $host_object): ?>
-    <a href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
+    <a class="black" href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
 <?php endforeach; endif;?>
     <?php endwhile; endif; ?>
 
@@ -225,13 +225,13 @@ foreach( $genre_terms as $genre_term ) {
     ) )
     ?>
 
-<ul>
+<ul class="spnone">
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
     
 <li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $hosts = get_field('author');if ($hosts): foreach($hosts as $host_object): ?>
-    <a href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
+    <a class="black" href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
 <?php endforeach;  endif;?>
     <?php endwhile; endif; ?>
 

@@ -162,8 +162,20 @@
                 });                     
             });
 
+            $("#A3Btn").on(event, function(j) {
+            $("#author_landing").attr("class", "grid-whole container_test"); 
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(3)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                     
+            });
+
 			$("#PerformanceBtnBC").on(event, function(d) {
-    		$("#author_landing").attr("class", "grid-whole container_test"); 
+    		$("#author_landing").attr("class", "grid-whole container_test");
             $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );
                     $this.isAnimating = false;
@@ -173,6 +185,18 @@
                 $this.height( newHeight );
                 });   				
 			});
+
+            $("#A4Btn").on(event, function(d) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(4)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                 
+            });
 
 			$("#FilmBtnBC").on(event, function(e) {
     		$("#author_landing").attr("class", "grid-whole container_test");
@@ -186,7 +210,31 @@
                 });    				
 			});
 
+            $("#A6Btn").on(event, function(e) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(6)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                 
+            });
+
             $("#PoetryBtn").on(event, function(f) {
+            $("#author_landing").attr("class", "grid-whole container_test");
+            $( ".mi-slider" ).each(function() {
+                    var newHeight = 25, $this = $( this );
+                    $this.isAnimating = false;
+                    $.each( $this.children(":nth-child(5)"), function() {
+                    newHeight += $( this ).height();
+                    });
+                $this.height( newHeight );
+                });                         
+            });
+
+            $("#A5Btn").on(event, function(f) {
             $("#author_landing").attr("class", "grid-whole container_test");
             $( ".mi-slider" ).each(function() {
                     var newHeight = 25, $this = $( this );

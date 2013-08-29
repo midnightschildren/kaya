@@ -72,13 +72,13 @@
 		<div class="social">
 		<div class="grid-whole"><a href="https://twitter.com/search?q=%23kayapress&src=hash">#kayapress</a></div>
 		<div class="grid-whole right padded-top"><a href="https://twitter.com/kayapress" id="twitter">Twitter</a><a href="http://www.facebook.com/pages/KAYA-Press/160101600672575" id="facebook">Facebook</a></div>
-		<div class="grid-whole right padded-top"><a href="http://kayapress.tumblr.com/" id="tumblr">Tumblr</a><a href="mailto:info@kaya.com" id="mail">Mail</a></div>
+		<div class="grid-whole right padded-top"><a href="http://kayapress.tumblr.com/" id="tumblr">Tumblr</a><a href="http://instagram.com/kayapress" id="mail">Instagram</a></div>
 
 		</div>	
 	</div>
 	<div class="grid-half padded-inner">
 		<footer>
-			<img class="alignnone size-tiger padded-vertical" alt="tiger-logo" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/tiger-logo.png" width="124" height="100" />
+			<a href="/"><img class="alignnone size-tiger padded-vertical" alt="tiger-logo" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/tiger-logo.png" width="124" height="100" /></a>
 			<p class="foot_about padded-top"><strong>Kaya Press</strong> is a publisher of Asian Pacific Diasporas and is under the academic auspices of the USC Dana and David Dornsife College of Letters, Arts and Sciences.</p>
 			<p class="foot">&copy; copyright <?php echo date("Y"); ?> kaya press</p>
 		</footer>

@@ -34,8 +34,14 @@ $slide_query = new WP_Query( array(
                 <ul class="slider-target">
                 <?php if ($slide_query->have_posts()) : while ($slide_query->have_posts()) : $slide_query->the_post(); ?>
                     <li class="slid">
-                        <div class="inner"><div class="opmask"><?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?>
-                            <div class="slide-title"><p class="test-title"><span style="background-color:#000;"><?php the_title(); ?></span></p> <a class="slide_link" href="">read on</a></div></div></div>
+                        <div class="inner"><div class="opmask">
+                            <?php $posts = get_field('read_more_link');if ($posts): foreach($posts as $post_object): ?><a href="<?php echo get_permalink($post_object->ID); ?>">
+                            <?php endforeach; endif;?>
+                            <?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?>       
+                            <div class="slide-title"><p class="test-title"><?php the_title(); ?></a></p> 
+                            <?php $posts = get_field('read_more_link');if ($posts): foreach($posts as $post_object): ?>
+                                <a class="slide_link" href="<?php echo get_permalink($post_object->ID); ?>">read on</a></div></div></div>
+                            <?php endforeach; endif;?>
                     </li>
                 <?php endwhile; endif; $slide_query = null; wp_reset_postdata();?>   
                 </ul>
@@ -61,8 +67,8 @@ $slide_query = new WP_Query( array(
         */
         ten('#example-3')
                 .responsiveCarousel({
-                    infinite:   true, // turn on infinite scrolling
-                    unitWidth:  'compute',
+                    infinite: true, // turn on infinite scrolling
+                    unitWidth: 'compute',
                     target: '.slider-target',
         			mask: '.slider-mask',
                     unitElement:'.slid',
@@ -146,7 +152,7 @@ foreach ( $genre_terms as $genre_term ) {
     
 <li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
+    <a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
     <?php endwhile; endif; ?>
 </ul>
@@ -227,7 +233,7 @@ $events_query = new WP_Query( array(
 </div>
 <?php endwhile; endif; $events_query = null;
     wp_reset_postdata(); ?>
-<div class="grid-3 padded-right padded-topcont">&nbsp;</div><div class="grid-13 padded-inner"><a class="author_name" href="/events" style="text-transform:uppercase;">see all events</a></div>
+<div class="grid-3 padded-right padded-topcont">&nbsp;</div><div class="grid-13 padded-inner"><a class="author_name" href="/category/events/" style="text-transform:uppercase;">see all events</a></div>
 
 
 </div>
@@ -257,7 +263,7 @@ $author_query = new WP_Query( array(
 </div>
 <?php endwhile; endif; $author_query = null;
     wp_reset_postdata();?>
-<div class="grid-5 padded-inner">&nbsp;</div><div class="grid-11 padded-inner"><a class="author_name" href="/authors" style="text-transform:uppercase;">see all author news</a></div>
+<div class="grid-5 padded-inner">&nbsp;</div><div class="grid-11 padded-inner"><a class="author_name" href="/category/news/" style="text-transform:uppercase;">see all author news</a></div>
 </div>
 
 

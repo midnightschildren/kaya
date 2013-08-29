@@ -288,16 +288,26 @@ it with your own stuff.  */
   max-width: 85%;
   color: #fff;
   font-family: dincondensed, sans-serif;
-  font-size: 2em;
-  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
+.test-title {
+  font-size: 3.5em;
+  font-size: 49px;
+}
+
+.test-title a {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
 .slide_link {
   text-decoration: none;
-  font-size: 14px;
-  font-size: .5em;
+  font-size: 28px;
+  font-size: 2em;
+  line-height: 1.5em;
 }
 
 .examples {
@@ -430,6 +440,14 @@ it with your own stuff.  */
   display: inline;
   margin: 0;
   
+}
+
+.mi-moveToLeft, .mi-moveToRight, .spnone {
+  display: none;
+}
+
+.mi-current {
+  display: block;
 }
 
 #books {
@@ -1337,7 +1355,8 @@ header a {
   
   margin-bottom: 0;
   line-height: 1em;
-  font-size: 48px;
+  font-size: 56px;
+  font-size: 4em;
 }
 
 .time-meta, .entry-content {
@@ -1518,7 +1537,7 @@ h3 {
 }
 
 .children li {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .creative p {
@@ -1977,10 +1996,17 @@ input, input[type="search"] {
     background-color: transparent;
 }
 
-.slide-title {
-    font-size: 20px;
-    font-size: 1.42857143em;
+
+.test-title {
+    font-size: 24px;
+    font-size: 1.71428571em;
 }
+
+.slide_link {
+  font-size: 14px;
+  font-size: 1em;
+  line-height: 1.5em;
+  }
 
 h2.side_author_news, h2.booktitle3 {
     line-height: 1em;
@@ -2175,9 +2201,18 @@ h2.side_author_news, h2.booktitle3 {
   .menu li {
 	padding-left: .5em;}
 
-  .slide-title {
-    font-size: 24px;
-    font-size: 1.71428571em;}
+  .test-title {
+  margin-bottom: 0;
+  line-height: 1em;
+  font-size: 35px;
+  font-size: 2.5em;
+}
+
+  .slide_link {
+  font-size: 21px;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  }
 
   .m-flow-opposite {
     float: right; }
@@ -2329,6 +2364,13 @@ h2.side_author_news, h2.booktitle3 {
   padding-right: 20%;
 }
 
+.test-title {
+  margin-bottom: 0;
+  line-height: 1em;
+  font-size: 49px;
+  font-size: 3.5em;
+}
+
 hr.foot_rule {
   margin-right: 20%;
 }
@@ -2358,6 +2400,13 @@ hr.foot_rule {
 .padded-tops {
   padding-top: 30px;
   letter-spacing: 0.2em;
+}
+
+.test-title {
+  margin-bottom: 0;
+  line-height: 1em;
+  font-size: 56px;
+  font-size: 4em;
 }
 
 .menu li {

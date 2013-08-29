@@ -30,7 +30,8 @@
     	<?php the_post_thumbnail('book-landing'); ?>
 
 	</div>
-	
+	<?php if (get_field('twitter_hash_tag'))
+		{ ?>
 	<div class="weblink_box">
 		<div class="grid-whole paper"></div>
 		<h3>#<?php the_field('twitter_hash_tag'); ?></h3>
@@ -82,29 +83,11 @@
 
 		</ul>
 	</div>
+	<?php } ?>
 
 </div>
 
-<div class="grid-whole padded-inner">
 
-<h2 class="side_author_news gray padded-bottom">More <?php the_title(); ?> Books</h2>
-
-	<div class="padded-inner">
-	<div class="grid-3">&nbsp;</div>
-	<div class="grid-10">
-	<?php foreach(get_field('authors_other_book') as $post_object): ?>
-		<div class="padded-inner-bottom">
-		<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
-			<div class="padded-top booktitle2">
-				<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
-				<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
-			</div>
-		</div>
-	<?php endforeach; ?>
-	</div>
-	<div class="grid-3">&nbsp;</div>
-	</div>
-</div>
 
 <div class="grid-whole padded-inner-sides">
 
@@ -115,7 +98,8 @@
     $author_term_query = new WP_Query( array(
         'post_type' => 'authors',
         'posts_per_page' => -1,
-        'orderby' => 'rand'
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
         
     ) )
     ?>
@@ -133,6 +117,31 @@
 <?php wp_reset_postdata();?>
 
 <?php $author_term_query = null; ?>
+
+<?php if (get_field('authors_other_book'))
+{ ?> 
+
+<div class="grid-whole padded-inner">
+
+<h2 class="side_author_news gray padded-top">More <?php the_title(); ?> Books</h2>
+
+	<div class="padded-inner">
+	<div class="grid-3">&nbsp;</div>
+	<div class="grid-10">
+	<?php foreach(get_field('authors_other_book') as $post_object): ?>
+		<div class="padded-inner-bottom">
+		<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_post_thumbnail($post_object->ID, 'book-thumb'); ?></a>
+			<div class="padded-top booktitle2">
+				<a href="<?php echo get_field('other_book_url',$post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a><br />
+				<?php echo get_field('press', $post_object->ID);?> <?php echo get_field('other_book_published', $post_object->ID); ?>
+			</div>
+		</div>
+	<?php endforeach; ?>
+	</div>
+	<div class="grid-3">&nbsp;</div>
+	</div>
+</div>
+<?php } ?>
 
 </div>
 <div class="grid-11 s-grid-10 padded-inner">
