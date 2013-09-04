@@ -1,18 +1,7 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
+/*
+Template Name: Kaya About Page
+*/
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
@@ -20,13 +9,37 @@
 <div id="author_landing" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-12 s-grid-16 m-grid-14 center">
+<div class="grid-12 s-grid-16 m-grid-14">
+
+<div class="grid-5 m-grid-6 s-grid-6 s-padded-sides padded-inner-right">
+
+
+	<ul class="padded-inner about-sidebar" id="sidebar">
+		<h2 class="gray absk">About Kaya</h2>
+		<?php dynamic_sidebar( 'about-menu' ); ?>
+	</ul>
+
+
+
+</div>
+
+<div class="grid-11 m-grid-10 s-grid-10 padded-inner">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content(); ?>
+<h2 class="book-title gray padded-bottom">Our Mission</h2>
+<div class="grid-whole padded-top"><?php the_field('our_mission'); ?></div>
+
+<h2 class="book-title gray padded-bottom">Kaya History</h2>
+<div class="grid-whole padded-top"><?php the_field('kaya_history'); ?></div>
+
+<h2 class="book-title gray padded-bottom">What does "Kaya" mean?</h2>
+<div class="grid-whole padded-top"><?php the_field('kaya_meaning'); ?></div>
+
+<h2 class="book-title gray padded-bottom">About Our Logo</h2>
+<div class="grid-whole padded-top"><?php the_field('about_our_logo'); ?></div>
 
 <?php endwhile; ?>
+</div>
 
 
 </div>

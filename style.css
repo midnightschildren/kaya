@@ -753,6 +753,7 @@ it with your own stuff.  */
     font-size: 28px;
 
   }
+
 }
 
 @media screen and (max-width: 817px){
@@ -1087,6 +1088,12 @@ hr.foot_rule {
 
 .menu li.menu-item-22 {
 	padding-left: 0;
+}
+
+.about-sidebar li {
+  float: none;
+  padding-bottom: .5em;
+  padding-left: 0;
 }
 
 .paper {
@@ -1527,17 +1534,34 @@ h3 {
   font-family: "dincondensed",sans-serif;
 }
 
-.children a {
+.children a, .about-sidebar a {
   color: #000;
   letter-spacing: .1em;
 }
 
-.children a:hover {
+.children a:hover, .about-sidebar a:hover {
   color: #cccc00;
+}
+
+.current_page_item a {
+  color: #cccc00;
+}
+
+.aboutpeoplestaff {
+  margin-bottom: 1em;
+}
+
+.aboutpeoplestaff p {
+  margin-bottom: 0;
 }
 
 .children li {
   margin-bottom: .5em;
+}
+
+.absk {
+  line-height: 1em;
+  padding-bottom: .5em;
 }
 
 .creative p {
@@ -1568,6 +1592,72 @@ p.author_name {
   text-transform: uppercase;
   font-family: "dincondensed",sans-serif;
   font-size: 24px;
+  text-decoration: none;
+}
+
+.event_circle {
+  width: 24%; 
+  height: 0;
+  padding: 12% 0;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: .5em;
+  margin-left: -15%;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  background-color: #dbef00;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+}
+
+.event_circle_sp {
+  width: 66.66%;
+  padding: 33.33% 0;
+  margin-left: -41.66%;
+}
+
+.edt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.edt:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+}
+
+.diaspora_e {
+  font-size: 3em;
+  font-size: 42px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.sya_container h2 {
+  color: #acaa9f;
+}
+
+.sya_date {
+  font-weight:bold; 
+  font-family: "playfair", serif;
+}
+
+.sya_container li {
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+
+.sya_container li a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "dincondensed",sans-serif;
   text-decoration: none;
 }
 
@@ -2033,6 +2123,15 @@ h2.side_author_news, h2.booktitle3 {
 	height: 50px;
 	padding: 10px 10px 10px 5px;
 }
+  .diaspora_e {
+    font-size: 1.28571429em;
+    font-size: 18px;
+  }
+
+  .event_circle {
+    margin-left: -6%;
+  }
+
   .s-padded {
     padding: 0.5em; }
 
@@ -2201,6 +2300,10 @@ h2.side_author_news, h2.booktitle3 {
   .menu li {
 	padding-left: .5em;}
 
+  .about-sidebar li {
+  padding-left: 0;
+  }
+
   .test-title {
   margin-bottom: 0;
   line-height: 1em;
@@ -2214,6 +2317,11 @@ h2.side_author_news, h2.booktitle3 {
   line-height: 1.25em;
   }
 
+  .diaspora_e {
+    font-size: 2em;
+    font-size: 28px;
+    letter-spacing: -0.1em;
+  }
   .m-flow-opposite {
     float: right; }
 
@@ -2291,7 +2399,12 @@ h2.side_author_news, h2.booktitle3 {
 
   .menu li {
 	padding-left: 1em;
-}
+  }
+
+  .about-sidebar li {
+  padding-left: 0;
+  }
+
   .l-padded {
     padding: 0.5em; }
 
@@ -2379,6 +2492,11 @@ hr.foot_rule {
   margin-right: 20%;
 }
 
+  .diaspora_e {
+    font-size: 2.5em;
+    font-size: 35px;
+  }
+
  }
 
 @media (min-width: 1020px) {
@@ -2409,9 +2527,18 @@ hr.foot_rule {
   font-size: 4em;
 }
 
+.diaspora_e {
+  font-size: 3em;
+  font-size: 42px;
+}
+
 .menu li {
 	padding-left: 2em;
 }
+
+ .about-sidebar li {
+  padding-left: 0;
+  }
 
   .crm-button {
     width: 22%;}
@@ -2452,6 +2579,10 @@ hr.foot_rule {
 .menu li {
   padding-left: .75em;
 }
+
+ .about-sidebar li {
+  padding-left: 0;
+  }
 
 .padded-tops {
   padding-top: 21px;

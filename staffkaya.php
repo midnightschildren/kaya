@@ -1,18 +1,7 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
+/*
+Template Name: Kaya Staff Page
+*/
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
@@ -20,13 +9,63 @@
 <div id="author_landing" class="grid-whole">
 <div class="grid-1 s-hidden m-hidden">&nbsp;</div>
 <div class="grid-1 s-hidden">&nbsp;</div>
-<div class="grid-12 s-grid-16 m-grid-14 center">
+<div class="grid-12 s-grid-16 m-grid-14">
+
+<div class="grid-5 m-grid-6 s-grid-6 s-padded-sides padded-inner-right">
+
+
+	<ul class="padded-inner about-sidebar" id="sidebar">
+		<h2 class="gray absk">About Kaya</h2>
+		<?php dynamic_sidebar( 'about-menu' ); ?>
+	</ul>
+
+
+
+</div>
+
+<div class="grid-11 m-grid-10 s-grid-10 padded-inner">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content(); ?>
+<h2 class="book-title gray padded-bottom">Staff</h2>
+<div class="grid-whole padded-top">
+<?php if(get_field('about_people_staff')): ?>
+ 
+	
+ 
+	<?php while(has_sub_field('about_people_staff')): ?>
+ 		<ul class="aboutpeoplestaff">
+		<li><strong><?php the_sub_field('about_people_title'); ?></strong></li>
+		<li><?php the_sub_field('staff_member_1'); ?></li>
+ 		<li><?php the_sub_field('staff_member_2'); ?></li>
+ 		<li><?php the_sub_field('staff_member_3'); ?></li>
+	
+ 		</ul>
+	<?php endwhile; ?>
+<?php endif; ?>
+<?php if(get_field('about_people_directors')): ?>
+<h2 class="book-title gray padded-vertical">Board of Directors</h2>
+<ul class="aboutpeoplestaff">
+	<?php while(has_sub_field('about_people_directors')): ?>
+ 		
+		<li><?php the_sub_field('board_member'); ?></li>	
+ 		
+	<?php endwhile; ?>
+ </ul>
+<?php endif; ?>
+<?php if(get_field('about_people_editors')): ?>
+<h2 class="book-title gray padded-vertical">Editorial Committee</h2>
+<ul class="aboutpeoplestaff">
+	<?php while(has_sub_field('about_people_editors')): ?>
+ 		
+		<li><?php the_sub_field('editor_member'); ?></li>	
+ 		
+	<?php endwhile; ?>
+ </ul>
+<?php endif; ?>
 
+</div>
 <?php endwhile; ?>
+</div>
 
 
 </div>

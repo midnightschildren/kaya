@@ -15,7 +15,7 @@
 	<div class="grid-3 s-hidden m-grid-4 left padded-topn"><h6><a href="/">#<?php bloginfo( 'name' ); ?></a> est. 1994</h6></div>
 	<div class="grid-8 s-grid-12 m-grid-8 right padded-topm"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 	<div class="grid-3 s-grid-4 m-grid-4 right">
-		<div class="grid-9 m-grid-half s-grid-8 right padded-topo"><a href="/"><img class="alignnone size-tiger" alt="tiger-logo" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/tiger-logo.png" width="80" height="65" /></a></div>
+		<div class="grid-9 m-grid-half s-grid-8 right padded-topo"><a href="/"><img class="alignnone size-tiger" alt="tiger-logo" src="/wp-content/themes/kaya_theme/parts/KYP_smoking_tiger21.gif" width="80" height="65" /></a></div>
 		<div class="grid-7 m-grid-half s-grid-8 right padded-tops">
 		<a href="#" rel="toggle[searchgroup]" class="searchlink" title="search">SEARCH</a> <img class="s-hidden" alt="search-glass" style="margin-top:-4px;" src="http://kaya.codisattva.com/wp-content/uploads/2013/02/eyeglass.png" width="18" height="18" /></div>
 	</div>

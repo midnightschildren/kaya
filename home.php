@@ -209,9 +209,9 @@ $feature_query = new WP_Query( array(
     ?>
 <?php if ($feature_query->have_posts()) : while ($feature_query->have_posts()) : $feature_query->the_post(); ?>
 <div class="grid-whole">
-<div class="grid-5 padded-topcont"><?php the_post_thumbnail('featured-event'); ?></div>
+<div class="grid-3 padded-topcont"><h2 class="diaspora event_date padded-bottom"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2><?php the_post_thumbnail('featured-event'); ?></div>
 
-    <div class="grid-11 padded-inner"><h2 class="diaspora event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2><a class="author_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
+    <div class="grid-13 padded-inner"><a class="event_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>
 <?php endwhile; endif; $feature_query = null;
     wp_reset_postdata();?>
@@ -227,7 +227,7 @@ $events_query = new WP_Query( array(
     ?>
 <?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
 <div class="grid-whole">
-<div class="grid-3 padded-right padded-topcont"><h2 class="diaspora event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2></div>
+<div class="grid-3 padded-right padded-topcont"><h2 class="diaspora event_date padded-bottom"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2><?php the_post_thumbnail('featured-event'); ?></div>
 
     <div class="grid-13 padded-inner"><a class="event_title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></div>
 </div>

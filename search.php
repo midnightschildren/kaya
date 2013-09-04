@@ -32,13 +32,23 @@
 <div class="grid-whole s-grid-whole s-padded-sides background-beige padded-inner">
 	
 		<article>
+			<?php if ( in_category('events')) { ?>
+			<div class="grid-6 s-grid-whole s-padded-vertical m-padded-right l-padded-right">
+					<div class="s-hidden"><div class="event_circle event_circle_sp"><div class="edt"><h2 class="diaspora_e event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2></div></div><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-image'); ?></div></a>
+					<div class="m-hidden l-hidden"><div class="event_circle"><div class="edt"><h2 class="diaspora_e event_date"><?php $date = DateTime::createFromFormat('Ymd', get_field('event_date'));echo $date->format('m/d'); ?></h2></div></div><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('news-featured'); ?></div></a>
+			</div>
+			<?php } else { ?>
 			<div class="grid-6 s-grid-whole s-padded-vertical m-padded-right l-padded-right"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
 					<div class="s-hidden"><?php the_post_thumbnail('news-image'); ?></div><div class="m-hidden l-hidden"><?php the_post_thumbnail('news-featured'); ?></div></a>
 			</div>
+			<?php } ?>
 			<div class="grid-10 s-grid-whole m-padded-left l-padded-left">
 			<div class="grid-whole padded-bottom"><a class="event_title booktitle2" href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
 			<div class="grid-whole padded-vertical timetitle"><?php the_terms($post->ID, 'topics', '', ' | '); ?></div>
+						<?php if ( in_category('events') or 'books' == get_post_type() or 'authors' == get_post_type() ) { ?>
+			<?php } else { ?>
 			<div class="grid-whole padded-bottom timetitle">ON <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></div> 
+			<?php } ?>
 			<?php if ( 'books' == get_post_type() ) { ?>
 			<div class="grid-whole padded-top"><?php the_field('description'); ?></div>
 			<?php } else if ( 'authors' == get_post_type() ) { ?>

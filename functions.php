@@ -44,6 +44,12 @@
     'description' => __( 'This sidebar is located on category and tag pages.'),
 ) );
 
+	register_sidebar( array(
+    'id'          => 'about-menu',
+    'name'        => __( 'About Menu'),
+    'description' => __( 'This sidebar is located on about pages.'),
+) );
+
 	add_theme_support('post-thumbnails');
   	add_image_size('category-thumb', 169, 239, true);
   	add_image_size('book-thumb', 338, 478, true);
