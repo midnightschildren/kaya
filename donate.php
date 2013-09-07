@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Kaya Supporters Page
+Template Name: Kaya Donate Page
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -20,7 +20,6 @@ Template Name: Kaya Supporters Page
 	</ul>
 
 
-
 </div>
 
 <div class="grid-11 m-grid-10 s-grid-10 padded-inner">
@@ -30,69 +29,79 @@ Template Name: Kaya Supporters Page
 
 <div class="grid-whole">
 
-<?php if(get_field('abs_funders')): ?>
 
-<h2 class="book-title gray padded-bottom">Kaya is generously funded by:</h2>
- <ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_funders')): ?>
+
+<h2 class="book-title gray padded-bottom">Ways to Contribute</h2>
+<?php if(get_field('contribute_subtitle')): ?> 
+
+<div class="grid-whole"><p class="emphtext"><?php the_field('contribute_subtitle'); ?></p></div>
+<div class="grid-whole"><?php the_field('contribute_text'); ?></div>
+<?php endif; ?>
+
+<div class="grid-whole padded-bottom">
+	<div class="grid-whole background-beige">
+	
+		<div class="grid-whole padded-inner">
+			<div class="grid-6 s-grid-whole s-padded-bottom">
+			<?php 	$attachment_id = get_field('donate_image');
+					$size = "book-thumb";
+					$image = wp_get_attachment_image_src( $attachment_id, $size );
+					?>
+			<img src="<?php echo $image[0]; ?>" class="wp-post-image" />
+			</div>
+
+			<div class="grid-10 s-grid-whole padded-inner-sides">
+			
+			<h2 class="book-title gray padded-bottom">Donate Now</h2>
+			<div class="grid-whole emphtext"><?php the_field('donate_now'); ?></div>
+			
+			</div>
+		</div>
+	<div class="papertop grid-whole">&nbsp;</div>
+	</div>
+	
+</div>	
+
+<div class="grid-whole padded-bottom">
+	<div class="grid-whole background-beige">
+	
+		<div class="grid-whole padded-inner">
+			<div class="grid-6 s-grid-whole s-padded-bottom">
+			<?php 	$attachment_id = get_field('monthly_image');
+					$size = "book-thumb";
+					$image = wp_get_attachment_image_src( $attachment_id, $size );
+					?>
+			<img src="<?php echo $image[0]; ?>" class="wp-post-image" />
+			</div>
+
+			<div class="grid-10 s-grid-whole padded-inner-sides">
+			
+			<h2 class="book-title gray padded-bottom">Monthly Giving</h2>
+			<div class="grid-whole emphtext"><?php the_field('monthly_giving'); ?></div>
+			
+			</div>
+		</div>
+	<div class="papertop grid-whole">&nbsp;</div>
+	</div>
+	
+</div>
+
+<div class="grid-whole padded-top"><p class="emphtext">More Ways to Contribute</p></div>
+<?php if(get_field('more_ways')): ?>
+
  
-		<li><?php the_sub_field('kaya_funders'); ?></li>
+	<?php while(has_sub_field('more_ways')): ?>
+ 
+		<div class="grid-whole emphtext gray"><?php the_sub_field('more_ways_title'); ?></div>
+		    <div class="grid-whole"><?php the_sub_field('more_ways_text'); ?></div>
 	
 	<?php endwhile; ?>
-</ul>
+
 <?php endif; ?>
 
 
-<?php if(get_field('abs_benefactors')): ?>
-<h2 class="book-title gray padded-vertical">Benefactors</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_benefactors')): ?>
- 		
-		<li><?php the_sub_field('kaya_benefactors'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_patrons')): ?>
-<h2 class="book-title gray padded-vertical">Patrons</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_patrons')): ?>
- 		
-		<li><?php the_sub_field('kaya_patrons'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_sponsors')): ?>
-<h2 class="book-title gray padded-vertical">Sponsors</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_sponsors')): ?>
- 		
-		<li><?php the_sub_field('kaya_sponsors'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_friends')): ?>
-<h2 class="book-title gray padded-vertical">Friends</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_friends')): ?>
- 		
-		<li><?php the_sub_field('kaya_friends'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_members')): ?>
-<h2 class="book-title gray padded-vertical">Members</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_members')): ?>
- 		
-		<li><?php the_sub_field('kaya_members'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
+
+
 </div>
 <?php endwhile; ?>
 </div>

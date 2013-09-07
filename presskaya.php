@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Kaya Supporters Page
+Template Name: Kaya Press Page
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -20,7 +20,6 @@ Template Name: Kaya Supporters Page
 	</ul>
 
 
-
 </div>
 
 <div class="grid-11 m-grid-10 s-grid-10 padded-inner">
@@ -30,69 +29,33 @@ Template Name: Kaya Supporters Page
 
 <div class="grid-whole">
 
-<?php if(get_field('abs_funders')): ?>
+<?php if(get_field('abp_pak')): ?>
 
-<h2 class="book-title gray padded-bottom">Kaya is generously funded by:</h2>
+<h2 class="book-title gray padded-bottom">Press About Kaya Press</h2>
  <ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_funders')): ?>
+	<?php while(has_sub_field('abp_pak')): ?>
  
-		<li><?php the_sub_field('kaya_funders'); ?></li>
+		<li class="padded-bottom"><div class="grid-whole event_title"><?php the_sub_field('press_title'); ?></div>
+		    <a class="press_link_css" href="<?php the_sub_field('press_link'); ?>"><?php the_sub_field('press_link_text'); ?></a></li>
 	
 	<?php endwhile; ?>
 </ul>
 <?php endif; ?>
 
 
-<?php if(get_field('abs_benefactors')): ?>
-<h2 class="book-title gray padded-vertical">Benefactors</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_benefactors')): ?>
- 		
-		<li><?php the_sub_field('kaya_benefactors'); ?></li>	
- 		
+<?php if(get_field('abp_pab')): ?>
+
+<h2 class="book-title gray padded-bottom">Press About Kaya Authors</h2>
+ <ul class="aboutpeoplestaff">
+	<?php while(has_sub_field('abp_pab')): ?>
+ 
+		<li class="padded-bottom"><div class="grid-whole event_title"><?php the_sub_field('press_titleb'); ?></div>
+		    <a class="press_link_css" href="<?php the_sub_field('press_linkb'); ?>"><?php the_sub_field('press_link_textb'); ?></a></li>
+	
 	<?php endwhile; ?>
- </ul>
+</ul>
 <?php endif; ?>
-<?php if(get_field('abs_patrons')): ?>
-<h2 class="book-title gray padded-vertical">Patrons</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_patrons')): ?>
- 		
-		<li><?php the_sub_field('kaya_patrons'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_sponsors')): ?>
-<h2 class="book-title gray padded-vertical">Sponsors</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_sponsors')): ?>
- 		
-		<li><?php the_sub_field('kaya_sponsors'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_friends')): ?>
-<h2 class="book-title gray padded-vertical">Friends</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_friends')): ?>
- 		
-		<li><?php the_sub_field('kaya_friends'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
-<?php if(get_field('abs_members')): ?>
-<h2 class="book-title gray padded-vertical">Members</h2>
-<ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abs_members')): ?>
- 		
-		<li><?php the_sub_field('kaya_members'); ?></li>	
- 		
-	<?php endwhile; ?>
- </ul>
-<?php endif; ?>
+
 </div>
 <?php endwhile; ?>
 </div>

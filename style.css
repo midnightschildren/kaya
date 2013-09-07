@@ -1543,7 +1543,7 @@ h3 {
   color: #cccc00;
 }
 
-.current_page_item a {
+.current_page_item a, .current-menu-item a, .menu-main-nav-container .current-page-ancestor a, .current-post-ancestor a {
   color: #cccc00;
 }
 
@@ -1562,6 +1562,29 @@ h3 {
 .absk {
   line-height: 1em;
   padding-bottom: .5em;
+}
+
+.press_title_css {
+  
+  font-size: 18px;
+  font-size: 1.28571429em;
+}
+
+.press_link_css {
+  font-family:"dincondensed",sans-serif;
+  font-size: 14px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+a.press_link_css {
+  text-decoration: none;
+}
+
+.emphtext {
+  font-size: 21px;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 .creative p {
