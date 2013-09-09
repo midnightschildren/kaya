@@ -32,7 +32,7 @@ Template Name: Kaya Supporters Page
 
 <?php if(get_field('abs_funders')): ?>
 
-<h2 class="book-title gray padded-bottom">Kaya is generously funded by:</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('group_1_title'); ?></h2>
  <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_funders')): ?>
  
@@ -44,7 +44,7 @@ Template Name: Kaya Supporters Page
 
 
 <?php if(get_field('abs_benefactors')): ?>
-<h2 class="book-title gray padded-vertical">Benefactors</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('group_2_title'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_benefactors')): ?>
  		
@@ -54,7 +54,7 @@ Template Name: Kaya Supporters Page
  </ul>
 <?php endif; ?>
 <?php if(get_field('abs_patrons')): ?>
-<h2 class="book-title gray padded-vertical">Patrons</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('group_3_title'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_patrons')): ?>
  		
@@ -64,7 +64,7 @@ Template Name: Kaya Supporters Page
  </ul>
 <?php endif; ?>
 <?php if(get_field('abs_sponsors')): ?>
-<h2 class="book-title gray padded-vertical">Sponsors</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('group_4_title'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_sponsors')): ?>
  		
@@ -74,7 +74,7 @@ Template Name: Kaya Supporters Page
  </ul>
 <?php endif; ?>
 <?php if(get_field('abs_friends')): ?>
-<h2 class="book-title gray padded-vertical">Friends</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('group_5_title'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_friends')): ?>
  		
@@ -84,7 +84,7 @@ Template Name: Kaya Supporters Page
  </ul>
 <?php endif; ?>
 <?php if(get_field('abs_members')): ?>
-<h2 class="book-title gray padded-vertical">Members</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('group_6_title'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('abs_members')): ?>
  		

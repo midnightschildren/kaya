@@ -955,6 +955,52 @@ font-family: "playfair", serif;
 color: #acaa9f;
 }
 
+#donate input[type="image"] {
+-webkit-appearance: none;
+padding: 0px;
+background-color: transparent;
+border: 0px;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+font-size: 1.428em;
+font-family: "playfair", serif;
+color: #acaa9f;
+}
+
+.donate-sm {
+max-width: 167px;
+height: auto;
+width: 50%;
+}
+
+.donate-monthly {
+max-width: 311px;
+height: auto;
+width: 93%;
+}
+
+.submissionsblock li {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.submanager {
+  margin-bottom: -50px;
+  line-height: 1em;
+
+}
+
+.submanager a {
+  color: #acaa9f;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 12px;
+  font-size: .85714286em;
+
+}
+
 #commentform input[type="text"] {
 -webkit-appearance: textfield;
 padding: 1px;
@@ -983,6 +1029,71 @@ width: 99%;
 font-size: 1.428em;
 font-family: "playfair", serif;
 color: #acaa9f;
+}
+
+#ninja_forms_form_2 input[type="file"] {
+-webkit-appearance: none;
+padding: 0;
+background-color: white;
+border: 1px dashed;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+margin-left: 0;
+margin-right: 0;
+width: 95%;
+box-sizing: border-box;
+font-size: 1em;
+font-size: 14px;
+line-height: 2em;
+font-family: "dincondensed", sans-serif;
+font-weight: bold;
+color: #acaa9f;  
+}
+
+.ninja-forms-form-wrap .ninja-forms-form .MultiFile-wrap {
+  width: 100%;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+}
+
+.ninja-forms-field {
+-webkit-appearance: textfield;
+padding: 0;
+background-color: white;
+border: 1px dashed;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+margin-left: 0;
+margin-right: 0;
+width: 95%;
+box-sizing: border-box;
+font-size: 1em;
+font-size: 14px;
+line-height: 2em;
+font-family: "dincondensed", sans-serif;
+font-weight: bold;
+color: #acaa9f;
+}
+
+.text-wrap {
+  padding-right: 1px;
+}
+
+.ninja-forms-form-wrap .ninja-forms-form .field-wrap.label-left .ninja-forms-field,
+.ninja-forms-form-wrap .ninja-forms-form .field-wrap.label-left .ninja-forms-star-rating-control {
+    margin-left: 0px;
+}
+.ninja-forms-form-wrap .ninja-forms-form .field-wrap.label-right .ninja-forms-field,
+.ninja-forms-form-wrap .ninja-forms-form .field-wrap.label-right .ninja-forms-star-rating-control {
+    margin-right: 0px;
 }
 
 #first_name, #last_name, #email_primary, #mce-FNAME, #mce-LNAME, #mce-EMAIL {

@@ -31,7 +31,7 @@ Template Name: Kaya Donate Page
 
 
 
-<h2 class="book-title gray padded-bottom">Ways to Contribute</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('donate_main_title'); ?></h2>
 <?php if(get_field('contribute_subtitle')): ?> 
 
 <div class="grid-whole"><p class="emphtext"><?php the_field('contribute_subtitle'); ?></p></div>
@@ -52,9 +52,24 @@ Template Name: Kaya Donate Page
 
 			<div class="grid-10 s-grid-whole padded-inner-sides">
 			
-			<h2 class="book-title gray padded-bottom">Donate Now</h2>
-			<div class="grid-whole emphtext"><?php the_field('donate_now'); ?></div>
+			<h2 class="book-title gray padded-bottom"><?php the_field('donate_now_title'); ?></h2>
+			<div class="grid-whole emphtext padded-bottom"><?php the_field('donate_now'); ?></div>
 			
+			<?php if (get_field('donate_paypal'))
+			{ ?> 
+
+			<div id="donate" class="padded-top">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+      		<input type="hidden" name="cmd" value="_s-xclick">
+      		<input type="hidden" name="hosted_button_id" value="<?php the_field('donate_paypal');?>">
+			<input type="image" src="/wp-content/themes/kaya_theme/parts/donate-button-sm.png" border="0" name="submit" class="donate-sm" alt="PayPal - The safer, easier way to pay online!"> 
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"> 
+    		</form>
+    		</div>
+
+			<?php } ?>
+
 			</div>
 		</div>
 	<div class="papertop grid-whole">&nbsp;</div>
@@ -76,9 +91,24 @@ Template Name: Kaya Donate Page
 
 			<div class="grid-10 s-grid-whole padded-inner-sides">
 			
-			<h2 class="book-title gray padded-bottom">Monthly Giving</h2>
-			<div class="grid-whole emphtext"><?php the_field('monthly_giving'); ?></div>
+			<h2 class="book-title gray padded-bottom"><?php the_field('monthly_giving_title'); ?></h2>
+			<div class="grid-whole emphtext padded-bottom"><?php the_field('monthly_giving'); ?></div>
 			
+			<?php if (get_field('monthly_paypal'))
+			{ ?> 
+
+			<div id="donate" class="padded-top">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+      		<input type="hidden" name="cmd" value="_s-xclick">
+      		<input type="hidden" name="hosted_button_id" value="<?php the_field('monthly_paypal');?>">
+			<input type="image" src="/wp-content/themes/kaya_theme/parts/donate-button.png" border="0" name="submit" class="donate-monthly" alt="PayPal - The safer, easier way to pay online!"> 
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"> 
+    		</form>
+    		</div>
+
+			<?php } ?>
+
 			</div>
 		</div>
 	<div class="papertop grid-whole">&nbsp;</div>
@@ -86,7 +116,7 @@ Template Name: Kaya Donate Page
 	
 </div>
 
-<div class="grid-whole padded-top"><p class="emphtext">More Ways to Contribute</p></div>
+<div class="grid-whole padded-top"><p class="emphtext"><?php the_field('more_ways_section_title'); ?></p></div>
 <?php if(get_field('more_ways')): ?>
 
  

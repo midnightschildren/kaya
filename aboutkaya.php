@@ -26,16 +26,16 @@ Template Name: Kaya About Page
 <div class="grid-11 m-grid-10 s-grid-10 padded-inner">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2 class="book-title gray padded-bottom">Our Mission</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('mission_title'); ?></h2>
 <div class="grid-whole padded-top"><?php the_field('our_mission'); ?></div>
 
-<h2 class="book-title gray padded-bottom">Kaya History</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('history_title'); ?></h2>
 <div class="grid-whole padded-top"><?php the_field('kaya_history'); ?></div>
 
-<h2 class="book-title gray padded-bottom">What does "Kaya" mean?</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('meaning_title'); ?></h2>
 <div class="grid-whole padded-top"><?php the_field('kaya_meaning'); ?></div>
 
-<h2 class="book-title gray padded-bottom">About Our Logo</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('logo_title'); ?></h2>
 <div class="grid-whole padded-top"><?php the_field('about_our_logo'); ?></div>
 
 <?php endwhile; ?>

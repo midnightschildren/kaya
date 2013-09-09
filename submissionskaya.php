@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Kaya Press Page
+Template Name: Kaya Submissions Page
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -29,32 +29,30 @@ Template Name: Kaya Press Page
 
 <div class="grid-whole">
 
-<?php if(get_field('abp_pak')): ?>
 
-<h2 class="book-title gray padded-bottom"><?php the_field('pak_title'); ?></h2>
- <ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abp_pak')): ?>
- 
-		<li class="padded-bottom"><div class="grid-whole event_title"><?php the_sub_field('press_title'); ?></div>
-		    <a class="press_link_css" href="<?php the_sub_field('press_link'); ?>"><?php the_sub_field('press_link_text'); ?></a></li>
+
+<h2 class="book-title gray padded-bottom"><?php the_field('submissions_headline'); ?></h2>
+
+<?php the_content(); ?>
+
+
+
+
+<div id="comgroup" class="grid-whole">
 	
-	<?php endwhile; ?>
-</ul>
-<?php endif; ?>
-
-
-<?php if(get_field('abp_pab')): ?>
-
-<h2 class="book-title gray padded-bottom"><?php the_field('pab_title'); ?></h2>
- <ul class="aboutpeoplestaff">
-	<?php while(has_sub_field('abp_pab')): ?>
- 
-		<li class="padded-bottom"><div class="grid-whole event_title"><?php the_sub_field('press_titleb'); ?></div>
-		    <a class="press_link_css" href="<?php the_sub_field('press_linkb'); ?>"><?php the_sub_field('press_link_textb'); ?></a></li>
+<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 2 ); } ?>
 	
-	<?php endwhile; ?>
-</ul>
-<?php endif; ?>
+</div>
+<div class="grid-whole padded-bottom">
+<h2 class="gray submanager"><a href="#" rel="toggle[comgroup]" class="commentlink" title="commentcol" style="z-index:50; position:relative;">Submit your manuscript here.</a></h2>
+<div id="com" class="grid-14 s-grid-13 m-grid-14"></div>
+<div id="coma" class="grid-2 s-grid-3 m-grid-2 padded-inner-sides">
+		<div class="arrow-container">
+		<div class="arrow-down-border"></div>
+		<div class="arrow-down"></div>
+		</div>
+</div>
+</div>
 
 </div>
 <?php endwhile; ?>

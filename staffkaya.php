@@ -26,7 +26,7 @@ Template Name: Kaya Staff Page
 <div class="grid-11 m-grid-10 s-grid-10 padded-inner">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2 class="book-title gray padded-bottom">Staff</h2>
+<h2 class="book-title gray padded-bottom"><?php the_field('people_group_1'); ?></h2>
 <div class="grid-whole padded-top">
 <?php if(get_field('about_people_staff')): ?>
  
@@ -43,7 +43,7 @@ Template Name: Kaya Staff Page
 	<?php endwhile; ?>
 <?php endif; ?>
 <?php if(get_field('about_people_directors')): ?>
-<h2 class="book-title gray padded-vertical">Board of Directors</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('people_group_2'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('about_people_directors')): ?>
  		
@@ -53,7 +53,7 @@ Template Name: Kaya Staff Page
  </ul>
 <?php endif; ?>
 <?php if(get_field('about_people_editors')): ?>
-<h2 class="book-title gray padded-vertical">Editorial Committee</h2>
+<h2 class="book-title gray padded-vertical"><?php the_field('people_group_3'); ?></h2>
 <ul class="aboutpeoplestaff">
 	<?php while(has_sub_field('about_people_editors')): ?>
  		

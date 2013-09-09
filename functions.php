@@ -86,7 +86,30 @@
 		}
 	}
 	
-	
+	function my_custom_change_ninja_forms_capabilities_filter( $capabilities ) {
+    $capabilities = "edit_others_posts";
+    return $capabilities;
+	}
+	add_filter( 'ninja_forms_admin_menu_capabilities', 'my_custom_change_ninja_forms_capabilities_filter' );
+
+	if (is_admin()) :
+	function my_remove_meta_boxes() {
+	 	if( !current_user_can('manage_options') ) {
+  			remove_meta_box('pageparentdiv', 'page', 'side');
+  			
+			 }
+	}
+	add_action( 'admin_menu', 'my_remove_meta_boxes' );
+
+	function remove_plugin_metaboxes(){
+    	if ( ! current_user_can( 'manage_options' ) ) { 
+    		remove_meta_box( 'ninja_forms_selector', 'page', 'side' );
+        	remove_meta_box( 'ninja_forms_selector', 'post', 'side' ); // Remove Ninja Form Append
+    		}
+	}
+	add_action( 'do_meta_boxes', 'remove_plugin_metaboxes' );
+	endif;
+
 	function exclude_widget_categories($args){
 	$exclude = "1, 54"; // The IDs of the excluding categories
 	$args["exclude"] = $exclude;
