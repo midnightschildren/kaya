@@ -1,6 +1,11 @@
 
 	<?php wp_footer(); ?>
 	<script>
+            $(function() {
+                $('#simple-menu').sidr();
+            });
+
+
 			$(function() {
 
 				$( '#mi-slider' ).catslider();

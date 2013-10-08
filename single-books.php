@@ -91,7 +91,7 @@ $author_query3 = new WP_Query( array(
 
       </header>
 
-<strong><?php the_field('pages'); ?>pp | Published  <?php the_field('published'); ?> | <?php the_field('format'); ?> | ISBN <?php the_field('isbn'); ?></strong>
+<strong><?php the_field('pages'); ?>pp | <?php the_field('published'); ?> | <?php the_field('format'); ?> | ISBN <?php the_field('isbn'); ?></strong>
 <div class="book_genres"><strong><?php echo get_the_term_list($post->ID, 'book_genre', '', ' | ', '' ); ?></strong></div>
 
 

@@ -188,27 +188,22 @@ if( !is_admin()){
 
 	function starkers_script_enqueuer() {
 
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
-		wp_enqueue_script( 'site' );
 		wp_register_script( 'modern', get_template_directory_uri().'/js/modernizr.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'modern' );
 	    wp_register_script( 'animatedcollapse', get_template_directory_uri().'/js/animatedcollapse.js', array( 'jquery' ) );
 		wp_enqueue_script( 'animatedcollapse' );
-		wp_register_script( 'collapse', get_template_directory_uri().'/js/collapse.js', array( 'jquery' ) );
-		wp_enqueue_script( 'collapse' );
 		wp_register_script( 'jquery-ui', get_template_directory_uri().'/js/jquery-ui.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'jquery-ui' );
-
 		wp_register_script( 'equalize', get_template_directory_uri().'/js/equalize.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'equalize' );
-
 		wp_register_script( 'hammer', get_template_directory_uri().'/js/hammer.min.js', array( 'jquery' ) );
 		wp_enqueue_script( 'hammer' );
 		wp_register_script( 'responsiveCarousel', get_template_directory_uri().'/js/responsiveCarousel.js', array( 'jquery' ) );
 		wp_enqueue_script( 'responsiveCarousel' );
 		wp_register_script( 'catslider', get_template_directory_uri().'/js/jquery.catslider.js', array( 'jquery' ) );
 		wp_enqueue_script( 'catslider' );
-
+		wp_register_script( 'sidr', get_template_directory_uri().'/js/jquery.sidr.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'sidr' );
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
 	}	
@@ -239,4 +234,18 @@ if( !is_admin()){
 		<?php endif; 
 	}
 
-	?>
+/* ========================================================================================================================
+	
+	Optimization
+	
+	======================================================================================================================== */
+
+
+	function _remove_script_version( $src ){
+		$parts = explode( '?', $src );
+		return $parts[0];
+	}
+	add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+	add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+?>

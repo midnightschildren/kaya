@@ -176,7 +176,7 @@
 			<div class="grid-10 s-grid-whole padded-inner-sides">
 			
 			<h2 class="black booktitle3"><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a></h2>
-			<div class="booktitle2 padded-bottom">Kaya Press<?php echo get_field('published', $post_object->ID); ?></div>
+			<div class="booktitle2 padded-bottom">Kaya Press <?php echo get_field('published', $post_object->ID); ?></div>
 			<?php echo get_field('description', $post_object->ID); ?>
 			
 			</div>
