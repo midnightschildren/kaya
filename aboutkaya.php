@@ -11,11 +11,30 @@ Template Name: Kaya About Page
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-12 s-grid-16 m-grid-14">
 
-<div class="grid-5 m-grid-6 s-grid-6 s-padded-sides padded-inner-right">
+<div class="s-grid-whole m-hidden l-hidden padded-inner-sides spd">
+	<div class="diaspora children"><a id="simple-menu" href="#sidr" class="event_title"><strong>+ Menu</strong></a></div>
+
+</div>
+
+<div id="sidr">
+<div class="s-grid-whole m-hidden l-hidden s-padded-sides padded-inner-right">
+
+<div class="background-white grid-whole">
+	<ul class="padded-inner about-sidebar" id="sidebar">
+		<h2 class="gray absk">About Kaya</h2>
+		<?php dynamic_sidebar( 'about-menu' ); ?>
+	</ul>
+</div>
+<div class="grid-whole paper"></div>
+
+</div>
+</div>
+
+<div class="grid-5 m-grid-6 s-grid-6 s-hidden s-padded-sides padded-inner-right">
 
 
 	<ul class="padded-inner about-sidebar" id="sidebar">
-		<h2 class="gray absk">About Kaya</h2>
+		<h2 class="diaspora gray absk">About Kaya</h2>
 		<?php dynamic_sidebar( 'about-menu' ); ?>
 	</ul>
 
@@ -23,7 +42,7 @@ Template Name: Kaya About Page
 
 </div>
 
-<div class="grid-11 m-grid-10 s-grid-10 padded-inner">
+<div class="grid-11 m-grid-10 s-grid-16 padded-inner">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <h2 class="book-title gray padded-bottom"><?php the_field('mission_title'); ?></h2>

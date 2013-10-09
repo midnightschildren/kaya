@@ -18,8 +18,30 @@
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-12 s-grid-16 m-grid-14">
 
+<div class="s-grid-whole m-hidden l-hidden padded-inner-sides spd">
+	<div class="diaspora children"><a id="simple-menu" href="#sidr" class="event_title"><strong>+ All Events</strong></a></div>
 
-<div class="grid-12 m-grid-11 s-grid-10 padded-inner">
+</div>
+
+<div id="sidr">
+<div class="s-grid-whole m-hidden l-hidden s-padded-sides padded-inner-right">
+
+<div class="background-white grid-whole">
+	
+		
+<div class="padded-inner">
+<?php simpleYearlyArchive('yearly','','7'); ?>
+</div>
+
+
+	
+</div>
+<div class="grid-whole paper"></div>
+
+</div>
+</div>
+
+<div class="grid-12 m-grid-11 s-grid-16 padded-inner">
 <?php
 $counter = 1; //start counter
 $row = 1;
@@ -92,7 +114,7 @@ endwhile; ?>
 <?php endif; ?>
 </div>
 
-<div class="grid-4 m-grid-5 s-grid-6 s-padded-left padded-inner-left">
+<div class="grid-4 m-grid-5 s-hidden s-padded-left padded-inner-left">
 
 <?php simpleYearlyArchive('yearly','','7'); ?>
 

@@ -1992,6 +1992,10 @@ textarea {
   
 }
 
+.sidr .children li {
+  margin-bottom: .5em;
+}
+
 .sidr ul{
   display:block;
 
@@ -2001,6 +2005,20 @@ textarea {
   display:block;
   margin:0;
   line-height:2em;
+  padding-left: 0;
+}
+
+.sidr .sya_container ul li{
+  display:block;
+  margin:0 0 .5em 0;
+  line-height:1em;
+  padding-left: 0;
+}
+
+.sidr .sgr-custom-taxonomies-menu ul li{
+  display:block;
+  
+  line-height:1em;
   padding-left: 0;
 }
 
@@ -2299,6 +2317,11 @@ input, input[type="search"] {
     background-color: transparent;
 }
 
+.single_post_title {
+
+  font-size: 28px;
+  font-size: 2em;
+}
 
 .test-title {
     font-size: 24px;
@@ -2341,16 +2364,17 @@ h2.side_author_news, h2.booktitle3 {
 	height: 50px;
 	padding: 10px 10px 10px 5px;
 }
+
   .diaspora_e {
-    font-size: 1.21428571em;
-    font-size: 17px;
+    font-size: 1.71428571em;
+    font-size: 24px;
   }
  .emphtext {
     font-size: 1.28571429em;
     font-size: 18px;
  }
   .event_circle {
-    margin-left: -6%;
+    margin-left: -4%;
   }
 
   .s-padded {
