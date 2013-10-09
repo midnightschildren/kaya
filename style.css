@@ -2291,6 +2291,15 @@ textarea {
 }
 
 
+p {
+  word-wrap:break-word;
+}
+
+.weblink_box h3 {
+  font-size: 1.28571429em;
+  font-size: 18px;
+}
+
 header a {
   font-size: 14px;
   font-size: 1em;
