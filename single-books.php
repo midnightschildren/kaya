@@ -83,12 +83,13 @@ $author_query3 = new WP_Query( array(
 <div class="padded-inner">
       <header>
         <h2 class="book-title gray"><?php the_title(); ?></h2>
-
+        <p class="author_name">
 <?php foreach(get_field('author') as $post_object): ?>
-    <p class="author_name"><strong>by <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></strong></p>
+    <strong>by <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a><?php endforeach; ?><?php if(get_field('other_contributor_text')): ?>, <?php the_field('other_contributor_text'); ?>&nbsp;<?php foreach(get_field('other_contributor') as $post_object): ?><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></strong>
+
 <?php endforeach; ?>
-
-
+<?php endif; ?>
+        </p>
       </header>
 
 <strong><?php the_field('pages'); ?>pp | <?php the_field('published'); ?> | <?php the_field('format'); ?> | ISBN <?php the_field('isbn'); ?></strong>
