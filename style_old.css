@@ -36,7 +36,8 @@ CONTENTS:
 html, 
 body, 
 div, 
-span,  
+span, 
+object, 
 iframe, 
 h1, 
 h2, 
@@ -44,34 +45,78 @@ h3,
 h4, 
 h5, 
 h6, 
-p,  
+p, 
+blockquote, 
+pre, 
+abbr, 
+address, 
+cite, 
+code, 
+del, 
+dfn, 
 em, 
-img,  
-strong,  
+img, 
+ins, 
+kbd, 
+q, 
+samp, 
+small, 
+strong, 
+sub, 
+sup, 
+var, 
 b, 
-i,  
+i, 
+dl, 
+dt, 
+dd, 
+ol, 
 ul, 
-li,  
+li, 
+fieldset, 
 form, 
-label,  
-caption,  
-article,  
+label, 
+legend, 
+table, 
+caption, 
+tbody, 
+tfoot, 
+thead, 
+tr, 
+th, 
+td, 
+article, 
+aside, 
+canvas, 
+details, 
+figcaption, 
+figure, 
 footer, 
 header, 
 hgroup, 
 menu, 
 nav, 
-section,  
+section, 
+summary, 
+time, 
+mark, 
 audio, 
 video                           { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }        
 
-article,  
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
 footer, 
 header, 
 hgroup, 
 nav, 
 section                         { display: block; }
 
+audio, 
+canvas, 
+video                           { display: inline-block; *display: inline; *zoom: 1; }
 
 audio:not([controls])                   { display: none; }
 
@@ -89,6 +134,8 @@ a:focus                         { outline: thin dotted; }
 
 li                            { list-style:none; }
 
+abbr[title]                       { border-bottom:none; }
+
 b, 
 strong                          { font-weight: 700; }
 
@@ -98,6 +145,30 @@ dfn                           { font-style: italic; }
 
 hr                            { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
+ins                           { background: #ff9; color: #000; text-decoration: none; }
+
+mark                          { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+pre, 
+code, 
+kbd, 
+samp                            { font-family: monospace, monospace; _font-family: 'courier new', monospace; }
+
+pre                           { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q                             { quotes: none; }
+
+q:before, 
+q:after                         { content: ""; content: none; }
+
+small                           { font-size: 85%; }
+
+sub, 
+sup                           { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup                           { top: -0.5em; }
+
+sub                           { bottom: -0.25em; }
 
 img                           { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
@@ -126,6 +197,9 @@ input::-moz-focus-inner                 { border: 0; padding: 0; }
 
 textarea                          { overflow: auto; vertical-align: top; resize: vertical; }
 
+table                           { border-collapse: collapse; border-spacing: 0; }
+
+td                            { vertical-align: top; }
 
 div,
 article,
@@ -145,10 +219,10 @@ body 				{ background:#acaa9f; overflow-x:hidden;/* Don't forget to style your b
 @font-face {
     font-family: 'dincondensed';
     src: url('fonts/pfdintextcondpro-regular-webfont.eot');
-    src: url('fonts/pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+    src: url('fonts/pfdintextcondpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdintextcondpro-regular-webfont.svg#dincondensed-regular') format('svg'),
          url('fonts/pfdintextcondpro-regular-webfont.woff') format('woff'),
-         url('fonts/pfdintextcondpro-regular-webfont.ttf') format('truetype'),
-         url('fonts/pfdintextcondpro-regular-webfont.svg#pf_din_text_cond_proregular') format('svg');
+         url('fonts/pfdintextcondpro-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -158,9 +232,9 @@ body 				{ background:#acaa9f; overflow-x:hidden;/* Don't forget to style your b
     font-family: 'dincondensed';
     src: url('fonts/pfdintextcondpro-bold-webfont.eot');
     src: url('fonts/pfdintextcondpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdintextcondpro-bold-webfont.svg#dincondensed-bold') format('svg'),
          url('fonts/pfdintextcondpro-bold-webfont.woff') format('woff'),
-         url('fonts/pfdintextcondpro-bold-webfont.ttf') format('truetype'),
-         url('fonts/pfdintextcondpro-bold-webfont.svg#pf_din_text_cond_probold') format('svg');
+         url('fonts/pfdintextcondpro-bold-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 
@@ -169,10 +243,10 @@ body 				{ background:#acaa9f; overflow-x:hidden;/* Don't forget to style your b
 @font-face {
     font-family: 'playfair';
     src: url('fonts/playfairdisplay-regular-webfont.eot');
-    src: url('fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),     
+    src: url('fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg'),    
          url('fonts/playfairdisplay-regular-webfont.woff') format('woff'),
-         url('fonts/playfairdisplay-regular-webfont.ttf') format('truetype'),
-         url('fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+         url('fonts/playfairdisplay-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -183,20 +257,39 @@ body 				{ background:#acaa9f; overflow-x:hidden;/* Don't forget to style your b
     font-family: 'playfair';
     src: url('fonts/playfairdisplay-italic-webfont.eot');
     src: url('fonts/playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg'),
          url('fonts/playfairdisplay-italic-webfont.woff') format('woff'),
-         url('fonts/playfairdisplay-italic-webfont.ttf') format('truetype'),
-         url('fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
+         url('fonts/playfairdisplay-italic-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 
 }
 
 
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-bolditalic-webfont.eot');
+    src: url('fonts/playfairdisplay-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg'),
+         url('fonts/playfairdisplay-bolditalic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
 
 
+@font-face {
+    font-family: 'playfair';
+    src: url('fonts/playfairdisplay-bold-webfont.eot');
+    src: url('fonts/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg'),
+         url('fonts/playfairdisplay-bold-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 
-
-
+}
 
 /* ---------------------------------------------------------------------------------------------------------- 
 01.2 Slider ------------------------------------------------------------------------------
@@ -247,8 +340,12 @@ tag */
     height: 100%;
     cursor: pointer;
 }
-/* When not clickable */
 
+/* When not clickable */
+.arrow.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
 
 /* position the left arrow */
 .arrow-left {
@@ -394,13 +491,40 @@ it with your own stuff.  */
     margin-top: -5px;
     background-color: #000;
 }
+#menu span {
+    white-space: nowrap;
+}
 
+
+/* selector styling */
+#selector a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background-color: #99F;
+}
 #selector a.current {
   background-color: #309;
 }
+#selector ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+#selector li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#menu span {
+    white-space: nowrap;
+}
 
 @media screen and (max-width: 700px){
-
   .slider .inner {
     
     height: 100%;
@@ -496,12 +620,11 @@ it with your own stuff.  */
 }
 
 .mi-moveToLeft, .mi-moveToRight, .spnone {
-  visibility: hidden;
+  display: none;
 }
 
 .mi-current {
   display: block;
-  visibility: visible;
 }
 
 #books {
@@ -539,7 +662,6 @@ it with your own stuff.  */
 .mi-slider ul li img {
   max-width: 100%;
   border: none;
-  height: auto;
 }
 
 .mi-slider ul li h4 {
@@ -564,10 +686,6 @@ it with your own stuff.  */
   text-align: center;
   margin: 0 auto;
   border-top: 6px solid #000;
-}
-
-ul .Fiction {
-  display:none;
 }
 
 #bi-slider nav {
@@ -1289,15 +1407,9 @@ hr.foot_rule {
 
 .papertop {
   height: 12px;
-  background-image: url('paper.png');
+  background-image: url('papertop.png');
   background-repeat: repeat-x;
   z-index: 100;
-  -webkit-transform: rotate(180deg); 
-     -moz-transform: rotate(180deg); 
-      -ms-transform: rotate(180deg); 
-       -o-transform: rotate(180deg); 
-          transform: rotate(180deg); 
-
 }
 
 .background-gray {
@@ -1327,6 +1439,20 @@ hr.foot_rule {
   margin-bottom: 2em;
 }
 
+.art {
+  max-width: 400px;
+}
+
+#twitter_icon {
+  width: 46px;
+  height: 38px;
+  float: right;
+  overflow: hidden;
+  text-indent: 100%;
+  display: block;
+  white-space: nowrap;
+  background: url(twitter-icon.png) 0px 0px no-repeat;
+}
 
 #twitter {
   width: 25px;
@@ -1405,7 +1531,7 @@ hr.foot_rule {
 
 .foot_about {
 	font-weight: normal;
-	font-family: "ff-ernestine-web-pro", sans-serif;
+	font-family: "playfair", serif;
 	font-size: 12px;
 	font-size: .875em; 
 }
@@ -1425,13 +1551,12 @@ img.size-full,
 img.size-tiger,
 img.size-large,
 img.header-image,
-img.wp-post-image,
-.headshot img {
+img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-img.size-slide, .opmask img {
+img.size-slide {
   max-width: 100%;
   height: auto;
 }
@@ -1444,6 +1569,10 @@ video {
 	max-width: 100%;
 }
 
+.scribd_iframe_embed {
+  width: 100%;
+  
+}
 
 .weblink_box {
   background-color:#dbef00;
@@ -1588,6 +1717,18 @@ h6	{
 	
 }
 
+h4 {
+  font-weight: bold;
+  text-transform:uppercase;
+  font-size: 1.14285714em;
+  font-size: 16px;
+  font-family: "dincondensed",sans-serif;
+  position: relative;
+    margin-top: 20px;
+    display: block;
+    text-align:center;
+    
+}
 
 h5 {
   font-weight: bold;
@@ -1652,6 +1793,17 @@ h3 {
 	font-family: "dincondensed",sans-serif; 
 }
 
+.widgettitle {
+  text-transform: none;
+  color: #acaa9f;
+  line-height: 1.2em;
+  margin-bottom: .5em;
+  margin-top: .4em;
+}
+
+.tlw-list {
+  line-height: 1em;
+}
 
 .tlw-list br, .cat-item {
   line-height: 1em;
@@ -1714,6 +1866,11 @@ h3 {
   padding-bottom: .5em;
 }
 
+.press_title_css {
+  
+  font-size: 18px;
+  font-size: 1.28571429em;
+}
 
 .press_link_css {
   font-family:"dincondensed",sans-serif;
@@ -1838,6 +1995,31 @@ p.author_name {
   text-decoration: none;
 }
 
+.smtit {
+  text-transform: none;
+}
+
+.kaya_comment p{
+  margin-bottom: 0;
+  margin-top: 2em;
+  font-style: italic;
+
+}
+
+.kaya_quote {
+  font-size: 42px;
+  font-size: 3em;
+  color: #acaa9f;
+  line-height: 1em;
+  font-family: "ff-ernestine-web-pro", serif;
+  float: left;
+  margin-right: 14px;
+}
+
+.kaya_c_section a {
+  text-decoration: none;
+  color: #000;
+}
 
 .kaya_c_section a:hover {
   color: #cccc00;
@@ -2055,6 +2237,8 @@ textarea {
 .grid-14 {
   width: 87.5%; }
 
+.grid-15 {
+  width: 93.75%; }
 
 .grid-16, .grid-whole {
   width: 100%; }
@@ -2086,6 +2270,8 @@ textarea {
   padding-top: 1em;
 }
 
+.padded-left {
+  padding-left: 0.5em; }
 
 .padded-right {
   padding-right: 0.5em; }
@@ -2096,6 +2282,8 @@ textarea {
 .padded-bottom {
   padding-bottom: 0.5em; }
 
+.padded-sides {
+  padding: 0 0.5em; }
 
 .padded-vertical {
   padding: 0.5em 0; }
@@ -2118,6 +2306,17 @@ textarea {
   padding-bottom: 1em;
 }
 
+.padded-reverse {
+  margin: 0 -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
+
+.padded-reverse-all {
+  margin: -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
 
 /* miscellaneous helper classes */
 .flow-opposite {
@@ -2131,12 +2330,17 @@ textarea {
 
 .right {
   text-align: right; }
+
 /* For compatibility with Bootstrap (fixed), Foundation, etc. */
+.row {
+  margin: 0 -0.5em;
+  width: auto;
+  box-sizing: content-box;
+  float: none; }
 
 /* Responsive Media Queries. */
 
 @media (max-width: 480px) {
-
 .menu li {
   padding-left: .5em;
 }
@@ -2156,6 +2360,11 @@ textarea {
     box-sizing: border-box;
     *behavior: url(boxsizing.htc); }
 
+  .s-grid-1 {
+    width: 6.25%; }
+
+  .s-grid-2 {
+    width: 12.5%; }
 
   .s-grid-3 {
     width: 18.75%; }
@@ -2163,6 +2372,8 @@ textarea {
   .s-grid-4, .s-grid-quarter {
     width: 25%; }
 
+  .s-grid-5 {
+    width: 31.25%; }
 
   .s-grid-third {
   width: 33.333%; }
@@ -2170,10 +2381,20 @@ textarea {
   .s-grid-6 {
     width: 37.5%; }
 
+  .s-grid-7 {
+    width: 43.75%; }
 
   .s-grid-8, .s-grid-half {
     width: 50%; }
 
+  .s-grid-9 {
+    width: 56.25%; }
+
+  .s-grid-10 {
+    width: 62.5%; }
+
+  .s-grid-11 {
+    width: 68.75%; }
 
   .s-grid-12, .s-grid-three-quarters {
     width: 75%; }
@@ -2181,6 +2402,11 @@ textarea {
   .s-grid-13 {
     width: 81.25%; }
 
+  .s-grid-14 {
+    width: 87.5%; }
+
+  .s-grid-15 {
+    width: 93.75%; }
 
   .s-grid-16, .s-grid-whole {
     width: 100%; }
@@ -2312,10 +2538,14 @@ h2.side_author_news, h2.booktitle3 {
     margin-left: -4%;
   }
 
+  .s-padded {
+    padding: 0.5em; }
 
   .s-padded-left {
     padding-left: 0.5em; }
 
+  .s-padded-right {
+    padding-right: 0.5em; }
 
   .s-padded-top {
     padding-top: 0.5em; }
@@ -2329,18 +2559,43 @@ h2.side_author_news, h2.booktitle3 {
   .s-padded-vertical {
     padding: 0.5em 0; }
 
+  .s-padded-inner {
+    padding: 1em; }
+
+  .s-padded-inner-sides {
+    padding: 0 1em; }
+
+  .s-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .s-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
 
   .s-breakword {
     word-wrap: break-word;
   }
-/* miscellaneous helper classes */
 
+  /* miscellaneous helper classes */
+  .s-flow-opposite {
+    float: right; }
+
+  .s-center {
+    text-align: center; }
+
+  .s-left {
+    text-align: left; }
+
+  .s-right {
+    text-align: right; }
 
   .s-hidden {
-      overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; } }
+    display: none; } }
 
 @media (min-width: 592px) and (max-width: 817px) {
   .m-grid-all, .m-grid-1, .m-grid-2, .m-grid-3, .m-grid-4, .m-grid-quarter, .m-grid-5, .m-grid-6, .m-grid-7, .m-grid-8, .m-grid-half, .m-grid-9, .m-grid-10, .m-grid-11, .m-grid-12, .m-grid-three-quarters, .m-grid-13, .m-grid-14, .m-grid-15, .m-grid-16, .m-grid-whole {
@@ -2352,10 +2607,14 @@ h2.side_author_news, h2.booktitle3 {
     box-sizing: border-box;
     *behavior: url(boxsizing.htc); }
 
+  .m-grid-1 {
+    width: 6.25%; }
 
   .m-grid-2 {
     width: 12.5%; }
 
+  .m-grid-3 {
+    width: 18.75%; }
 
   .m-grid-4, .m-grid-quarter {
     width: 25%; }
@@ -2366,10 +2625,14 @@ h2.side_author_news, h2.booktitle3 {
   .m-grid-6 {
     width: 37.5%; }
 
+  .m-grid-7 {
+    width: 43.75%; }
 
   .m-grid-8, .m-grid-half {
     width: 50%; }
 
+  .m-grid-9 {
+    width: 56.25%; }
 
   .m-grid-10 {
     width: 62.5%; }
@@ -2377,10 +2640,17 @@ h2.side_author_news, h2.booktitle3 {
   .m-grid-11 {
     width: 68.75%; }
 
+  .m-grid-12, .m-grid-three-quarters {
+    width: 75%; }
+
+  .m-grid-13 {
+    width: 81.25%; }
 
   .m-grid-14 {
     width: 87.5%; }
 
+  .m-grid-15 {
+    width: 93.75%; }
 
   .m-grid-16, .m-grid-whole {
     width: 100%; }
@@ -2395,6 +2665,8 @@ h2.side_author_news, h2.booktitle3 {
     word-spacing: -0.1em;
   }
 
+  .m-padded {
+    padding: 0.5em; }
 
   .m-padded-left {
     padding-left: 0.5em; }
@@ -2402,6 +2674,35 @@ h2.side_author_news, h2.booktitle3 {
   .m-padded-right {
     padding-right: 0.5em; }
 
+  .m-padded-top {
+    padding-top: 0.5em; }
+
+  .m-padded-bottom {
+    padding-bottom: 0.5em; }
+
+  .m-padded-sides {
+    padding: 0 0.5em; }
+
+  .m-padded-vertical {
+    padding: 0.5em 0; }
+
+  .m-padded-inner {
+    padding: 1em; }
+
+  .m-padded-inner-sides {
+    padding: 0 1em; }
+
+  .m-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .m-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
 
   /* miscellaneous helper classes */
   .menu li {
@@ -2434,16 +2735,78 @@ h2.side_author_news, h2.booktitle3 {
     font-size: 26px;
     letter-spacing: -0.1em;
   }
+  .m-flow-opposite {
+    float: right; }
 
+  .m-center {
+    text-align: center; }
+
+  .m-left {
+    text-align: left; }
+
+  .m-right {
+    text-align: right; }
 
   .m-hidden {
-      overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; } }
+    display: none; } }
 
 @media (min-width: 818px) {
+  .l-grid-all, .l-grid-1, .l-grid-2, .l-grid-3, .l-grid-4, .l-grid-quarter, .l-grid-5, .l-grid-6, .l-grid-7, .l-grid-8, .l-grid-half, .l-grid-9, .l-grid-10, .l-grid-11, .l-grid-12, .l-grid-three-quarters, .l-grid-13, .l-grid-14, .l-grid-15, .l-grid-16, .l-grid-whole {
+    margin: 0;
+    clear: none;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(boxsizing.htc); }
 
+  .l-grid-1 {
+    width: 6.25%; }
+
+  .l-grid-2 {
+    width: 12.5%; }
+
+  .l-grid-3 {
+    width: 18.75%; }
+
+  .l-grid-4, .l-grid-quarter {
+    width: 25%; }
+
+  .l-grid-5 {
+    width: 31.25%; }
+
+  .l-grid-6 {
+    width: 37.5%; }
+
+  .l-grid-7 {
+    width: 43.75%; }
+
+  .l-grid-8, .l-grid-half {
+    width: 50%; }
+
+  .l-grid-9 {
+    width: 56.25%; }
+
+  .l-grid-10 {
+    width: 62.5%; }
+
+  .l-grid-11 {
+    width: 68.75%; }
+
+  .l-grid-12, .l-grid-three-quarters {
+    width: 75%; }
+
+  .l-grid-13 {
+    width: 81.25%; }
+
+  .l-grid-14 {
+    width: 87.5%; }
+
+  .l-grid-15 {
+    width: 93.75%; }
+
+  .l-grid-16, .l-grid-whole {
+    width: 100%; }
 
   /* padding helper classes */
 
@@ -2455,6 +2818,8 @@ h2.side_author_news, h2.booktitle3 {
   padding-left: 0;
   }
 
+  .l-padded {
+    padding: 0.5em; }
 
   .l-padded-left {
     padding-left: 0.5em; }
@@ -2462,6 +2827,35 @@ h2.side_author_news, h2.booktitle3 {
   .l-padded-right {
     padding-right: 0.5em; }
 
+  .l-padded-top {
+    padding-top: 0.5em; }
+
+  .l-padded-bottom {
+    padding-bottom: 0.5em; }
+
+  .l-padded-sides {
+    padding: 0 0.5em; }
+
+  .l-padded-vertical {
+    padding: 0.5em 0; }
+
+  .l-padded-inner {
+    padding: 1em; }
+
+  .l-padded-inner-sides {
+    padding: 0 1em; }
+
+  .l-padded-reverse {
+    margin: 0 -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
+
+  .l-padded-reverse-all {
+    margin: -0.5em;
+    width: auto;
+    box-sizing: content-box;
+    float: none; }
 
 .padded-topn {
   padding-top: 31px;
@@ -2472,14 +2866,22 @@ h2.side_author_news, h2.booktitle3 {
   padding-top: 29px;
   letter-spacing: 0em;
 }
-/* miscellaneous helper classes */
 
+  /* miscellaneous helper classes */
+  .l-flow-opposite {
+    float: right; }
+
+  .l-center {
+    text-align: center; }
+
+  .l-left {
+    text-align: left; }
+
+  .l-right {
+    text-align: right; }
 
   .l-hidden {
-      overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; }
+    display: none; }
 
   .crm-button {
     width: 27%;}

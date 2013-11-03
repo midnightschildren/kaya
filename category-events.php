@@ -18,13 +18,9 @@
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-12 s-grid-16 m-grid-14">
 
-<div class="s-grid-whole m-hidden l-hidden padded-inner-sides spd">
-	<div class="diaspora children"><a id="simple-menu" href="#sidr" class="event_title"><strong>+ All Events</strong></a></div>
-
-</div>
 
 <div id="sidr">
-<div class="s-grid-whole m-hidden l-hidden s-padded-sides padded-inner-right">
+<div class="s-grid-whole m-hidden l-hidden padded-bottom">
 
 <div class="background-white grid-whole">
 	
@@ -36,7 +32,7 @@
 
 	
 </div>
-<div class="grid-whole paper"></div>
+<div class="grid-whole spd"></div>
 
 </div>
 </div>
@@ -57,6 +53,11 @@ $grids = 2; //Grids per row ?>
 //Show the left hand side column
 if($counter == 1) :
 ?>
+
+<span class="m-hidden l-hidden diaspora children flow-opposite">
+	<a rel="toggle[sidr]" href="#" class="event_title"><strong>&#x271a;All Events</strong></a>
+</span>
+
 <div class="grid-whole padded-inner-bottom news-width">
 <div class="grid-whole s-grid-whole s-padded-sides background-beige padded-inner">
 	

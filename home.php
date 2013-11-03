@@ -37,7 +37,17 @@ $slide_query = new WP_Query( array(
                         <div class="inner"><div class="opmask">
                             <?php $posts = get_field('read_more_link');if ($posts): foreach($posts as $post_object): ?><a href="<?php echo get_permalink($post_object->ID); ?>">
                             <?php endforeach; endif;?>
-                            <?php the_post_thumbnail('featured-slide', array( 'class' => "size-slide attachment-post-thumbnail")); ?>       
+                            <?php   $slidesm = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'featured-slide-small' ); 
+                                    $slide = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'featured-slide' );
+                            ?>
+                            <span data-picture data-alt="<?php the_title(); ?>">
+                                <span  data-width="595" data-height="490" data-src="<?php echo $slidesm['0'] ?>"></span>
+                                <span  data-width="850" data-height="700" data-src="<?php echo $slide['0'] ?>"     data-media="(min-width: 1300px), only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+                                <span  data-width="595" data-height="490" data-src="<?php echo $slidesm['0'] ?>"   data-media="only screen and (max-width: 599px) and (-webkit-min-device-pixel-ratio:2), only screen and (max-width: 599px) and (min--moz-device-pixel-ratio:2), only screen and (max-width: 599px) and (-o-min-device-pixel-ratio:2/1), only screen and (max-width: 599px) and (min-device-pixel-ratio:2), only screen and (max-width: 599px) and (min-resolution:192dpi), only screen and (max-width: 599px) and (min-resolution:2dppx)"></span>
+                            <noscript>
+                                <img width="850" height="700" src="<?php echo $slide['0'] ?>" alt="<?php the_title(); ?>">
+                            </noscript>
+                            </span>      
                             <div class="slide-title"><p class="test-title"><?php the_title(); ?></a></p> 
                             <?php $posts = get_field('read_more_link');if ($posts): foreach($posts as $post_object): ?>
                                 <a class="slide_link" href="<?php echo get_permalink($post_object->ID); ?>">read on</a></div></div></div>
@@ -54,72 +64,7 @@ $slide_query = new WP_Query( array(
 
 </div>
 
-<script>
 
-
-    /* Okay, everything is loaded. Let's go! (on dom ready) */
-    
-    jQuery(function ( ten ) {
-
-        /*
-            A generic product carousel - something that might appear in the body of a e-commerce site. Unlike example 1,
-            this example uses infinite scrolling.
-        */
-        ten('#example-3')
-                .responsiveCarousel({
-                    infinite: true, // turn on infinite scrolling
-                    unitWidth: 'compute',
-                    target: '.slider-target',
-        			mask: '.slider-mask',
-                    unitElement:'.slid',
-                    dragEvents: true, // touch and mouse dragging enabled
-                    responsiveUnitSize: function () {
-                        var m, w, i = ten(document).width(); // use the document width as a measuring stick to determine how many elements we want in the carousel.
-                        if (i > 900) {
-                            m = 3;
-                        }
-                        else if (i > 700) {
-                            m = 3;
-                        }
-                        else if (i > 600) {
-                            m = 3;
-                        }
-                        else if (i > 400) {
-                            m = 3;
-                        }
-                        else {
-                            m = 3
-                        }
-                        return m;
-                    },
-                    onShift: function (i) {
-        i = Math.round(i);
-        if (i >4) {
-        var $current = $('.slider-target li[data-slide=' + (i-5) + ']');	
-        }
-        else {
-        var $current = $('.slider-target li[data-slide=' + (i+1) + ']');}
-        $('.slider-target li[data-slide]').removeClass('current');
-        $current.addClass('current'); 
-    	}
-        
-    
-                });
-
-    });
-
-    /* bleh... CSS media queries seem to be applied sometime after the document.ready and before the
-     window.load events.  If you are using the "onRedraw" callback, you should call it again after the page
-     is finished loading. Not my fault! Blame your browser! :-) */
-    jQuery(function ( $ ) {
-
-    $(window).on('load', function () {
-        $('.examples').responsiveCarousel('redraw');
-    });
-
-    });
-
-</script>
 <div id="books" class="grid-whole">
 <h2 class="diaspora white center">kaya publishes books of the <span class="green">asian pacific diaspora</span></h2>
 
@@ -146,11 +91,28 @@ foreach ( $genre_terms as $genre_term ) {
     ) )
     ?>
 
-<ul>
+<ul class="<?php echo $genre_term->name; ?>">
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>
+
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<?php if($genre_term->name == Featured) :
+?>
+<span data-picture data-alt="<?php the_title(); ?>">
+<?php else :?>
+<span class="catimsli" data-alt="<?php the_title(); ?>">
+<?php endif; ?>
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>        
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"    data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen  and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"     data-media="only screen and (max-width: 599px) and (-webkit-min-device-pixel-ratio:2), only screen and (max-width: 599px) and (min--moz-device-pixel-ratio:2), only screen and (max-width: 599px) and (-o-min-device-pixel-ratio:2/1), only screen and (max-width: 599px) and (min-device-pixel-ratio:2), only screen and (max-width: 599px) and (min-resolution:192dpi), only screen and (max-width: 599px) and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span>
+</a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -177,7 +139,7 @@ foreach ( $genre_terms as $genre_term ) {
     ) );
     ?>
 
-    <a href="#"><?php echo $genre_term->name; ?></a><?php
+    <a id="<?php echo $genre_term->name; ?>p" href="#"><?php echo $genre_term->name; ?></a><?php
 
     $genre_term_query = null;
     wp_reset_postdata();

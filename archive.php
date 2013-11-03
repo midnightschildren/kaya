@@ -45,8 +45,17 @@ $term_id = $queried_object->term_id;?>
 <ul class="spnone">
     <?php
     if ( $genre_term_query4->have_posts() ) : while ( $genre_term_query4->have_posts() ) : $genre_term_query4->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<span data-picture data-alt="<?php the_title(); ?>">
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"     data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -68,8 +77,17 @@ $term_id = $queried_object->term_id;?>
 <ul class="spnone"> 
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<span data-picture data-alt="<?php the_title(); ?>">
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"     data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>
@@ -104,8 +122,17 @@ foreach ( $genre_terms as $genre_term ) {
 <ul class="spnone">
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<span data-picture data-alt="<?php the_title(); ?>">
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"     data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $posts = get_field('author');if ($posts): foreach($posts as $post): setup_postdata($post); ?>
     <a class="black" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div></li>
 <?php endforeach; wp_reset_postdata(); endif;?>

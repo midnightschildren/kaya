@@ -19,13 +19,9 @@
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-12 s-grid-16 m-grid-14">
 
-<div class="s-grid-whole m-hidden l-hidden padded-inner-sides spd">
-	<div class="diaspora children"><a id="simple-menu" href="#sidr" class="event_title"><strong>+ Categories</strong></a></div>
-
-</div>
 
 <div id="sidr">
-<div class="s-grid-whole m-hidden l-hidden s-padded-sides padded-inner-right">
+<div class="s-grid-whole m-hidden l-hidden padded-bottom">
 
 <div class="background-white grid-whole">
 	
@@ -38,13 +34,16 @@
 
 	
 </div>
-<div class="grid-whole paper"></div>
+<div class="grid-whole spd"></div>
 
 </div>
 </div>
 
 <div class="grid-12 m-grid-11 s-grid-16 padded-inner">
 
+<span class="m-hidden l-hidden diaspora children flow-opposite">
+	<a rel="toggle[sidr]" href="#" class="event_title"><strong>&#x271a;Categories</strong></a>
+</span>
 
 <?php if ( have_posts() ): ?>
 

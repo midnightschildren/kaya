@@ -83,13 +83,14 @@ $author_query3 = new WP_Query( array(
 <div class="padded-inner">
       <header>
         <h2 class="book-title gray"><?php the_title(); ?></h2>
-        <p class="author_name">
+        <p class="author_name"><strong>
 <?php foreach(get_field('author') as $post_object): ?>
-    <strong>by <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a><?php endforeach; ?><?php if(get_field('other_contributor_text')): ?>, <?php the_field('other_contributor_text'); ?>&nbsp;<?php foreach(get_field('other_contributor') as $post_object): ?><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a></strong>
+    by <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a><?php endforeach; ?><?php wp_reset_postdata();?><?php if(get_field('other_contributor_text')): ?>, <?php the_field('other_contributor_text'); ?> <?php foreach(get_field('other_contributor') as $post_object): ?><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID) ?></a>
 
 <?php endforeach; ?>
+<?php wp_reset_postdata();?>
 <?php endif; ?>
-        </p>
+        </strong></p>
       </header>
 
 <strong><?php the_field('pages'); ?>pp | <?php the_field('published'); ?> | <?php the_field('format'); ?> | ISBN <?php the_field('isbn'); ?></strong>
@@ -189,8 +190,17 @@ $author_query3 = new WP_Query( array(
 <ul class="spnone">
     <?php
     if ( $genre_term_query3->have_posts() ) : while ( $genre_term_query3->have_posts() ) : $genre_term_query3->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<span data-picture data-alt="<?php the_title(); ?>">
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"     data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $hosts = get_field('author');if ($hosts): foreach($hosts as $host_object): ?>
     <a class="black" href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
 <?php endforeach; endif;?>
@@ -229,8 +239,17 @@ foreach( $genre_terms as $genre_term ) {
 <ul class="spnone">
     <?php
     if ( $genre_term_query2->have_posts() ) : while ( $genre_term_query2->have_posts() ) : $genre_term_query2->the_post(); ?>
-    
-<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('book-thumb'); ?></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
+    <?php   $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'category-thumb' ); 
+            $retina = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'book-thumb' );
+    ?>    
+<li><div class="bookcover"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<span data-picture data-alt="<?php the_title(); ?>">
+        <span  data-width="200" data-height="283" data-src="<?php echo $thumb['0'] ?>"></span>
+        <span  data-width="338" data-height="478" data-src="<?php echo $retina['0'] ?>"     data-media="only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min--moz-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2), only screen and (min-resolution:192dpi), only screen and (min-resolution:2dppx)"></span>
+        <noscript>
+            <img width="200" height="283" src="<?php echo $thumb['0'] ?>" alt="<?php the_title(); ?>">
+        </noscript>
+</span></a></div><div class="booktitle"><a class="black" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>&nbsp;by&nbsp;
     <?php $hosts = get_field('author');if ($hosts): foreach($hosts as $host_object): ?>
     <a class="black" href="<?php echo get_permalink($host_object->ID); ?>"><?php echo get_the_title($host_object->ID); ?></a></div></li>
 <?php endforeach;  endif;?>
@@ -251,7 +270,7 @@ foreach( $genre_terms as $genre_term ) {
 
 <div class="grid-whole background-gray">
 <nav>
-    <a id="CurrentBtn" href="#"><?php echo wp_trim_words( get_the_title(), 3 ); ?></a>
+    <a id="CurrentBtn" href="#"><?php echo wp_trim_words( get_the_title(), 2 ); ?></a>
     <a id="AllBtn" href="#">All</a>
 <?php
 foreach ( $genre_terms as $genre_term ) {

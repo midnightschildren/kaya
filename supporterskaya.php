@@ -11,13 +11,9 @@ Template Name: Kaya Supporters Page
 <div class="grid-1 s-hidden">&nbsp;</div>
 <div class="grid-12 s-grid-16 m-grid-14">
 
-<div class="s-grid-whole m-hidden l-hidden padded-inner-sides spd">
-	<div class="diaspora children"><a id="simple-menu" href="#sidr" class="event_title"><strong>+ Menu</strong></a></div>
-
-</div>
 
 <div id="sidr">
-<div class="s-grid-whole m-hidden l-hidden s-padded-sides padded-inner-right">
+<div class="s-grid-whole m-hidden l-hidden padded-bottom">
 
 <div class="background-white grid-whole">
 	<ul class="padded-inner about-sidebar" id="sidebar">
@@ -25,7 +21,7 @@ Template Name: Kaya Supporters Page
 		<?php dynamic_sidebar( 'about-menu' ); ?>
 	</ul>
 </div>
-<div class="grid-whole paper"></div>
+<div class="grid-whole spd"></div>
 
 </div>
 </div>
@@ -48,6 +44,10 @@ Template Name: Kaya Supporters Page
 
 
 <div class="grid-whole">
+
+<span class="m-hidden l-hidden diaspora children flow-opposite">
+	<a rel="toggle[sidr]" href="#" class="event_title"><strong>&#x271a;Menu</strong></a>
+</span>
 
 <?php if(get_field('abs_funders')): ?>
 

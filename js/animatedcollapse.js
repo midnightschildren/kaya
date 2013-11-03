@@ -224,6 +224,7 @@ preloadimage:function(){
 		animatedcollapse.addDiv('categories', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('archives', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('searchgroup', 'fade=1, speed=200,group=srv,hide=1')
+		animatedcollapse.addDiv('sidr', 'fade=1, speed=200,group=trv,hide=1')
 		animatedcollapse.addDiv('comgroup', 'fade=1, speed=200,group=trv,hide=1')
 		animatedcollapse.addDiv('comgroup2', 'fade=1, speed=200,group=trv,hide=1')
 		animatedcollapse.addDiv('comgroup3', 'fade=1, speed=200,group=trv,hide=1')

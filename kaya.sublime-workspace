@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"print",
+				"print_r"
+			],
+			[
+				"vi",
+				"visibility"
+			],
+			[
 				"ninja_forms",
 				"ninja_forms_code"
 			],
@@ -79,39 +87,49 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 50502,
+				"buffer_size": 50340,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "contactkaya.php",
+			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 5632,
+				"buffer_size": 11472,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "parts/shared/header.php",
+			"contents": "Package Control Messages\n========================\n\nSublimeLinter:\n-------------\n\n  =====================\n  SublimeLinter for ST3\n  Fundraising update\n  October 31, 2013\n  =====================\n  \n  Through October 30, we have raised $2885 (after fees) from 226 donations. Thank you for your support!\n  Development has started, and I’m very excited about this new version! But there is still a lot of work\n  to do, and I’m getting cool new ideas every day.\n  \n  So if you are one of the thousands of happy SublimeLinter users who has not donated yet, it isn’t too late\n  to contribute. Please consider making a small donation to fund ongoing development and to compensate\n  Ryan Hileman for the great work on which SublimeLinter3 is based.\n  \n  Open source software is not free! It is we the developers who usually end up paying for it.\n  To donate and find out more about what you can expect from SublimeLinter3, go here:\n  \n  https://github.com/SublimeLinter/SublimeLinter3#sublimelinter3\n  \n  If you are interested in helping with development, please leave a message here:\n  \n  https://github.com/SublimeLinter/SublimeLinter3/issues/3\n  \n  Thanks again for your support,\n  \n  - Aparajita Fishman\n    SublimeLinter maintainer\n  \n",
 			"settings":
 			{
-				"buffer_size": 1508,
+				"buffer_size": 1230,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "kayabooks.php",
+			"settings":
+			{
+				"buffer_size": 6053,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "staffkaya.php",
+			"file": "single-books.php",
 			"settings":
 			{
-				"buffer_size": 3235,
+				"buffer_size": 11427,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "submissionskaya.php",
+			"file": "archive.php",
 			"settings":
 			{
-				"buffer_size": 2811,
+				"buffer_size": 8661,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,16 +137,16 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 8471,
+				"buffer_size": 9042,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/collapse.js",
+			"file": "parts/shared/html-footer.php",
 			"settings":
 			{
-				"buffer_size": 841,
-				"line_ending": "Windows"
+				"buffer_size": 14831,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -168,33 +186,43 @@
 	},
 	"file_history":
 	[
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/picturefill.js",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/custom.js",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/kayaauthors.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/functions.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/header.php",
+		"/Users/amar/Desktop/slir.class.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/animatedcollapse.js",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/search.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single-authors.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/sprite.png",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/footer.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/category.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/style.css",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/aboutkaya.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/staffkaya.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/supporterskaya.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/contactkaya.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/submissionskaya.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/donate.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/presskaya.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/supporterskaya.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/functions.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single-books.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single-authors.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/donate-button.png",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/aboutkaya.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/submissionskaya.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/jquery.sidr.min.js",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single-authorsbkcopy.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/taxonomy-topics.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/staffkaya.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/single.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/home.php",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/collapse.js",
+		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/donate-button.png",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/category-events.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/header.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/KYP_smoking_tiger21.gif",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/footer.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/kayaauthors.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/KYP_smoking_tiger21.gif",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Refinements/Tiger/KYP_smoking_tiger-logo-V2-1.gif",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/home.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/archive.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/search.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/kayabooks.php",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/html-footer.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/parts/shared/html-header.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/responsiveCarousel.js",
-		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/js/collapse.js",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/comments.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/tag.php",
 		"/Volumes/Encyclia/Active/Kaya Redesign/Kaya_local/kaya/kayanews.php",
@@ -292,6 +320,46 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"paper",
+			"playfair",
+			"bold",
+			"category-thumb",
+			"url",
+			"faceb",
+			"side_menu",
+			"float:right",
+			"diaspora_e",
+			"text",
+			"dincon",
+			"book-title",
+			"booktitle",
+			"author_title",
+			"author-titel",
+			"padded-topn",
+			".menu li",
+			"padded-topn",
+			"padded-tops",
+			"padded-topn",
+			"500",
+			"ff-good-headline-web-pro-con",
+			"\"ff-good-headline-web-pro-con\"",
+			"\"dincondensed\"",
+			"dincondensed",
+			"\"m",
+			"class=\"social\"",
+			"\"m",
+			"\"proxima-nova-alt-ext-cond\"",
+			"\"dincondensed\"",
+			"dincondensed",
+			"font-family",
+			"dincondensed",
+			"mi-slider",
+			"bi-slider",
+			"category-thumb",
+			"author-thumb",
+			"book-thumb",
+			"category-thumb",
+			"featured-event",
 			"h2",
 			"gray",
 			"diaspora",
@@ -384,6 +452,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"bold",
+			"dincondensed",
+			"\"ff-good-headline-web-pro-con\"",
+			"\"myriad-pro-condensed\"\n",
+			"\"proxima-nova-alt-ext-cond\"\n",
+			"proxima-nova-alt-ext-cond\n",
 			"'Cabin Condensed'\n",
 			", \n",
 			", ",
@@ -412,15 +486,15 @@
 					"file": "style.css",
 					"settings":
 					{
-						"buffer_size": 50502,
+						"buffer_size": 50340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42513,
-								42513
+								6041,
+								6041
 							]
 						],
 						"settings":
@@ -522,25 +596,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7944.0,
+						"translation.y": 2250.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "contactkaya.php",
+					"file": "home.php",
 					"settings":
 					{
-						"buffer_size": 5632,
+						"buffer_size": 11472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3825,
-								3825
+								2282,
+								2797
 							]
 						],
 						"settings":
@@ -638,28 +712,28 @@
 							"sublimelinter_wrap_find": true,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1158.0,
+						"translation.y": 316.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "parts/shared/header.php",
 					"settings":
 					{
-						"buffer_size": 1508,
+						"buffer_size": 1230,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1038,
-								979
+								1230,
+								1230
 							]
 						],
 						"settings":
@@ -756,10 +830,12 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
-						"translation.x": 631.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -767,18 +843,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "staffkaya.php",
+					"file": "kayabooks.php",
 					"settings":
 					{
-						"buffer_size": 3235,
+						"buffer_size": 6053,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1841,
-								1841
+								900,
+								688
 							]
 						],
 						"settings":
@@ -875,28 +951,30 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 290.0,
+						"translation.y": 236.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "submissionskaya.php",
+					"file": "single-books.php",
 					"settings":
 					{
-						"buffer_size": 2811,
+						"buffer_size": 11427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1138,
-								1138
+								5715,
+								5715
 							]
 						],
 						"settings":
@@ -993,28 +1071,150 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 93.0,
+						"translation.y": 3084.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "functions.php",
+					"file": "archive.php",
 					"settings":
 					{
-						"buffer_size": 8471,
+						"buffer_size": 8661,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3621,
-								3621
+								5394,
+								5394
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"remote_loading": false,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 308.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 9042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7488,
+								7488
 							]
 						],
 						"settings":
@@ -1115,25 +1315,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 746.0,
+						"translation.y": 2409.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "js/collapse.js",
+					"buffer": 7,
+					"file": "parts/shared/html-footer.php",
 					"settings":
 					{
-						"buffer_size": 841,
+						"buffer_size": 14831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								14813,
+								14813
 							]
 						],
 						"settings":
@@ -1230,11 +1430,12 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4563.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1279,7 +1480,7 @@
 	},
 	"replace":
 	{
-		"height": 66.0
+		"height": 286.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1406,6 +1607,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 244.0,
+	"side_bar_width": 218.0,
 	"status_bar_visible": true
 }
